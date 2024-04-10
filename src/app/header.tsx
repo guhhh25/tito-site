@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import getQuotation from "./Utils/GetQuotation";
-import FormatData from "./Utils/FormatData";
+//import FormatData from "./Utils/FormatData";
 
 interface usdQuotationValueProps {
   ask: string;
@@ -49,7 +49,7 @@ export default function Header() {
     fetchData();
   }, []);
 
-  let formattedData = FormatData(usdQuotationValue);
+  //let formattedData = FormatData(usdQuotationValue);
 
   return (
     <div className="fixed z-10 w-full">
@@ -161,7 +161,7 @@ export default function Header() {
               <p className="text-yellow-500 font-bold text-[16px]">
                 DOLAR PTAX EM:
               </p>
-              <span className="ml-1 font-bold">{formattedData}</span>
+              <span className="ml-1 font-bold">10/04/2024</span>
             </div>
           </div>
           <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
@@ -257,7 +257,7 @@ export default function Header() {
               <p className="text-yellow-500 font-bold text-[16px]">
                 DOLAR PTAX EM:
               </p>
-              <span className="ml-1 font-bold">{formattedData}</span>
+              <span className="ml-1 font-bold">10/04/2024</span>
             </div>
           </div>
         
