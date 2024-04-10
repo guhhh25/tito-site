@@ -1,17 +1,18 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import getQuotation from "./Utils/GetQuotation";
-
+import FormatData from "./Utils/FormatData";
 
 interface usdQuotationValueProps {
-    ask: any
-    USDBRL: any
+  ask: string;
+  bid: string;
+  USDBRL: any;
 }
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [usdQuotationValue, setUsdQuotationValue]  = useState<usdQuotationValueProps>();
+  const [usdQuotationValue, setUsdQuotationValue] = useState<usdQuotationValueProps>();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,11 +44,12 @@ export default function Header() {
       } catch (error) {
         console.error("Ocorreu um erro:", error);
       }
-      console.log(usdQuotationValue);
     };
 
     fetchData();
   }, []);
+
+  let formattedData = FormatData(usdQuotationValue);
 
   return (
     <div className="fixed z-10 w-full">
@@ -123,13 +125,44 @@ export default function Header() {
             id="hoverItem"
             className="text-gray-700 hover:text-blue-600"
           >
-            DOLLAR
+            DOLAR
           </a>
           <div id="popup" className="popup">
-           <p className="text-xl text-gray-500"> Comercial </p>
-           <p>
-           {usdQuotationValue?.USDBRL.ask}
-            </p>  
+            <p className="text-xl text-gray-500 mt-2 mb-2">COMERCIAL</p>
+            <div className="flex items-center">
+              <p className="text-green-500   font-bold text-[16px]">COMPRA:</p>
+              <span className=" ml-1 font-bold ">
+                ${usdQuotationValue?.USDBRL.bid.substring(0, 4)}
+              </span>
+            </div>
+            <div className="flex items-center mt-2">
+              <p className="text-red-500 font-bold text-[16px]">VENDA:</p>
+              <span className="ml-1 font-bold">
+                ${usdQuotationValue?.USDBRL.ask.substring(0, 4)}
+              </span>
+            </div>
+            <div className="flex items-center mt-2">
+              <p className="text-green-500 mb-1  font-bold text-[16px]">
+                VALOR MAIS ALTO:
+              </p>
+              <span className=" ml-1 font-bold ">
+                ${usdQuotationValue?.USDBRL.high.substring(0, 4)}
+              </span>
+            </div>
+            <div className="flex items-center mt-2">
+              <p className="text-red-500 font-bold text-[16px]">
+                VALOR MAIS BAIXO:
+              </p>
+              <span className="ml-1 font-bold">
+                ${usdQuotationValue?.USDBRL.low.substring(0, 4)}
+              </span>
+            </div>
+            <div className="flex items-center mt-2">
+              <p className="text-yellow-500 font-bold text-[16px]">
+                DOLAR PTAX EM:
+              </p>
+              <span className="ml-1 font-bold">{formattedData}</span>
+            </div>
           </div>
           <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
             INTRANET
@@ -183,6 +216,52 @@ export default function Header() {
           >
             CONTATO
           </a>
+          <a
+            href="/contact"
+            id="hoverItem"
+            className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
+          >
+            DOLAR
+          </a>
+          <div id="popup" className="popup">
+            <p className="text-xl text-gray-500 mt-2 mb-2">COMERCIAL</p>
+            <div className="flex items-center">
+              <p className="text-green-500   font-bold text-[16px]">COMPRA:</p>
+              <span className=" ml-1 font-bold ">
+                ${usdQuotationValue?.USDBRL.bid.substring(0, 4)}
+              </span>
+            </div>
+            <div className="flex items-center mt-2">
+              <p className="text-red-500 font-bold text-[16px]">VENDA:</p>
+              <span className="ml-1 font-bold">
+                ${usdQuotationValue?.USDBRL.ask.substring(0, 4)}
+              </span>
+            </div>
+            <div className="flex items-center mt-2">
+              <p className="text-green-500 mb-1  font-bold text-[16px]">
+                VALOR MAIS ALTO:
+              </p>
+              <span className=" ml-1 font-bold ">
+                ${usdQuotationValue?.USDBRL.high.substring(0, 4)}
+              </span>
+            </div>
+            <div className="flex items-center mt-2">
+              <p className="text-red-500 font-bold text-[16px]">
+                VALOR MAIS BAIXO:
+              </p>
+              <span className="ml-1 font-bold">
+                ${usdQuotationValue?.USDBRL.low.substring(0, 4)}
+              </span>
+            </div>
+            <div className="flex items-center mt-2">
+              <p className="text-yellow-500 font-bold text-[16px]">
+                DOLAR PTAX EM:
+              </p>
+              <span className="ml-1 font-bold">{formattedData}</span>
+            </div>
+          </div>
+        
+          
           <button className="w-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mt-4">
             Global View
           </button>

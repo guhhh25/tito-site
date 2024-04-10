@@ -32,7 +32,7 @@ export default function AboutUs() {
           </button>
         </div>
 
-        <div className=" lg:w-[50%] mt-5 lg:mt-0">
+        <div className=" lg:w-[45%]  mt-5 lg:mt-0">
           <Image
             alt="truck"
             className="border-1 rounded-lg"

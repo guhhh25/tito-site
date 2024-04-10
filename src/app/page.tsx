@@ -15,7 +15,7 @@ export default function page() {
       <Header />
       <Carrousel />
       <div>
-        <Fade triggerOnce={true} delay={1000} duration={1000}>
+        <Fade triggerOnce={true} delay={800} duration={800}>
           <AboutUs />
           <Solutions />
           <GlobalView />

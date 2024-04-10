@@ -31,7 +31,7 @@ export default function Carrousel() {
           }}
           className="flex flex-col w-[50%]"
         >
-          <p className="text-white text-4xl font-bold text-start">
+          <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-start">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             orci neque, pulvinar at interdum ac, pellentesque ac
           </p>
@@ -56,7 +56,7 @@ export default function Carrousel() {
           }}
           className="flex flex-col w-[50%]"
         >
-          <p className="text-white text-4xl font-bold text-start">
+        <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-start">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             orci neque, pulvinar at interdum ac, pellentesque ac
           </p>
@@ -81,7 +81,7 @@ export default function Carrousel() {
           }}
           className="flex flex-col w-[50%]"
         >
-          <p className="text-white text-4xl font-bold text-start">
+         <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-start">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             orci neque, pulvinar at interdum ac, pellentesque ac
           </p>
