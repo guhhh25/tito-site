@@ -1,6 +1,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import getQuotation from "./Utils/GetQuotation";
+import { PiMoneyDuotone } from "react-icons/pi";
+import { GiReceiveMoney } from "react-icons/gi";
+import { PiChartLineUpBold } from "react-icons/pi";
+import { PiChartLineDownBold } from "react-icons/pi";
+import { FaCalendarAlt } from "react-icons/fa";
 //import FormatData from "./Utils/FormatData";
 
 interface usdQuotationValueProps {
@@ -12,7 +17,8 @@ interface usdQuotationValueProps {
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [usdQuotationValue, setUsdQuotationValue] = useState<usdQuotationValueProps>();
+  const [usdQuotationValue, setUsdQuotationValue] =
+    useState<usdQuotationValueProps>();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -59,13 +65,15 @@ export default function Header() {
           isScrolled ? "bg-white bg-opacity-40" : ""
         }`}
       >
-        <Image
-          className={`cursor-pointer ${isScrolled ? "opacity-40" : ""}`}
-          alt="tito logo"
-          width={110}
-          height={110}
-          src="/logo-tito-transparente.png"
-        />
+        <a href="/">
+          <Image
+            className={`cursor-pointer ${isScrolled ? "opacity-40" : ""}`}
+            alt="tito logo"
+            width={110}
+            height={110}
+            src="/logo-tito-transparente.png"
+          />
+        </a>
         {/* Botão de menu para dispositivos móveis */}
         <button
           className="block lg:hidden focus:outline-none z-50"
@@ -130,35 +138,40 @@ export default function Header() {
           <div id="popup" className="popup">
             <p className="text-xl text-gray-500 mt-2 mb-2">COMERCIAL</p>
             <div className="flex items-center">
-              <p className="text-green-500   font-bold text-[16px]">COMPRA:</p>
-              <span className=" ml-1 font-bold ">
-                ${usdQuotationValue?.USDBRL.bid.substring(0, 4)}
+            <PiMoneyDuotone className="w-[22px] h-[22px]"/> <p className="text-green-500 ml-2 mt-0.5  font-bold text-[16px]"> COMPRA:</p>
+              <span className=" ml-1 mt-0.5 font-bold ">
+               ${usdQuotationValue?.USDBRL.bid.substring(0, 4)}
               </span>
             </div>
-            <div className="flex items-center mt-2">
-              <p className="text-red-500 font-bold text-[16px]">VENDA:</p>
-              <span className="ml-1 font-bold">
+            <div className="flex items-center mt-4">
+            <GiReceiveMoney className="w-[22px] h-[22px]"/>
+              <p className="text-red-500 ml-2 mt-0.5  font-bold text-[16px]">VENDA:</p>
+              <span className=" ml-1 mt-0.5 font-bold ">
                 ${usdQuotationValue?.USDBRL.ask.substring(0, 4)}
               </span>
             </div>
-            <div className="flex items-center mt-2">
-              <p className="text-green-500 mb-1  font-bold text-[16px]">
+            <div className="flex items-center mt-4">
+            <PiChartLineUpBold className="w-[22px] h-[22px]"/>
+              <p className="text-green-500 ml-2 mt-0.5  font-bold text-[16px]">
                 VALOR MAIS ALTO:
               </p>
               <span className=" ml-1 font-bold ">
                 ${usdQuotationValue?.USDBRL.high.substring(0, 4)}
               </span>
             </div>
-            <div className="flex items-center mt-2">
-              <p className="text-red-500 font-bold text-[16px]">
+            <div className="flex items-center mt-4">
+            <PiChartLineDownBold className="w-[22px] h-[22px]"/>
+              <p className="text-red-500 ml-2 mt-0.5  font-bold text-[16px]">
                 VALOR MAIS BAIXO:
               </p>
               <span className="ml-1 font-bold">
                 ${usdQuotationValue?.USDBRL.low.substring(0, 4)}
               </span>
             </div>
-            <div className="flex items-center mt-2">
-              <p className="text-yellow-500 font-bold text-[16px]">
+            <div className="flex items-center mt-4">
+            <  FaCalendarAlt className="w-[22px] h-[22px]"/>
+            
+              <p className="text-yellow-500 ml-2 mt-0.5  font-bold text-[16px]">
                 DOLAR PTAX EM:
               </p>
               <span className="ml-1 font-bold">10/04/2024</span>
@@ -260,8 +273,7 @@ export default function Header() {
               <span className="ml-1 font-bold">10/04/2024</span>
             </div>
           </div>
-        
-          
+
           <button className="w-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mt-4">
             Global View
           </button>

@@ -35,7 +35,7 @@ export default function Solutions() {
               consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
               et perferendis eaque, exercitationem praesentium nihil."
         />
-          <Card
+        <Card
           image={"/img-servico.jpeg"}
           title="Titulo de serviço"
           text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit.
@@ -44,17 +44,6 @@ export default function Solutions() {
               consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
               et perferendis eaque, exercitationem praesentium nihil."
         />
-          <Card
-          image={"/img-servico.jpeg"}
-          title="Titulo de serviço"
-          text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, nulla! Maiores et perferendis eaque,
-              exercitationem praesentium nihil. Lorem ipsum dolor sit amet,
-              consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores
-              et perferendis eaque, exercitationem praesentium nihil."
-        />
-       
-        
       </div>
     </div>
   );
