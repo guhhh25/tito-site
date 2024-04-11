@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import getQuotation from "./Utils/GetQuotation";
+import {getQuotation} from "./Utils/GetQuotation";
 import { VscArrowUp } from "react-icons/vsc";
 import { VscArrowDown } from "react-icons/vsc";
 import { PiChartLineUpThin } from "react-icons/pi";

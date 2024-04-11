@@ -1,4 +1,4 @@
-export default function getQuotation() {
+export function getQuotation() {
    return fetch("https://economia.awesomeapi.com.br/last/USD-BRL")
     .then(response => {
         if (!response.ok) {
