@@ -1,14 +1,13 @@
 import Image from "next/image";
 import { Fade } from "react-awesome-reveal";
+import Title from "./components/title";
 
 export default function AboutUs() {
   return (
     <Fade triggerOnce={true} cascade={true}>
       <div className="flex flex-col lg:flex-row items-center lg:items-start  lg:justify-between  w-full p-10">
         <div className="lg:ml-10 lg:text-start lg:w-[40%]">
-          <p className="tracking-wider font-bold">
-            SOBRE A TITO SMART MODAL LOGISTICS
-          </p>
+         <Title title="SOBRE A TITO SMART MODAL LOGISTICS"/>
           <p className="font-black     text-4xl mt-4 mb-4">
             Experiência e atualização para oferecer ao mercado as melhores
             soluções logísticas.
@@ -36,7 +35,7 @@ export default function AboutUs() {
           <Image
             alt="truck"
             className="border-1 rounded-lg"
-            src="/truck.jpg"
+            src="/truck/truck.jpg"
             width={700}
             height={100}
           />

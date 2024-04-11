@@ -11,7 +11,9 @@ export default function Contact() {
       <div className="flex-grow flex justify-center items-center">
         <div className="flex flex-col items-start mx-4 mt-10">
             <Path link1="/" link2="/contact" namePath1="Home" namePath2="Contato"/>
+            <div className="lg:mt-10">
           <ContactForm />
+          </div>
         </div>
       </div>
       <Footer />

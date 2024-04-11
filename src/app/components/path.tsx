@@ -1,12 +1,15 @@
 interface PathProps {
   link1: string;
   link2: string;
+  link3?: string;
   namePath1: string;
   namePath2: string;
+  namePath3?: string;
+
 }
 
 export default function Path(props: PathProps) {
-  const { link1, link2, namePath1, namePath2 } = props;
+  const { link1, link2, namePath1, namePath2, link3, namePath3 } = props;
 
   return (
     <div>
@@ -25,6 +28,15 @@ export default function Path(props: PathProps) {
         >
           {" "}
           {namePath2}{" "}
+        </a>
+        {namePath3 ? ">" : '' }
+        
+        <a
+          className="transiction ease-in-out delay-150 duration-100 hover:text-blue-500"
+          href={link3}
+        >
+          {" "}
+          {namePath3}{" "}
         </a>
       </p>
     </div>

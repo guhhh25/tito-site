@@ -2,18 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
   background-color: #f2f2f2;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.bg-tito-color{
+.content{
+  padding-top: 10rem;
+}
+
+.bg-tito-color {
   background-color: #1c2c4c;
 }
 
-.bg-tito-color2{
+.bg-tito-color2 {
   background-color: #21458d;
 }
 
@@ -24,13 +26,13 @@ body {
 }
 
 .links a::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
-  width: 0; 
+  width: 0;
   height: 1px;
   background-color: blue;
-  transition: width 0.3s ease; 
+  transition: width 0.3s ease;
 }
 
 .imagem-clara {
@@ -56,13 +58,20 @@ body {
 }
 
 .links a:hover::before {
-  width: 100%; 
+  width: 100%;
 }
 
-h1{
+h1 {
   font-size: 42px;
   font-weight: 600;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
+  color: #363636;
+}
+
+h2 {
+  font-size: 27px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
   color: #363636;
 }
 
@@ -79,3 +88,10 @@ h1{
   text-align: center;
   margin-top: auto; /* Adicionado para garantir que o rodapé permaneça no final da página */
 }
+
+.awssld__content {
+  background-color: white;
+}
+
+/*** STYLE ***/
+

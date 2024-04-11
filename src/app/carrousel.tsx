@@ -16,7 +16,7 @@ export default function Carrousel() {
       <div style={{ position: "relative" }}>
        
         <Image
-          src="/img-provisoria-4.jpg"
+          src="/carrousel/img-provisoria-4.jpg"
           alt="Image 1"
           width={900}
           className="h-[572px]  filter brightness-50"
@@ -42,7 +42,7 @@ export default function Carrousel() {
       </div>
       <div>
         <Image
-          src="/img-provisoria2.jpg"
+          src="/carrousel/img-provisoria2.jpg"
           alt="Image 2"
           width={900}
           className="h-[572px]  filter brightness-50"
@@ -67,7 +67,7 @@ export default function Carrousel() {
       </div>
       <div>
         <Image
-          src="/img-provisoria5.jpg"
+          src="/carrousel/img-provisoria5.jpg"
           alt="Image 3"
           width={900}
           className="h-[572px]  filter brightness-50"

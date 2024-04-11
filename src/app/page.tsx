@@ -9,7 +9,7 @@ import { Fade } from "react-awesome-reveal";
 import AboutUs from "../app/aboutUs";
 import Footer from "../app/footer";
 import InternationalLogistic from "./InternationalLogistic";
-import Planning from "./planning";
+import Partnerships from "./partnerships";
 
 export default function page() {
   return (
@@ -17,11 +17,11 @@ export default function page() {
       <Header />
       <Carrousel />
       <div>
-        <Fade triggerOnce={true} delay={500} duration={800}>
+        <Fade triggerOnce={true} delay={80} duration={800}>
           <AboutUs />
-          <Planning/>
-          <Solutions />
           <GlobalView />
+          <Solutions />
+          <Partnerships/>
         </Fade>
         <Footer />
       </div>

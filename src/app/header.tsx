@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import getQuotation from "./Utils/GetQuotation";
-import { PiMoneyDuotone } from "react-icons/pi";
-import { GiReceiveMoney } from "react-icons/gi";
-import { PiChartLineUpBold } from "react-icons/pi";
-import { PiChartLineDownBold } from "react-icons/pi";
-import { FaCalendarAlt } from "react-icons/fa";
+import { VscArrowUp } from "react-icons/vsc";
+import { VscArrowDown } from "react-icons/vsc";
+import { PiChartLineUpThin } from "react-icons/pi";
+import { PiChartLineDownThin } from "react-icons/pi";
+import { PiCalendarBlankThin } from "react-icons/pi";
 //import FormatData from "./Utils/FormatData";
 
 interface usdQuotationValueProps {
@@ -71,7 +71,7 @@ export default function Header() {
             alt="tito logo"
             width={110}
             height={110}
-            src="/logo-tito-transparente.png"
+            src="/logosTito/logo-tito-transparente.png"
           />
         </a>
         {/* Botão de menu para dispositivos móveis */}
@@ -119,11 +119,11 @@ export default function Header() {
           <a href="#" className="text-gray-700 hover:text-blue-600">
             SERVIÇOS
           </a>
-          <a href="#" className="text-gray-700 hover:text-blue-600">
-            COMUNICAÇÃO
+          <a href="/titotools" className="text-gray-700 hover:text-blue-600">
+            FERRAMENTAS
           </a>
-          <a href="#" className="text-gray-700 hover:text-blue-600">
-            QUALIDADE
+          <a href="/certifications" className="text-gray-700 hover:text-blue-600">
+            CERTIFICAÇÕES
           </a>
           <a href="/contact" className="text-gray-700 hover:text-blue-600">
             CONTATO
@@ -138,43 +138,43 @@ export default function Header() {
           <div id="popup" className="popup">
             <p className="text-xl text-gray-500 mt-2 mb-2">COMERCIAL</p>
             <div className="flex items-center">
-            <PiMoneyDuotone className="w-[22px] h-[22px]"/> <p className="text-green-500 ml-2 mt-0.5  font-bold text-[16px]"> COMPRA:</p>
-              <span className=" ml-1 mt-0.5 font-bold ">
+            <VscArrowUp className="w-[16px] h-[16px]"/> <p className="text-green-500 ml-2 mt-0.5  font-medium text-[16px]"> COMPRA:</p>
+              <span className=" ml-1 mt-0.5 font-medium ">
                ${usdQuotationValue?.USDBRL.bid.substring(0, 4)}
               </span>
             </div>
             <div className="flex items-center mt-4">
-            <GiReceiveMoney className="w-[22px] h-[22px]"/>
-              <p className="text-red-500 ml-2 mt-0.5  font-bold text-[16px]">VENDA:</p>
-              <span className=" ml-1 mt-0.5 font-bold ">
+            <VscArrowDown className="w-[16px] h-[16px]"/>
+              <p className="text-red-500 ml-2 mt-0.5  font-medium text-[16px]">VENDA:</p>
+              <span className=" ml-1 mt-0.5 font-medium ">
                 ${usdQuotationValue?.USDBRL.ask.substring(0, 4)}
               </span>
             </div>
             <div className="flex items-center mt-4">
-            <PiChartLineUpBold className="w-[22px] h-[22px]"/>
-              <p className="text-green-500 ml-2 mt-0.5  font-bold text-[16px]">
+            <PiChartLineUpThin className="w-[18px] h-[18px]"/>
+              <p className="text-green-500 ml-2 mt-0.5  font-medium text-[16px]">
                 VALOR MAIS ALTO:
               </p>
-              <span className=" ml-1 font-bold ">
+              <span className=" ml-1 font-medium ">
                 ${usdQuotationValue?.USDBRL.high.substring(0, 4)}
               </span>
             </div>
             <div className="flex items-center mt-4">
-            <PiChartLineDownBold className="w-[22px] h-[22px]"/>
-              <p className="text-red-500 ml-2 mt-0.5  font-bold text-[16px]">
+            <PiChartLineDownThin className="w-[18px] h-[18px]"/>
+              <p className="text-red-500 ml-2 mt-0.5  font-medium text-[16px]">
                 VALOR MAIS BAIXO:
               </p>
-              <span className="ml-1 font-bold">
+              <span className="ml-1 font-medium">
                 ${usdQuotationValue?.USDBRL.low.substring(0, 4)}
               </span>
             </div>
             <div className="flex items-center mt-4">
-            <  FaCalendarAlt className="w-[22px] h-[22px]"/>
+            <  PiCalendarBlankThin className="w-[16px] h-[16px]"/>
             
-              <p className="text-yellow-500 ml-2 mt-0.5  font-bold text-[16px]">
+              <p className="text-yellow-500 ml-2 mt-0.5  font-medium text-[16px]">
                 DOLAR PTAX EM:
               </p>
-              <span className="ml-1 font-bold">10/04/2024</span>
+              <span className="ml-1 font-medium">10/04/2024</span>
             </div>
           </div>
           <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
@@ -221,7 +221,7 @@ export default function Header() {
             href="#"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            QUALIDADE
+            CERTIFICAÇÕES
           </a>
           <a
             href="/contact"

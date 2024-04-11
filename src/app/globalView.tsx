@@ -1,13 +1,14 @@
 import Image from "next/image";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import Title from "./components/title";
 
 export default function GlobalView() {
   return (
     <div className="bg-white p-10 w-full mb-10">
       <div className="flex flex-col  lg:flex-row lg:ml-10 lg:text-start mt-10 w-full">
         <div className="w-full">
-          <p className="tracking-wider font-bold">GLOBAL VIEW</p>
+          <Title title="GLOBAL VIEW"/>
           <p className="tracking-wider text-xl mt-5 w-[90%]">
             Tenha uma visão integrada de todos os seus processos aduaneiros em
             tempo real e em um só lugar: essa é a principal vantagem do
@@ -29,38 +30,38 @@ export default function GlobalView() {
           >
              <div className="mt-5 lg:mt-0">
               <Image
-                src={"/global-view-3.png"}
+                src={"/globalview/globalview1.png"}
                 height={1000}
                 width={1000}
                 alt="map"
-                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[450px]"
+                className=" h-[200px] w-[700px] sm:h-[250px]  lg:w-[400px] xl:h-[400px]"
               />
             </div>
             <div className="mt-5 lg:mt-0">
               <Image
-                src={"/global-view-4.png"}
+                src={"/globalview/globalview2.png"}
                 height={1000}
                 width={1000}
                 alt="map"
-                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[450px]"
+                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[400px]"
               />
             </div>
             <div className="mt-5 lg:mt-0">
               <Image
-                src={"/global-view1.png"}
+                src={"/globalview/global-view1.png"}
                 height={1000}
                 width={1000}
                 alt="map"
-                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[450px]"
+                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[400px]"
               />
             </div>
             <div className="mt-5 lg:mt-0">
               <Image
-                src={"/global-view2.png"}
+                src={"/globalview/global-view2.png"}
                 height={1000}
                 width={1000}
                 alt="map"
-                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[450px]"
+                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[400px]"
               />
             </div>
           </Carousel>
