@@ -30,7 +30,7 @@ export default function GlobalView() {
           >
              <div className="mt-5 lg:mt-0">
               <Image
-                src={"/globalview/globalview1.png"}
+                src={"/globalView/globalview1.png"}
                 height={1000}
                 width={1000}
                 alt="map"
@@ -39,7 +39,7 @@ export default function GlobalView() {
             </div>
             <div className="mt-5 lg:mt-0">
               <Image
-                src={"/globalview/globalview2.png"}
+                src={"/globalView/globalview2.png"}
                 height={1000}
                 width={1000}
                 alt="map"
@@ -48,7 +48,7 @@ export default function GlobalView() {
             </div>
             <div className="mt-5 lg:mt-0">
               <Image
-                src={"/globalview/global-view1.png"}
+                src={"/globalView/global-view1.png"}
                 height={1000}
                 width={1000}
                 alt="map"
@@ -57,7 +57,7 @@ export default function GlobalView() {
             </div>
             <div className="mt-5 lg:mt-0">
               <Image
-                src={"/globalview/global-view2.png"}
+                src={"/globalView/global-view2.png"}
                 height={1000}
                 width={1000}
                 alt="map"

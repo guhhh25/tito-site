@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex w-full h-full items-center">
         <div>
           <Image
-            src={"/logo-tito-nobg.png"}
+            src={"/logosTito/logo-tito-nobg.png"}
             width={130}
             height={100}
             alt="img"
