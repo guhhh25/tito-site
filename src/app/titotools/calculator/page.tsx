@@ -5,7 +5,7 @@ import Path from "@//components/path";
 import Footer from "@//footer";
 import Header from "@//header";
 
-export default function() {
+export default function Calculate() {
     return (
         <div className="flex flex-col h-screen">
         <Header />
