@@ -1,5 +1,5 @@
 import { useState } from "react";
-import HandleCalculate from '../Utils/Calculate';
+import {HandleCalculate} from '../Utils/Calculate';
 
 export default function Calculator() {
     const [result, setResult] = useState<number>()

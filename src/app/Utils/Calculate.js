@@ -1,4 +1,4 @@
-export default function HandleCalculate(length, width, height, units) {
+export function HandleCalculate(length, width, height, units) {
     // Convertendo as dimensões para polegadas, se as unidades forem em centímetros (cm)
     if (units === "cm") {
         length /= 2.54;
