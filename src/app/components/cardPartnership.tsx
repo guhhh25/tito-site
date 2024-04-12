@@ -12,7 +12,7 @@ export default function CardPartnerShip(props: cardPartnetShipProps) {
   const { title, description, about, img, isMobile } = props;
 
   return (
-    <div className="relative mx-8 flex bg-clip-border rounded-xl bg-white text-gray-700 h-[200px] shadow-xl  lg:max-w-[45rem] flex-row">
+    <div className="relative mx-8 flex bg-clip-border rounded-xl bg-white text-gray-700 h-[200px] shadow-lg  lg:max-w-[35rem] flex-row">
       <div className=" relative w-2/5 m-0 overflow-hidden text-gray-700 bg-tito-color rounded-r-none bg-clip-border rounded-xl shrink-0">
         <Image
           src={img}

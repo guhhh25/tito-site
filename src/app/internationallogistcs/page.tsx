@@ -16,16 +16,12 @@ export default function InternationalLogistics() {
             namePath2="Logística Internacional"
             link2="/internationallogistics"
           />
-          <div className="content p-10">
-            <p className="text-lg">
-              As competências que a TITO desenvolveu, amparadas em modernos
-              sistemas de gerenciamento dos fluxos, garantem agilidade e
-              visibilidade nos embarques de Agenciamento de Cargas Marítimas,
-              Aéreas e Terrestres.
-            </p>
+          <div className="content  ">
+            <div className="w-full px-10 mb-10 h-50"> 
 
            <InternationalLogistic/>
-          
+            </div>
+           
           </div>
         </div>
       </div>

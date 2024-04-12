@@ -36,7 +36,7 @@ export default function TitoTools() {
               </span>
             </a>
             <a
-              href=""
+              href="/titotools/converter"
               className="flex flex-row mt-5 items-center text-white justify-center w-full px-4 py-4 mb-4 text-sm font-bold bg-tito-color leading-6 capitalize duration-100 transform rounded-sm shadow cursor-pointer focus:ring-4 focus:ring-green-500 focus:ring-opacity-50 focus:outline-none sm:mb-0 sm:w-auto sm:mr-4 md:pl-8 md:pr-6 xl:pl-12 xl:pr-10 hover:bg-[#21458d]"
             >
               Conversor Monetário

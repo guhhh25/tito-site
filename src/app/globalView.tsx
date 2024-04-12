@@ -18,7 +18,7 @@ export default function GlobalView() {
             informações necessárias para uma tomada de decisão mais precisa.
           </p>
         </div>
-        <div className="w-[100%] lg:mr-5">
+        <div className="w-[100%]  lg:mr-5">
           <Carousel
             autoPlay
             infiniteLoop
@@ -34,7 +34,7 @@ export default function GlobalView() {
                 height={1000}
                 width={1000}
                 alt="map"
-                className=" h-[200px] w-[700px] sm:h-[250px]  lg:w-[400px] xl:h-[400px]"
+                className=" h-[200px] w-[700px] sm:h-[250px]  lg:w-[400px] xl:h-[300px]"
               />
             </div>
             <div className="mt-5 lg:mt-0">
@@ -43,7 +43,7 @@ export default function GlobalView() {
                 height={1000}
                 width={1000}
                 alt="map"
-                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[400px]"
+                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[300px]"
               />
             </div>
             <div className="mt-5 lg:mt-0">
@@ -52,7 +52,7 @@ export default function GlobalView() {
                 height={1000}
                 width={1000}
                 alt="map"
-                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[400px]"
+                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[300px]"
               />
             </div>
             <div className="mt-5 lg:mt-0">
@@ -61,7 +61,7 @@ export default function GlobalView() {
                 height={1000}
                 width={1000}
                 alt="map"
-                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[400px]"
+                className=" h-[200px] w-[700px] sm:h-[300px]  lg:w-[400px] xl:h-[300px]"
               />
             </div>
           </Carousel>
