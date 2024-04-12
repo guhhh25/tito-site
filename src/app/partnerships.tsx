@@ -26,6 +26,9 @@ export default function Partnerships() {
             >
               <div className="flex mb-2">
                 <CardPartnerShip
+                imgHeight="200"
+                imgWidth="200"
+                bgColor="black"
                   isMobile={false}
                   title="Câmara de Comércio Argentino Brasileira"
                   description="A Câmara de Comércio Argentino-Brasileira da República Argentina é uma Associação Civil sem fins lucrativos."
@@ -34,6 +37,9 @@ export default function Partnerships() {
                 />
 
                 <CardPartnerShip
+                imgHeight="1200"
+                imgWidth="1200"
+                bgColor="black"
                   isMobile={false}
                   title="Câmara Americana - Brasil"
                   description=" uma comunidade de empresas que busca melhorar o ambiente de negócios no Brasil. Nossos associados estão em 15 cidades pelo Brasil e representam 33% do PIB nacional."
@@ -44,6 +50,9 @@ export default function Partnerships() {
 
               <div className="flex mb-2">
                 <CardPartnerShip
+                imgHeight="300"
+                imgWidth="200"
+                bgColor="white"
                   isMobile={false}
                   title="Câmara México Brasil"
                   description="A Câmara de Comércio México Brasil é uma Associação Civil, dedicada a estabelecer relações comerciais bilaterais entre empresas mexicanas e brasileiras."
@@ -52,6 +61,9 @@ export default function Partnerships() {
                 />
 
                 <CardPartnerShip
+                imgHeight="300"
+                imgWidth="200"
+                bgColor="white"
                   isMobile={false}
                   title="Asociación Mexicana de Agentes de Carga"
                   description="Associação Mexicana de Agentes de Cargas com mais de 380 associados no país, fundada em 13 de maio de 1986."
@@ -61,6 +73,9 @@ export default function Partnerships() {
               </div>
               <div className="flex mb-2">
                 <CardPartnerShip
+                imgHeight="300"
+                imgWidth="200"
+                bgColor="white"
                   isMobile={false}
                   title="Dutch Brazilian Chamber Of Commerce"
                   description="A Dutcham promove networking de qualidade entre profissionais de negócios para impulsionar o sucesso das empresas holandesas no Brasil."
@@ -86,6 +101,9 @@ export default function Partnerships() {
             >
               <div className="flex mb-2">
                 <CardPartnerShip
+                imgHeight="300"
+                imgWidth="200"
+                bgColor="black"
                   isMobile={true}
                   title="Câmara de Comércio Argentino Brasileira"
                   description="A Câmara de Comércio Argentino-Brasileira da República Argentina é uma Associação Civil sem fins lucrativos."
@@ -95,6 +113,9 @@ export default function Partnerships() {
               </div>
               <div>
               <CardPartnerShip
+              imgHeight="300"
+              imgWidth="200"
+              bgColor="white"
                 isMobile={true}
                 title="Câmara Americana - Brasil"
                 description=" uma comunidade de empresas que busca melhorar o ambiente de negócios no Brasil. Nossos associados estão em 15 cidades pelo Brasil e representam 33% do PIB nacional."
@@ -104,6 +125,9 @@ export default function Partnerships() {
 </div>
               <div className="flex mb-2">
                 <CardPartnerShip
+                imgHeight="300"
+                imgWidth="200"
+                bgColor="white"
                   isMobile={true}
                   title="Câmara México Brasil"
                   description="A Câmara de Comércio México Brasil é uma Associação Civil, dedicada a estabelecer relações comerciais bilaterais entre empresas mexicanas e brasileiras."
@@ -113,6 +137,9 @@ export default function Partnerships() {
                 </div>
                 <div>
                 <CardPartnerShip
+                imgHeight="300"
+                imgWidth="200"
+                bgColor="white"
                   isMobile={true}
                   title="Asociación Mexicana de Agentes de Carga"
                   description="Associação Mexicana de Agentes de Cargas com mais de 380 associados no país, fundada em 13 de maio de 1986."
@@ -122,6 +149,9 @@ export default function Partnerships() {
               </div>
               <div className="flex mb-2">
                 <CardPartnerShip
+                imgHeight="300"
+                imgWidth="200"
+                bgColor="white"
                   isMobile={true}
                   title="Dutch Brazilian Chamber Of Commerce"
                   description="A Dutcham promove networking de qualidade entre profissionais de negócios para impulsionar o sucesso das empresas holandesas no Brasil."
