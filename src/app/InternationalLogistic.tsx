@@ -10,11 +10,11 @@ export default function InternationalLogistic() {
   }
 
   return (
-    <div className="flex flex-col  lg:flex-row lg:ml-10  mt-10 w-full p-10">
+    <div className="flex flex-col  lg:flex-row   mt-10 ">
       <div>
         <p className="tracking-wider font-bold">LOGÍSTICA INTERNACIONAL</p>
 
-        <p className="tracking-wider text-lg lg:mt-5  w-full">
+        <p className="tracking-wider text-lg lg:mt-5">
           As competências que a TITO desenvolveu, amparadas em modernos sistemas
           de gerenciamento dos fluxos, garantem agilidade e visibilidade nos
           embarques de Agenciamento de Cargas Marítimas, Aéreas e Terrestres.

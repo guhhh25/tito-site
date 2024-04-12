@@ -113,8 +113,8 @@ export default function Header() {
         </button>
         {/* Menu desktop */}
         <div className="hidden lg:flex lg:items-center lg:space-x-8 links text-sm">
-          <a href="#" className="text-gray-700 hover:text-blue-600">
-            SOBRE NÓS
+          <a href="/internationallogistcs" className="text-gray-700 hover:text-blue-600">
+            LOGISTICA INTERNACIONAL
           </a>
           <a href="#" className="text-gray-700 hover:text-blue-600">
             SERVIÇOS
@@ -178,7 +178,9 @@ export default function Header() {
             </div>
           </div>
           <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+            <a href="https://home.titoonline.com.br/intranet_1/index.php" target="_blank">
             INTRANET
+            </a>
           </button>
         </div>
       </div>

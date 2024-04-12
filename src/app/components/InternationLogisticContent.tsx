@@ -50,7 +50,7 @@ export default function InternationalLogisticContent(props: TypeProps) {
       {type === "rodoviario" ? (
          <Fade>
         <div>
-          <p className="w-[730px] text-lg">
+          <p className="w-[600px] text-lg">
             Transporte Rodoviário Internacional Tito Smart Modal Logistics. A
             expertise e a segurança que sua operação precisa.
           </p>
