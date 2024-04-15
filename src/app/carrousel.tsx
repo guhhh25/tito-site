@@ -5,47 +5,35 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 export default function Carrousel() {
   return (
-   
     <Carousel
-      autoPlay
-      infiniteLoop
+      // autoPlay
+      // infiniteLoop
       showArrows={false}
       showStatus={false}
       showThumbs={false}
       interval={3000}
       className="mb-10 w-full"
     >
-      
-      <div style={{ position: "relative" }}>
-      
-            <Image
-              src="/carrousel/img-provisoria-4.jpg"
-              alt="Image 1"
-              width={900}
-              className="h-[572px] w-full filter brightness-50"
-              height={900}
-            />
-     
-        <div
-          style={{
-            position: "absolute",
-            bottom: 160,
-            left: 40,
-          }}
-          className="flex flex-col w-[50%]"
-        >
-          <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-start">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-            orci neque, pulvinar at interdum ac, pellentesque ac
-          </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 w-[200px] mt-5">
-            Veja mais sobre
-          </button>
-        </div>
-      </div>
+    <div className="relative">
+  <Image
+    src="/carrousel/img-provisoria-4.jpg"
+    alt="Image 1"
+    width={900}
+    className="h-fit max-h-[1300px]  filter brightness-50"
+    height={900}
+  />
+  <div className="absolute top-1/2 left-1/3 px-5 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
+    <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+      orci neque, pulvinar at interdum ac, pellentesque ac
+    </p>
+    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 w-48 sm:w-[200px] mt-5">
+      Veja mais sobre
+    </button>
+  </div>
+</div>
 
       <div>
-     
         <Image
           src="/carrousel/img-provisoria2.jpg"
           alt="Image 2"
@@ -54,15 +42,8 @@ export default function Carrousel() {
           height={900}
         />
 
-        <div
-          style={{
-            position: "absolute",
-            bottom: 160,
-            left: 40,
-          }}
-          className="flex flex-col w-[50%]"
-        >
-          <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-start">
+<div className="absolute top-1/2 left-1/3 px-5 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
+    <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             orci neque, pulvinar at interdum ac, pellentesque ac
           </p>
@@ -72,7 +53,6 @@ export default function Carrousel() {
         </div>
       </div>
       <div>
-    
         <Image
           src="/carrousel/img-provisoria5.jpg"
           alt="Image 3"
@@ -80,26 +60,17 @@ export default function Carrousel() {
           className="h-[572px]  filter brightness-50"
           height={900}
         />
-    
-        <div
-          style={{
-            position: "absolute",
-            bottom: 160,
-            left: 40,
-          }}
-          className="flex flex-col w-[50%]"
-        >
-          <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold text-start">
+
+<div className="absolute top-1/2 left-1/3 px-5 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
+    <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             orci neque, pulvinar at interdum ac, pellentesque ac
           </p>
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 w-[200px] mt-5">
             Veja mais sobre
           </button>
-
         </div>
       </div>
-   
     </Carousel>
   );
 }

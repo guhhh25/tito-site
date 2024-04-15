@@ -5,14 +5,14 @@ import Title from "./components/title";
 export default function AboutUs() {
   return (
    
-      <div className="flex flex-col lg:flex-row items-start items-center lg:justify-around 2xl:justify-center lg:items-center w-[100%] p-10">
-        <div className="lg:ml-10 lg:text-start  px-5 2xl:px-8 lg:w-1/2">
+      <div className="flex flex-col xl:flex-row items-start items-center lg:justify-around 2xl:justify-center lg:items-center w-[100%] p-10">
+        <div className="lg:ml-10 lg:text-start   px-5 2xl:px-8 xl:w-1/2">
          <Title title="SOBRE A TITO SMART MODAL LOGISTICS"/>
-          <p className="font-black     text-4xl mt-4 mb-4">
+          <p className="font-black      text-4xl mt-4 mb-4">
             Experiência e atualização para oferecer ao mercado as melhores
             soluções logísticas.
           </p>
-          <p className="text-xl">
+          <p className="text-xl ">
             A experiência da Tito em inúmeros casos demonstra que a mudança de
             processos traz resultados maiores e mais consistentes para o Opex, e
             na maioria das vezes impactam positivamente na qualidade. Os prazos
@@ -31,7 +31,7 @@ export default function AboutUs() {
           </button>
         </div>
 
-        <div className="w-[1/2] mt-5 lg:mt-0">
+        <div className="w-[1/2] mt-5 xl:mt-0">
           <Image
             alt="truck"
             className="border-1 rounded-lg"

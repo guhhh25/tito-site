@@ -5,7 +5,7 @@ import Title from "./components/title";
 
 export default function Solutions() {
   return (
-    <div className="flex flex-col  mt-10 mb-10 p-10  lg:p-20  2xl:text-center 2xl:justify-center">
+    <div className="flex flex-col  mt-10 mb-10 p-10  lg:p-20  3xl:text-center 3xl:justify-center">
       <Title title="SOLUÇÕES"  />
     
       <div className="flex flex-col  sm:flex-row sm:justify-between 2xl:justify-center flex-wrap">
