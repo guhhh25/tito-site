@@ -14,7 +14,7 @@ export default function GlobalView() {
     showIndicators={false}
     showThumbs={false}
     interval={3000}
-    className="mb-10 h-[500px]"
+    className="mb-10 h-auto lg:max-h-[1022px]"
   >
     
     <div style={{ position: "relative" }}>
@@ -24,20 +24,13 @@ export default function GlobalView() {
             src="/carrousel/truck-teste.jpg"
             alt="Image 1"
             width={900}
-            className="h-full h-[580px] lg:max-h-[602px] filter brightness-50"
+            className="h-full h-[580px] lg:max-h-[1022px] filter brightness-50"
             height={900}
           />
      </Parallax>
      </ParallaxProvider>
-      <div 
-        style={{
-          position: "absolute",
-          top:0
-          
-        }}
-        className="flex flex-col w-[100%] text-center items-center justify-center h-full max-h-[650px]"
-      >
-        <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold max-w-[80%]">
+     <div className="absolute top-1/2 left-1/3 px-5 transform -translate-x-1/3 -translate-y-1/2 text-start text-white">
+        <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold max-w-[100%]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
           orci neque, pulvinar at interdum ac, pellentesque ac
         </p>

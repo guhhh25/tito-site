@@ -35,7 +35,7 @@ export default function Carrousel() {
 
       <div>
         <Image
-          src="/carrousel/img-provisoria2.jpg"
+           src="/carrousel/img-provisoria-4.jpg"
           alt="Image 2"
           width={900}
           className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
@@ -54,7 +54,7 @@ export default function Carrousel() {
       </div>
       <div>
         <Image
-          src="/carrousel/img-provisoria5.jpg"
+         src="/carrousel/img-provisoria-4.jpg"
           alt="Image 3"
           width={900}
           className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
