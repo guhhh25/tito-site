@@ -19,12 +19,12 @@ export default function GlobalView() {
     
     <div style={{ position: "relative" }}>
       <ParallaxProvider>
-    <Parallax speed={-300} >
+    <Parallax speed={-100} >
           <Image
             src="/carrousel/rodoviario_tito.jpg"
             alt="Image 1"
             width={900}
-            className="h-[572px] filter brightness-50"
+            className="h-full max-h-[602px] filter brightness-50"
             height={900}
           />
      </Parallax>
@@ -32,10 +32,10 @@ export default function GlobalView() {
       <div 
         style={{
           position: "absolute",
-          bottom: 160,
+          top:0
           
         }}
-        className="flex flex-col w-[100%] text-center items-center justify-center"
+        className="flex flex-col w-[100%] text-center items-center justify-center h-full max-h-[650px]"
       >
         <p className="text-white text-2xl sm:text-3xl lg:text-4xl font-bold max-w-[80%]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent

@@ -10,7 +10,7 @@ export default function Card(props: cardProps) {
   const { image, title, text } = props;
 
   return (
-    <div className="w-full sm:max-w-[250px] max-h-[500px]  lg:max-w-[350px] rounded-md overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 2xl:m-5">
+    <div className="flex w-full sm:max-w-[350px] max-h-[500px]  2xl:max-w-[500px] rounded-md overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 2xl:m-5">
       <div className="px-1 py-4">
         <Image
           src={image}

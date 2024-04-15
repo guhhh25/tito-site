@@ -4,9 +4,9 @@ import Title from "./components/title";
 
 export default function AboutUs() {
   return (
-    <Fade triggerOnce={true} cascade={true}>
-      <div className="flex flex-col lg:flex-row items-center lg:items-start  lg:justify-between  w-full p-10">
-        <div className="lg:ml-10 lg:text-start lg:w-[40%]">
+   
+      <div className="flex flex-col lg:flex-row items-start items-center lg:justify-around 2xl:justify-center lg:items-center w-[100%] p-10">
+        <div className="lg:ml-10 lg:text-start  px-5 2xl:px-8 lg:w-1/2">
          <Title title="SOBRE A TITO SMART MODAL LOGISTICS"/>
           <p className="font-black     text-4xl mt-4 mb-4">
             Experiência e atualização para oferecer ao mercado as melhores
@@ -31,7 +31,7 @@ export default function AboutUs() {
           </button>
         </div>
 
-        <div className=" lg:w-[45%]  mt-5 lg:mt-0">
+        <div className="w-[1/2] mt-5 lg:mt-0">
           <Image
             alt="truck"
             className="border-1 rounded-lg"
@@ -41,6 +41,6 @@ export default function AboutUs() {
           />
         </div>
       </div>
-    </Fade>
+ 
   );
 }

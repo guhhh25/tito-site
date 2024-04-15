@@ -13,21 +13,19 @@ export default function Carrousel() {
       showStatus={false}
       showThumbs={false}
       interval={3000}
-      className="mb-10"
+      className="mb-10 w-full"
     >
       
       <div style={{ position: "relative" }}>
-        <ParallaxProvider>
-      <Parallax speed={-300} >
+      
             <Image
               src="/carrousel/img-provisoria-4.jpg"
               alt="Image 1"
               width={900}
-              className="h-[572px] filter brightness-50"
+              className="h-[572px] w-full filter brightness-50"
               height={900}
             />
-       </Parallax>
-       </ParallaxProvider>
+     
         <div
           style={{
             position: "absolute",
@@ -47,8 +45,7 @@ export default function Carrousel() {
       </div>
 
       <div>
-      <ParallaxProvider>
-      <Parallax speed={-300} >
+     
         <Image
           src="/carrousel/img-provisoria2.jpg"
           alt="Image 2"
@@ -56,8 +53,7 @@ export default function Carrousel() {
           className="h-[572px]  filter brightness-50"
           height={900}
         />
-     </Parallax>
-          </ParallaxProvider>
+
         <div
           style={{
             position: "absolute",
@@ -76,8 +72,7 @@ export default function Carrousel() {
         </div>
       </div>
       <div>
-      <ParallaxProvider>
-      <Parallax speed={-300} >
+    
         <Image
           src="/carrousel/img-provisoria5.jpg"
           alt="Image 3"
@@ -85,8 +80,7 @@ export default function Carrousel() {
           className="h-[572px]  filter brightness-50"
           height={900}
         />
-      </Parallax>
-         </ParallaxProvider>
+    
         <div
           style={{
             position: "absolute",

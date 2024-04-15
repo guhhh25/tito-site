@@ -58,10 +58,10 @@ export default function Header() {
   //let formattedData = FormatData(usdQuotationValue);
 
   return (
-    <div className="fixed z-10 w-full">
+   
       <div
         style={{ transition: "background-color 0.3s ease" }}
-        className={`flex items-center justify-between bg-white p-5 ${
+        className={`fixed w-full z-10 h-auto flex items-center justify-between bg-white p-5   ${
           isScrolled ? "bg-white bg-opacity-40" : ""
         }`}
       >
@@ -183,7 +183,7 @@ export default function Header() {
             </a>
           </button>
         </div>
-      </div>
+    
       {/* Menu mobile */}
       <div
         className={`lg:hidden fixed top-0 right-0 bottom-0 left-0 bg-white z-10 transition-all duration-300 ease-in-out ${

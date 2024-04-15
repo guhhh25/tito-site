@@ -5,10 +5,10 @@ import Title from "./components/title";
 
 export default function Solutions() {
   return (
-    <div className=" mt-10 mb-10 p-10  lg:p-20">
-      <Title title="SOLUÇÕES" />
-
-      <div className="flex flex-col sm:flex-row sm:justify-between 2xl:justify-center flex-wrap">
+    <div className="flex flex-col  mt-10 mb-10 p-10  lg:p-20  2xl:text-center 2xl:justify-center">
+      <Title title="SOLUÇÕES"  />
+    
+      <div className="flex flex-col  sm:flex-row sm:justify-between 2xl:justify-center flex-wrap">
         <Card
           image={"/solutions/truckcard.jpg"}
           title="Transporte Internacional"

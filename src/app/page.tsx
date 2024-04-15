@@ -13,9 +13,11 @@ import Partnerships from "./partnerships";
 
 export default function page() {
   return (
-    <div className="w-full">
+    <div className="w-full ">
+      <div>
       <Header />
       <Carrousel />
+      </div>
       <div>
         <Fade triggerOnce={true} delay={80} duration={800}>
           <AboutUs />
