@@ -12,36 +12,41 @@ export default function Partnerships() {
       <div className="flex flex-col  lg:flex-row lg:ml-10 lg:text-start mt-10 w-full">
         <div className="w-full">
           <Title title="PARCERIAS" />
-          <div className="flex flex-col lg:flex-row items-center justify-around mt-5">
+          <div className="flex  lg:flex-row lg:items-center justify-around mt-5 flex-wrap">
             <Image
               src={"/partnerships/amacarga.png"}
               alt="amacarga"
               width={180}
               height={100}
+              className="mt-5"
             />
              <Image
               src={"/partnerships/amcham2.png"}
               alt="amacarga"
               width={180}
               height={100}
+              className="mt-5"
             />
              <Image
               src={"/partnerships/cambras.png"}
               alt="amacarga"
               width={180}
               height={100}
+              className="mt-5"
             />
              <Image
               src={"/partnerships/camebra.png"}
               alt="amacarga"
               width={180}
               height={100}
+              className="mt-5"
             />
              <Image
               src={"/partnerships/novo_dutcham.png"}
               alt="amacarga"
               width={180}
               height={100}
+              className="mt-5"
             />
           </div>
         </div>
