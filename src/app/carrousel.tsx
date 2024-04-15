@@ -19,7 +19,7 @@ export default function Carrousel() {
     src="/carrousel/img-provisoria-4.jpg"
     alt="Image 1"
     width={900}
-    className="h-fit max-h-[1300px]  filter brightness-50"
+    className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
     height={900}
   />
   <div className="absolute top-1/2 left-1/3 px-5 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
@@ -38,7 +38,7 @@ export default function Carrousel() {
           src="/carrousel/img-provisoria2.jpg"
           alt="Image 2"
           width={900}
-          className="h-[572px]  filter brightness-50"
+          className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
           height={900}
         />
 
@@ -57,7 +57,7 @@ export default function Carrousel() {
           src="/carrousel/img-provisoria5.jpg"
           alt="Image 3"
           width={900}
-          className="h-[572px]  filter brightness-50"
+          className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
           height={900}
         />
 

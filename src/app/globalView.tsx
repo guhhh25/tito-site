@@ -24,7 +24,7 @@ export default function GlobalView() {
             src="/carrousel/rodoviario_tito.jpg"
             alt="Image 1"
             width={900}
-            className="h-full h-[800px] lg:max-h-[602px] filter brightness-50"
+            className="h-full h-[580px] lg:max-h-[602px] filter brightness-50"
             height={900}
           />
      </Parallax>
