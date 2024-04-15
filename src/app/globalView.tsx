@@ -14,7 +14,7 @@ export default function GlobalView() {
     showIndicators={false}
     showThumbs={false}
     interval={3000}
-    className="mb-10"
+    className="mb-10 h-[500px]"
   >
     
     <div style={{ position: "relative" }}>
@@ -24,7 +24,7 @@ export default function GlobalView() {
             src="/carrousel/rodoviario_tito.jpg"
             alt="Image 1"
             width={900}
-            className="h-full max-h-[602px] filter brightness-50"
+            className="h-full h-[620px] lg:max-h-[602px] filter brightness-50"
             height={900}
           />
      </Parallax>
