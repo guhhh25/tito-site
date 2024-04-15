@@ -21,7 +21,7 @@ export default function GlobalView() {
       <ParallaxProvider>
     <Parallax speed={-100} >
           <Image
-            src="/carrousel/rodoviario_tito.jpg"
+            src="/carrousel/truck-teste.jpg"
             alt="Image 1"
             width={900}
             className="h-full h-[580px] lg:max-h-[602px] filter brightness-50"

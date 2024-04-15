@@ -6,8 +6,8 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 export default function Carrousel() {
   return (
     <Carousel
-      // autoPlay
-      // infiniteLoop
+      autoPlay
+      infiniteLoop
       showArrows={false}
       showStatus={false}
       showThumbs={false}
