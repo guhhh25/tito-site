@@ -7,16 +7,17 @@ interface TypeProps {
 export default function InternationalLogisticContent(props: TypeProps) {
   const { type } = props;
 
+
   return (
-    <div className="mt-5 w-full">
+    <div className=" w-full">
       {type === "maritmo" ? (
         <Fade>
-        <div>
-          <p className="text-lg w-full">
+        <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-300"> 
+          <p className="text-lg w-full font-normal text-black">
             A Tito oferece soluções no modal marítimo, seja de forma pontual até
             integrações com múltiplas ferramentas e outros modais.
           </p>
-          <ul className="mt-5 text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
+          <ul className="mt-5 font-normal text-black  text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
             <div>
             <li> - Relacionamento com as principais cias marítimas e NVOCC</li>
             <li> - Tarifas competitivas</li>
@@ -35,12 +36,12 @@ export default function InternationalLogisticContent(props: TypeProps) {
       )}
       {type === "aereo" ? (
          <Fade>
-        <div>
-        <p className="text-lg w-full">
+        <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-300"> 
+        <p className="text-lg w-full font-normal text-black">
             O Transporte Aéreo Internacional da Tito, combina o melhor tempo
             para sua operação.
           </p>
-          <ul className="mt-5 text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
+          <ul className="mt-5 font-normal text-black  text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
             <div>
             <li> - Tarifas competitivas</li>
             <li> - Consolidação de cargas e rotas regulares</li>
@@ -57,7 +58,7 @@ export default function InternationalLogisticContent(props: TypeProps) {
       )}
       {type === "rodoviario" ? (
          <Fade>
-        <div>
+       <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-300"> 
           <p className="w-full text-lg w-full">
             Transporte Rodoviário Internacional Tito Smart Modal Logistics. A
             expertise e a segurança que sua operação precisa.
@@ -84,7 +85,7 @@ export default function InternationalLogisticContent(props: TypeProps) {
 
       {type === "projeto" ? (
         <Fade>
-        <div>
+        <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-300"> 
           <p className="w-full text-lg">
             A Competência na medida certa para seu projeto.
           </p>
@@ -109,7 +110,7 @@ export default function InternationalLogisticContent(props: TypeProps) {
       )}
       {type === "planejamento" ? (
         <Fade>
-        <div>
+        <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-300"> 
           <p className="w-full text-lg">
             Os objetivos dos planos da Tito para seus clientes são:
           </p>
@@ -144,7 +145,7 @@ export default function InternationalLogisticContent(props: TypeProps) {
       )}
       {type === "rastreabilidade" ? (
         <Fade>
-        <div>
+        <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-300"> 
           <p className="w-full lg:w-[85%] text-lg mt-5 ">
             O conceito de Smartmodal Logistics, também está fortemente embasado
             em alta tecnologia. Uma poderosa intranet, com um sistema “back to

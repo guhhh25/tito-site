@@ -12,17 +12,28 @@ interface cardPartnetShipProps {
 }
 
 export default function CardPartnerShip(props: cardPartnetShipProps) {
-  const { title, description, about, img, isMobile, bgColor,imgWidth, imgHeight } = props;
+  const {
+    title,
+    description,
+    about,
+    img,
+    isMobile,
+    bgColor,
+    imgWidth,
+    imgHeight,
+  } = props;
 
   return (
-    <div className="relative mx-8 flex bg-clip-border rounded-xl bg-white text-gray-700 h-[200px] shadow-lg  lg:max-w-[35rem] flex-row">
-      <div className={` flex items-center relative w-2/5 m-0 overflow-hidden text-gray-700 bg-${bgColor} rounded-r-none bg-clip-border rounded-xl shrink-0`}>
+    <div className=" mx-8   bg-clip-border rounded-xl bg-white text-gray-700 h-[400px] shadow-lg  lg:max-w-[30rem] flex-row">
+      <div
+        className={` flex   w-full h-[150px] m-0 overflow-hidden text-gray-700 bg-${bgColor} rounded-r-none bg-clip-border rounded-xl shrink-0`}
+      >
         <Image
           src={img}
           alt="card-image"
           className={`w-[${imgWidth}px] h-${imgHeight}px] `}
-          width={500}
-          height={500}
+          width={1000}
+          height={1000}
         />
       </div>
       <div className="p-6">

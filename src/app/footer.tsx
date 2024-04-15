@@ -20,13 +20,13 @@ export default function Footer() {
         </div>
         <div className="flex w-[15%] justify-between">
           <div>
-            <FaLinkedin className="text-white flex w-full h-full text-white mr-3 cursor-pointer" />
+            <FaLinkedin className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
           </div>
           <div>
-            <FaInstagramSquare className="text-white flex w-full h-full text-white mr-3 cursor-pointer" />
+            <FaInstagramSquare className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
           </div>
           <div>
-            <FaSquareTwitter className="text-white flex w-full h-full text-white mr-3 cursor-pointer" />
+            <FaSquareTwitter className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
           </div>
         </div>
       </div>
