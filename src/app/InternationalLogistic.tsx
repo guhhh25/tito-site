@@ -1,6 +1,7 @@
 import { useState } from "react";
 import InternationalLogisticContent from "./components/InternationLogisticContent";
 import Title from "./components/title";
+import { MdCheck } from "react-icons/md";
 
 export default function InternationalLogistic() {
 

@@ -22,7 +22,7 @@ export default function Carrousel() {
     className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
     height={900}
   />
-  <div className="absolute top-1/2 left-1/3 px-5 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
+  <div className="absolute top-1/2 left-1/3  lg:ml-20 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
     <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
       orci neque, pulvinar at interdum ac, pellentesque ac
@@ -42,7 +42,7 @@ export default function Carrousel() {
           height={900}
         />
 
-<div className="absolute top-1/2 left-1/3 px-5 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
+<div className="absolute top-1/2 left-1/3  lg:ml-20 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
     <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             orci neque, pulvinar at interdum ac, pellentesque ac
@@ -61,8 +61,8 @@ export default function Carrousel() {
           height={900}
         />
 
-<div className="absolute top-1/2 left-1/3 px-5 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
-    <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
+<div className="absolute top-1/2 left-1/3 lg:ml-20 transform -translate-x-1/2 -translate-y-1/2 text-start text-white">
+    <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
             orci neque, pulvinar at interdum ac, pellentesque ac
           </p>

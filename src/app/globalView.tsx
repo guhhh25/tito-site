@@ -14,17 +14,17 @@ export default function GlobalView() {
     showIndicators={false}
     showThumbs={false}
     interval={3000}
-    className="mb-10 h-auto lg:max-h-[1022px]"
+    className="mb-10 h-auto max-h-full lg:max-h-[422px]"
   >
     
     <div style={{ position: "relative" }}>
       <ParallaxProvider>
-    <Parallax speed={-100} >
+    <Parallax speed={-50} >
           <Image
             src="/carrousel/truck-teste.jpg"
             alt="Image 1"
             width={900}
-            className="h-full h-[580px] lg:max-h-[1022px] filter brightness-50"
+            className="h-full h-[590px] lg:max-h-[650px] filter brightness-50"
             height={900}
           />
      </Parallax>

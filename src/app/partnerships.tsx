@@ -8,11 +8,11 @@ import Image from "next/image";
 
 export default function Partnerships() {
   return (
-    <div className="bg-white mt-20  p-5 sm:p-10 w-full mb-10 h-[500px] lg:h-[320px] 2xl:text-center 2xl:justify-center">
-      <div className="flex flex-col  lg:flex-row lg:ml-10 lg:text-start 3xl:text-center mt-10 w-full">
-        <div className="w-full lg:px-20">
+    <div className="bg-white mt-20  p-5 sm:p-20 w-full mb-10 h-[500px] lg:h-[320px] 2xl:justify-center w-full">
+ 
           <Title title="PARCERIAS" />
-          <div className="flex   lg:flex-row lg:items-center justify-around mt-5 flex-wrap">
+        <div className="w-full">
+          <div className="flex lg:flex-row lg:items-center justify-around mt-5 flex-wrap">
             <Image
               src={"/partnerships/amacarga.png"}
               alt="amacarga"
@@ -51,6 +51,6 @@ export default function Partnerships() {
           </div>
         </div>
       </div>
-    </div>
+    
   );
 }
