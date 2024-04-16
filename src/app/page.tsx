@@ -22,8 +22,8 @@ export default function page() {
         <Fade triggerOnce={true} delay={80} duration={800}>
           <AboutUs />
           <GlobalView />
-          <Partnerships/>
           <Solutions />
+          <Partnerships/>
         </Fade>
         <Footer />
       </div>
