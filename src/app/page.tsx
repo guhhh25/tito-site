@@ -11,8 +11,30 @@ import Footer from "../app/footer";
 import InternationalLogistic from "./InternationalLogistic";
 import Partnerships from "./partnerships";
 import ContactForm from "./components/contactForm";
+import BackToTopBtn from "./components/backToTopBtn";
+import { useEffect, useState } from "react";
 
-export default function page() {
+export default function Page() {
+
+  const [isHidden, setIsHidden] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 500) {
+        setIsHidden(false);
+      } else {
+        setIsHidden(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="w-full ">
       <div>
@@ -20,12 +42,12 @@ export default function page() {
         <Carrousel />
       </div>
       <div>
+        <BackToTopBtn hidden={isHidden}/>
         <Fade triggerOnce={true} delay={80} duration={800}>
           <AboutUs />
           <GlobalView />
           <Solutions />
           <Partnerships />
-         
         </Fade>
         <Footer />
       </div>

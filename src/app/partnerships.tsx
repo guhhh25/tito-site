@@ -19,7 +19,7 @@ export default function Partnerships() {
               alt="amacarga"
               width={180}
               height={100}
-              className="py-5"
+              className="py-5  " 
             />
              <Image
               src={"/partnerships/amcham2.png"}
