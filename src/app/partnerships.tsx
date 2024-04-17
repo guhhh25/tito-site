@@ -8,7 +8,8 @@ import Image from "next/image";
 
 export default function Partnerships() {
   return (
-    <div className="bg-white mt-20  p-5 sm:p-20 w-full mb-10 h-[500px] lg:h-[320px] 2xl:justify-center w-full">
+    <div className="flex justify-center p-20  items-center w-[100%] mb-10 lg:max-h-[622px] ">
+    <div className=" bg-white w-full px-10 py-10 rounded-lg w-full max-w-[1720px] ">
  
           <Title title="PARCERIAS" />
         <div className="w-full">
@@ -50,6 +51,7 @@ export default function Partnerships() {
             />
           </div>
         </div>
+      </div>
       </div>
     
   );

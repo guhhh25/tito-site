@@ -10,20 +10,22 @@ import AboutUs from "../app/aboutUs";
 import Footer from "../app/footer";
 import InternationalLogistic from "./InternationalLogistic";
 import Partnerships from "./partnerships";
+import ContactForm from "./components/contactForm";
 
 export default function page() {
   return (
     <div className="w-full ">
       <div>
-      <Header />
-      <Carrousel />
+        <Header />
+        <Carrousel />
       </div>
       <div>
         <Fade triggerOnce={true} delay={80} duration={800}>
           <AboutUs />
           <GlobalView />
           <Solutions />
-          <Partnerships/>
+          <Partnerships />
+         
         </Fade>
         <Footer />
       </div>

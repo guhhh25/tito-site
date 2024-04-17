@@ -4,5 +4,5 @@ interface titleProps {
 
 export default function Title(props: titleProps) {
   const { title } = props;
-  return <p className="tracking-wider font-bold">{title}</p>;
+  return <p className="tracking-wider   font-bold">{title}</p>;
 }

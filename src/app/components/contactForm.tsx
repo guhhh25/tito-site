@@ -1,11 +1,15 @@
 import { FaMapLocation } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa";
 import { SiMinutemailer } from "react-icons/si";
+import Title from "./title";
 
 export default function ContactForm() {
   return (
-    <div className="flex flex-col lg:flex-row p-10 mt-20 lg:mt-10 ">
-      <div className="bg-[#dae0eb] h-[550px] w-[400px] border-1 lg:rounded-l-lg p-8 mb-5 lg:mb-0">
+    <div className="flex flex-col lg:flex-row  justify-center items-center w-full px-20 mb-10  lg:mt-10 ">
+      <div className="w-full px-10 lg:py-10   rounded-lg w-full  ">
+        <Title title="CONTATO" />
+      </div>
+      <div className="bg-[#dae0eb] h-[550px] border-1 w-[100%] mt-10  lg:rounded-l-lg p-8 mb-5 lg:mb-0">
         <p className="text-gray-600 text-2xl">ENTRE EM CONTATO</p>
 
         <form className="">
@@ -46,7 +50,7 @@ export default function ContactForm() {
           </div>
         </form>
       </div>
-      <div className="bg-tito-color h-[550px] w-[400px] border-1 lg:rounded-r-lg p-8">
+      <div className="bg-tito-color h-[550px] w-[100%] mt-10 border-1 lg:rounded-r-lg p-8">
         <div>
           <p className="text-white text-xl">Informações de contato</p>
           <p className="text-gray-300 text-lg mt-4">

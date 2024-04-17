@@ -61,7 +61,7 @@ export default function Header() {
    
       <div
         style={{ transition: "background-color 0.3s ease" }}
-        className={`fixed w-full z-10 h-auto flex items-center justify-between bg-white p-5   ${
+        className={`fixed shadow-2xl w-full z-10 h-auto flex items-center justify-between bg-white p-5   ${
           isScrolled ? "bg-white bg-opacity-40" : ""
         }`}
       >
@@ -125,9 +125,7 @@ export default function Header() {
           <a href="/certifications" className="text-gray-700 hover:text-blue-600">
             CERTIFICAÇÕES
           </a>
-          <a href="/contact" className="text-gray-700 hover:text-blue-600">
-            CONTATO
-          </a>
+          
           <a
             href="/contact"
             id="hoverItem"
