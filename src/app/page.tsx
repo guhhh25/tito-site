@@ -16,8 +16,7 @@ import { useEffect, useState } from "react";
 import Features from "./features";
 
 export default function Page() {
-
-  const [isHidden, setIsHidden] = useState(false)
+  const [isHidden, setIsHidden] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,13 +42,13 @@ export default function Page() {
         <Carrousel />
       </div>
       <div>
-        <BackToTopBtn hidden={isHidden}/>
+        <BackToTopBtn hidden={isHidden} />
         <Fade triggerOnce={true} delay={80} duration={800}>
           <AboutUs />
           <GlobalView />
           <Solutions />
           <Partnerships />
-          <Features/>
+          <Features />
         </Fade>
         <Footer />
       </div>

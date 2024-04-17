@@ -1,18 +1,19 @@
-export default function CardFeature(props:any){
+export default function CardFeature(props: any) {
+  const { text, title, icon } = props;
 
-    const {text, title, icon} = props
+  return (
+    <div className="flex   w-[350px] 2xl:w-[400px] h-[200px] border-4 border-gray-300 m-4 transition  ease-in-out ease hover:border-blue-400 hover:bg-gray-200">
+      <div className="flex items-center h-full px-4 text-center justify-center w-[150px]">
+        {icon}
+      </div>
 
-    return (
-        <div className="flex  w-[350px] 2xl:w-[400px] h-[190px] border-4 border-gray-300 m-4" >
-            <div className="flex items-center h-full px-4 text-center justify-center w-[150px]">
-                {icon}
-            </div>
+      <div className="px-5  items-center  w-full">
+        <p className="text-bold font-bold text-xl mt-5 text-gray-700">
+          {title}
+        </p>
 
-            <div className="px-5  items-center  w-full">
-                <p className="text-bold font-bold text-xl mt-5 text-gray-700">{title}</p>
-
-                <p className=" text-xl mt-5 text-gray-500  ">{text}</p>
-            </div>
-        </div>
-    )
+        <p className=" text-xl mt-3 text-gray-500  ">{text}</p>
+      </div>
+    </div>
+  );
 }

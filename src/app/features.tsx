@@ -25,12 +25,28 @@ export default function Features() {
       </div>
       <div className="flex">
         <div>
-        <CardFeature  title={"VOOS"} text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. " icon={<SlPlane className="w-[50px] h-[80px]" />}/>
-        <CardFeature title={"VOOS"}  text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. " icon={<IoBoatOutline className="w-[50px] h-[80px]" />}/>
+          <CardFeature
+            title={"VOOS"}
+            text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+            icon={<SlPlane className="w-[50px] h-[80px]" />}
+          />
+          <CardFeature
+            title={"EMBARCAÇÃO"}
+            text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
+            icon={<IoBoatOutline className="w-[50px] h-[80px]" />}
+          />
         </div>
         <div>
-        <CardFeature  title={"VOOS"} text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." icon={<PiTrain className="w-[50px] h-[80px]" />}/>
-        <CardFeature title={"VOOS"} text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." icon={<TbClockBolt  className="w-[50px] h-[80px]" />} />
+          <CardFeature
+            title={"TREM"}
+            text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            icon={<PiTrain className="w-[50px] h-[80px]" />}
+          />
+          <CardFeature
+            title={"TEMPO"}
+            text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            icon={<TbClockBolt className="w-[50px] h-[80px]" />}
+          />
         </div>
       </div>
     </div>

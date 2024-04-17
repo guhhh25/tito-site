@@ -4,7 +4,7 @@ import Title from "./components/title";
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col lg:flex-row 2xl:justify-center  items-center 2xl:items-center text-start justify-start lg:p-20" >
+    <div className="flex flex-col lg:flex-row 2xl:justify-center  items-center 2xl:items-center text-start justify-start lg:p-20">
       <div className="flex flex-col justify-center items-start 2xl:max-w-[1200px] px-8 lg:px-10">
         <Title title="SOBRE A TITO SMART MODAL LOGISTICS" />
         <p className="text-gray-800  lg:max-w-[1100px]   w-full text-4xl mt-4 mb-4">
