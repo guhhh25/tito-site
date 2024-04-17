@@ -7,15 +7,15 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 export default function GlobalView() {
   return (
     <div className="flex justify-center items-center px-10 lg:px-20 py-10  ">
-      <div className=" flex flex-col max-w-[1720px]  justify-center items-center  w-full rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white md:flex-row">
+      <div className=" flex flex-col max-w-[1720px] h-[360px]  justify-center items-center  w-full rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white md:flex-row">
  
        
           <Image
             height={1000}
             width={1000}
             alt="alguma"
-            className=" w-full object-cover rounded-t-lg  md:h-[250px] md:w-[890px] md:!rounded-none md:!rounded-s-lg"
-            src="/globalView/globalview1.png"
+            className=" w-full object-cover rounded-t-lg  md:h-[360px] md:w-[890px] md:!rounded-none md:!rounded-s-lg"
+            src="/globalView/image.png"
           />
          
      

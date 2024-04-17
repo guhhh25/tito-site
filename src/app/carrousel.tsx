@@ -6,8 +6,8 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 export default function Carrousel() {
   return (
     <Carousel
-      autoPlay
-      infiniteLoop
+      //autoPlay
+      //infiniteLoop
       showArrows={false}
       showStatus={false}
       showThumbs={false}
@@ -16,12 +16,12 @@ export default function Carrousel() {
     >
       <div className="relative">
         <ParallaxProvider>
-          <Parallax speed={-140}>
+          <Parallax speed={-50}>
             <Image
               src="/carrousel/img-provisoria-4.jpg"
               alt="Image 1"
               width={900}
-              className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
+              className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
               height={900}
             />
           </Parallax>
@@ -39,12 +39,12 @@ export default function Carrousel() {
 
       <div>
         <ParallaxProvider>
-          <Parallax speed={-140}>
+          <Parallax speed={-50}>
             <Image
-              src="/carrousel/img-provisoria-4.jpg"
+              src="/carrousel/img-provisoria5.jpg"
               alt="Image 1"
               width={900}
-              className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
+              className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
               height={900}
             />
           </Parallax>
@@ -62,12 +62,12 @@ export default function Carrousel() {
       </div>
       <div>
         <ParallaxProvider>
-          <Parallax speed={-140}>
+          <Parallax speed={-50}>
             <Image
-              src="/carrousel/img-provisoria-4.jpg"
+              src="/carrousel/img-provisoria3.jpg"
               alt="Image 1"
               width={900}
-              className="h-[672px] 2xl:max-h-[1500px] 2xl:h-full  filter brightness-50"
+              className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
               height={900}
             />
           </Parallax>
