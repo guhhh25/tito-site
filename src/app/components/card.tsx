@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { GoArrowRight } from "react-icons/go";
+
 
 interface cardProps {
   image: any;
@@ -10,21 +12,23 @@ export default function Card(props: cardProps) {
   const { image, title, text } = props;
 
   return (
-    <div className="flex w-full px-10  sm:max-w-[350px] lg:max-w-[400px] xl:max-w-[430px] max-h-[700px] rounded-md overflow-hidden shadow-xl transition-transform duration-300 hover:scale-105 2xl:m-5">
-      <div className="w-full">
+    <div className="card flex w-full mt-5 lg:mt-0  sm:max-w-[350px] 2xl:max-w-[450px] w-full rounded-md overflow-hiddenborder border-gray-400 rounded shadow-sm group 2xl:m-5">
+      
+      <div className="w-full h-full relative">
         <Image
           src={image}
-          className="w-full max-h-[250px] object-cover"
+          className="cardPhoto w-full max-h-[250px] object-cover"
           width={2000}
           height={2000}
           alt="service"
         />
        
-        <div className="px-5 pt-5 ">
+        <div className="px-5 pt-5 h-[250px] ">
           <div className="font-bold text-xl mb-2">{title}</div>
+          <div className="cardLine bg-blue-400 w-[80px] h-[8px] rounded-full mb-5"></div>
           <p className="text-gray-700 text-base">{text}</p>
-          <button className="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 mb-5">
-            Saiba mais
+          <button className="cardBtn bg-blue-500 w-[60px] h-12 absolute  mb-5 -bottom-5 right-0">
+          <GoArrowRight className="w-[50px] h-[30px]" />
           </button>
         </div>
       </div>

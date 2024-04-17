@@ -23,8 +23,8 @@ export default function Features() {
           Nossos Serviços
         </button>
       </div>
-      <div className="flex">
-        <div>
+      <div className="flex justify-center items-center flex-wrap lg:flex-nowrap lg:justify-start items-start">
+        <div className="flex flex-col justify-center items-center px-5 lg:px-0">
           <CardFeature
             title={"VOOS"}
             text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "
@@ -36,7 +36,7 @@ export default function Features() {
             icon={<IoBoatOutline className="w-[50px] h-[80px]" />}
           />
         </div>
-        <div>
+        <div className="flex flex-col justify-center items-center px-5 lg:px-0">
           <CardFeature
             title={"TREM"}
             text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."

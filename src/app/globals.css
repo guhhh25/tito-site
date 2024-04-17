@@ -96,5 +96,37 @@ h2 {
   background-color: white;
 }
 
-/*** STYLE ***/
+.card .cardBtn {
+  width: 60px; /* Defina o valor inicial para zero */
+  transition: width 0.3s; /* Aplicar transição */
+}
+
+.card .cardLine {
+  width: 60px; /* Defina o valor inicial para zero */
+  transition: width 0.3s; /* Aplicar transição */
+}
+
+.card {
+  overflow: hidden;
+}
+
+.card .cardPhoto {
+  transform: scale(1); /* Defina o valor inicial para a escala normal */
+  transition: transform 0.3s; /* Aplicar transição */
+}
+
+.card:hover .cardBtn {
+  width: 20%;
+}
+
+.card:hover .cardLine {
+  width: 120px;
+}
+
+.card:hover .cardPhoto {
+  transform: scale(1.03);
+}
+
+/* CSS */
+
 
