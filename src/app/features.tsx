@@ -6,8 +6,8 @@ import { PiTrain } from "react-icons/pi";
 import { TbClockBolt } from "react-icons/tb";
 export default function Features() {
   return (
-    <div className="flex flex-col lg:flex-row justify-center lg:px-20  items-center w-[100%] mb-10 lg:max-h-[622px] ">
-      <div className="w-full px-10 lg:py-10   rounded-lg w-full max-w-[1720px] ">
+    <div className="flex flex-col lg:flex-row justify-center  lg:px-20   items-center mb-10 lg:max-h-[622px] ">
+      <div className="px-10">
         <Title title="RECURSOS INCRÍVEIS" />
         <p className="text-gray-800  lg:max-w-[500px]   w-full text-4xl mt-4 mb-4">
           NÓS OFERECEMOS SOLUÇÕES RAPIDAS E PODEROSAS PARA TRANSPORTE

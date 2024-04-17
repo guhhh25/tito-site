@@ -3,7 +3,7 @@ export default function CardFeature(props:any){
     const {text, title, icon} = props
 
     return (
-        <div className="flex  w-[400px]  h-[180px] border-4 border-gray-300 m-4" >
+        <div className="flex  w-[350px] 2xl:w-[400px] h-[190px] border-4 border-gray-300 m-4" >
             <div className="flex items-center h-full px-4 text-center justify-center w-[150px]">
                 {icon}
             </div>
