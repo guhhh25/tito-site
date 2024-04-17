@@ -130,3 +130,28 @@ h2 {
 /* CSS */
 
 
+/* FlyingPlane.css */
+.plane-container {
+  position: relative;
+  width: 100px; /* Ajuste o tamanho conforme necessário */
+  height: 100px; /* Ajuste o tamanho conforme necessário */
+}
+
+.plane-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg); /* Inicialmente o avião está apontando para cima */
+  color: #007bff; /* Cor do avião */
+  font-size: 3rem; /* Tamanho do ícone do avião */
+  animation: fly-in-circles 5s linear infinite; /* Animação de voar em círculos */
+}
+
+@keyframes fly-in-circles {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg); /* O avião está na parte superior do círculo */
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg); /* O avião completa um círculo */
+  }
+}

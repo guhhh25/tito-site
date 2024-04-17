@@ -14,9 +14,12 @@ import ContactForm from "./components/contactForm";
 import BackToTopBtn from "./components/backToTopBtn";
 import { useEffect, useState } from "react";
 import Features from "./features";
+import { AiOutlineLoading3Quarters } from "react-icons/ai";
+import Loading from "./components/loading";
 
 export default function Page() {
   const [isHidden, setIsHidden] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,28 +33,38 @@ export default function Page() {
 
     window.addEventListener("scroll", handleScroll);
 
+    setIsLoading(false);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div className="w-full ">
-      <div>
-        <Header />
-        <Carrousel />
-      </div>
-      <div>
-        <BackToTopBtn hidden={isHidden} />
-        <Fade triggerOnce={true} delay={80} duration={800}>
-          <AboutUs />
-          <GlobalView />
-          <Solutions />
-          <Partnerships />
-          <Features />
-        </Fade>
-        <Footer />
-      </div>
+    <div>
+      {isLoading ? (
+        <div className="flex justify-center items-center h-[100vh] w-full">
+          <Loading />
+        </div>
+      ) : (
+        <div className="w-full ">
+          <div>
+            <Header />
+            <Carrousel />
+          </div>
+          <div>
+            <BackToTopBtn hidden={isHidden} />
+            <Fade triggerOnce={true} delay={80} duration={800}>
+              <AboutUs />
+              <GlobalView />
+              <Solutions />
+              <Partnerships />
+              <Features />
+            </Fade>
+            <Footer />
+          </div>
+        </div>
+      )}
     </div>
   );
 }
