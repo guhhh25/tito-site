@@ -13,6 +13,7 @@ import Partnerships from "./partnerships";
 import ContactForm from "./components/contactForm";
 import BackToTopBtn from "./components/backToTopBtn";
 import { useEffect, useState } from "react";
+import Features from "./features";
 
 export default function Page() {
 
@@ -48,6 +49,7 @@ export default function Page() {
           <GlobalView />
           <Solutions />
           <Partnerships />
+          <Features/>
         </Fade>
         <Footer />
       </div>

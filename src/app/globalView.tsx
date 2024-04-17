@@ -11,10 +11,10 @@ export default function GlobalView() {
  
        
           <Image
-            height={300}
+            height={1000}
             width={1000}
             alt="alguma"
-            className="h- w-full rounded-t-lg  md:h-[350px] md:w-[600px] md:!rounded-none md:!rounded-s-lg"
+            className=" w-full object-cover rounded-t-lg  md:h-[250px] md:w-[890px] md:!rounded-none md:!rounded-s-lg"
             src="/globalView/globalview1.png"
           />
          
