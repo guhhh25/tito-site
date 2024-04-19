@@ -17,8 +17,7 @@ import Features from "./features";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Loading from "./components/loading";
 import Contact from "./contact";
-import Map from "./components/map";
-import Mapa from "./components/map";
+
 
 export default function Page() {
   const [isHidden, setIsHidden] = useState(true);
