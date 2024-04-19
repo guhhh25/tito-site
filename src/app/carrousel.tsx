@@ -42,7 +42,7 @@ export default function Carrousel() {
         <ParallaxProvider>
           <Parallax speed={-50}>
             <Image
-              src="/carrousel/img-provisoria5.jpg"
+              src="/carrousel/plane.jpg"
               alt="Image 1"
               width={900}
               className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
@@ -65,7 +65,7 @@ export default function Carrousel() {
         <ParallaxProvider>
           <Parallax speed={-50}>
             <Image
-              src="/carrousel/img-provisoria3.jpg"
+              src="/carrousel/boat.jpg"
               alt="Image 1"
               width={900}
               className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
