@@ -5,7 +5,6 @@ interface PathProps {
   namePath1: string;
   namePath2: string;
   namePath3?: string;
-
 }
 
 export default function Path(props: PathProps) {
@@ -29,8 +28,7 @@ export default function Path(props: PathProps) {
           {" "}
           {namePath2}{" "}
         </a>
-        {namePath3 ? ">" : '' }
-        
+        {namePath3 ? ">" : ""}
         <a
           className="transiction ease-in-out delay-150 duration-100 hover:text-blue-500"
           href={link3}

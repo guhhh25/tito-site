@@ -8,16 +8,12 @@ import GlobalView from "../app/globalView";
 import { Fade } from "react-awesome-reveal";
 import AboutUs from "../app/aboutUs";
 import Footer from "../app/footer";
-import InternationalLogistic from "./InternationalLogistic";
 import Partnerships from "./partnerships";
-import ContactForm from "./components/contactForm";
-import BackToTopBtn from "./components/backToTopBtn";
+import BackPageToTop from "./components/backToTopBtn";
 import { useEffect, useState } from "react";
 import Features from "./features";
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Loading from "./components/loading";
 import Contact from "./contact";
-
 
 export default function Page() {
   const [isHidden, setIsHidden] = useState(true);
@@ -55,14 +51,14 @@ export default function Page() {
             <Carrousel />
           </div>
           <div>
-            <BackToTopBtn hidden={isHidden} />
+            <BackPageToTop hidden={isHidden} />
             <Fade triggerOnce={true} delay={80} duration={800}>
               <AboutUs />
               <GlobalView />
               <Solutions />
               <Partnerships />
               <Features />
-              <Contact/>
+              <Contact />
             </Fade>
             <Footer />
           </div>

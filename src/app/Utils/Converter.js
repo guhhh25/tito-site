@@ -13,8 +13,6 @@ export async function MoneyConverter(code, codein, date, value) {
   const currentDate = new Date();
   const formattedDate = formatDate(currentDate);
 
-  console.log(value);
-
   try {
     const response = await axios.get(
       `https://economia.awesomeapi.com.br/json/daily/${codein}?start_date=${formateDate}&end_date=${formattedDate}`

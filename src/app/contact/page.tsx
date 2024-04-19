@@ -10,9 +10,14 @@ export default function Contact() {
       <Header />
       <div className="flex-grow flex  ">
         <div className="flex flex-col w-full mx-4 mt-10">
-            <Path link1="/" link2="/contact" namePath1="Home" namePath2="Contato"/>
-            <div className="lg:mt-10">
-          <ContactForm />
+          <Path
+            link1="/"
+            link2="/contact"
+            namePath1="Home"
+            namePath2="Contato"
+          />
+          <div className="lg:mt-10">
+            <ContactForm />
           </div>
         </div>
       </div>

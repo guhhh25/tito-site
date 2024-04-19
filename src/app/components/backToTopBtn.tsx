@@ -1,11 +1,14 @@
 import { IoIosArrowUp } from "react-icons/io";
-import { backToTop } from "./../Utils/backToTopBtn";
+import { BackPageToTop } from "../Utils/backPageToTopBtn";
+
+
 export default function BackToTopBtn(props: any) {
+
   const { hidden } = props;
 
   return (
     <div
-      onClick={() => backToTop()}
+      onClick={() => BackPageToTop()}
       id="backToTopBtn"
       className={`transition-opacity duration-500 ease-in-out fixed bottom-5 right-5 z-50 ${
         hidden

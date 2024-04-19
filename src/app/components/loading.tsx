@@ -1,4 +1,3 @@
-import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import { FaPlane } from 'react-icons/fa';
 import { GiEarthAmerica } from 'react-icons/gi';
 

@@ -17,11 +17,9 @@ export default function InternationalLogistics() {
             link2="/internationallogistics"
           />
           <div className="content  ">
-            <div className="w-full px-10 mb-10 h-50"> 
-
-           <InternationalLogistic/>
+            <div className="w-full px-10 mb-10 h-50">
+              <InternationalLogistic />
             </div>
-           
           </div>
         </div>
       </div>

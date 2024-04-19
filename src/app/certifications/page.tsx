@@ -2,7 +2,6 @@
 import Image from "next/image";
 import CertificationsList from "../components/certificationsList";
 import Path from "../components/path";
-import Title from "../components/title";
 import Footer from "../footer";
 import Header from "../header";
 

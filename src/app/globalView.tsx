@@ -1,24 +1,19 @@
 import Image from "next/image";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Title from "./components/title";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 export default function GlobalView() {
   return (
     <div className="flex justify-center items-center px-10 lg:px-20 py-10  ">
       <div className=" flex flex-col max-w-[1720px] h-[360px]  justify-center items-center  w-full rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white md:flex-row">
- 
-       
-          <Image
-            height={1000}
-            width={1000}
-            alt="alguma"
-            className=" w-full object-cover rounded-t-lg  md:h-[360px] md:w-[890px] md:!rounded-none md:!rounded-s-lg"
-            src="/globalView/image.png"
-          />
-         
-     
+        <Image
+          height={1000}
+          width={1000}
+          alt="alguma"
+          className=" w-full object-cover rounded-t-lg  md:h-[360px] md:w-[890px] md:!rounded-none md:!rounded-s-lg"
+          src="/globalView/image.png"
+        />
+
         <div className="flex flex-col text-black justify-start p-6">
           <Title title="GLOBAL VIEW" />
           <p className="mb-4 text-black mt-5">

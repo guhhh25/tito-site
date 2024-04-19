@@ -6,8 +6,8 @@ import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 export default function Carrousel() {
   return (
     <Carousel
-      //autoPlay
-      //infiniteLoop
+      autoPlay
+      infiniteLoop
       showArrows={false}
       showStatus={false}
       showThumbs={false}
@@ -20,6 +20,7 @@ export default function Carrousel() {
             <Image
               src="/carrousel/img-provisoria-4.jpg"
               alt="Image 1"
+              style={{ width: "100%", height: "auto" }}
               width={900}
               className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
               height={900}

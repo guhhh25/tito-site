@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { HandleCalculate } from "../Utils/Calculate";
 import { MoneyConverter } from "../Utils/Converter";
 import { Moedas } from "../Utils/Moedas";
 
@@ -25,15 +24,13 @@ export default function ConverterForm() {
   };
 
   const handleSubmit = async () => {
-    let convert =  await MoneyConverter(
+    let convert = await MoneyConverter(
       inputs.code,
       inputs.codein,
       inputs.date,
       inputs.value
     );
-    console.log(convert)
     await setResult(convert as any);
-    console.log(result)
   };
 
   return (

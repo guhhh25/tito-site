@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Fade } from "react-awesome-reveal";
 import Title from "./components/title";
 
 export default function AboutUs() {
@@ -30,11 +29,12 @@ export default function AboutUs() {
         </button>
       </div>
 
-      <div className="">
+      <div>
         <Image
           alt="truck"
           className="border-1 rounded-lg px-8 lg:px-0"
           src="/truck/truck.jpg"
+          style={{ width: "100%", height: "auto" }}
           width={600}
           height={200}
         />

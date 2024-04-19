@@ -1,5 +1,3 @@
-import Image from "next/image";
-import { Fade } from "react-awesome-reveal";
 import Card from "./components/card";
 import Title from "./components/title";
 

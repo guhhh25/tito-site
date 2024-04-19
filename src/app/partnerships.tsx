@@ -9,42 +9,40 @@ import Image from "next/image";
 export default function Partnerships() {
   return (
     <div className="flex justify-center px-8 lg:p-20  items-center w-[100%] mb-10 lg:max-h-[622px] ">
-    <div className=" bg-white w-full px-4 lg:px-10 py-10 rounded-lg w-full max-w-[1720px] ">
- 
-          <Title title="PARCERIAS" />
+      <div className=" bg-white w-full px-4 lg:px-10 py-10 rounded-lg w-full max-w-[1720px] ">
+        <Title title="PARCERIAS" />
         <div className="w-full">
           <div className="flex lg:flex-row lg:items-center justify-around mt-5 flex-wrap">
-
             <Image
               src={"/partnerships/amacarga.png"}
               alt="amacarga"
               width={180}
               height={100}
-              className="py-5  " 
+              className="py-5  "
             />
-        
-             <Image
+
+            <Image
               src={"/partnerships/image.png"}
               alt="amacarga"
               width={180}
               height={100}
               className="py-5"
             />
-             <Image
+            <Image
               src={"/partnerships/cambras.png"}
               alt="amacarga"
               width={180}
               height={100}
               className="py-5"
             />
-             <Image
+            <Image
               src={"/partnerships/camebra.png"}
               alt="amacarga"
               width={180}
               height={100}
               className="py-5"
             />
-             <Image
+            <Image
               src={"/partnerships/novo_dutcham.png"}
               alt="amacarga"
               width={180}
@@ -54,7 +52,6 @@ export default function Partnerships() {
           </div>
         </div>
       </div>
-      </div>
-    
+    </div>
   );
 }
