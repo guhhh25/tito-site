@@ -20,25 +20,13 @@ export default function Certification() {
           <div className="content">
             <br />
             <div className="flex flex-col justify-center items-center  lg:flex-row">
-              <CertificationsList
-                letter="F"
-                text="TSA (Transportation Security Administration): Approved IAC"
-              />
+              <CertificationsList text="TSA (Transportation Security Administration): Approved IAC" />
 
-              <CertificationsList
-                letter="T"
-                text=" IATA (International Air Transport Association)"
-              />
+              <CertificationsList text=" IATA (International Air Transport Association)" />
             </div>
 
-            <CertificationsList
-              letter="O"
-              text=" OEA (Programa Brasileiro de Operador Econômico Autorizado): Sudex Logística"
-            />
-            <CertificationsList
-              letter="I"
-              text="FMC (Federal Maritime Commission) License: NVOCC, OTI"
-            />
+            <CertificationsList text=" OEA (Programa Brasileiro de Operador Econômico Autorizado): Sudex Logística" />
+            <CertificationsList text="FMC (Federal Maritime Commission) License: NVOCC, OTI" />
 
             <div className="flex justify-center items-center flex-col lg:flex-row justify-around w-full">
               <Image
