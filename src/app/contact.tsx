@@ -14,46 +14,73 @@ export default function Contact() {
         <form className="w-full">
           <div className="d-flex justify-between">
             <div className="flex flex-col mt-8 w-full ">
-              <input
-                type="text"
-                className=" border-b border-gray-600 bg-transparent focus:outline-none mb-5 text-gray-600 placeholder-gray-600 py-1 "
-                placeholder="Nome"
-              />
+              <div className="relative z-0 mb-5">
+                <input
+                  type="text"
+                  id="floating_standard"
+                  className="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-gray-100 appearance-none  dark:border-gray-400 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                />
+                <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                  Nome
+                </label>
+              </div>
 
-              <input
-                type="text"
-                className=" border-b border-gray-600 bg-transparent focus:outline-none mb-5 text-gray-600 placeholder-gray-600 py-1 "
-                placeholder="Telefone"
-              />
+              <div className="relative z-0 mb-5">
+                <input
+                  type="text"
+                  id="floating_standard"
+                  className="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-gray-100 appearance-none  dark:border-gray-400 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                />
+                <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                 Email
+                </label>
+              </div>
 
-              <input
-                type="text"
-                className=" border-b border-gray-600 bg-transparent focus:outline-none mb-5 text-gray-600 placeholder-gray-600 py-1 "
-                placeholder="Email"
-              />
+              <div className="relative z-0 mb-5">
+                <input
+                  type="text"
+                  id="floating_standard"
+                  className="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-gray-100 appearance-none  dark:border-gray-400 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                />
+                <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                  Endereço
+                </label>
+              </div>
 
-              <input
-                type="text"
-                className=" border-b border-gray-600 bg-transparent focus:outline-none mb-5 text-gray-600 placeholder-gray-600 py-1 "
-                placeholder="Assunto"
-              />
-
+              <div className="relative z-0 mb-5">
+                <input
+                  type="text"
+                  id="floating_standard"
+                  className="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-gray-100 appearance-none  dark:border-gray-400 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=" "
+                />
+                <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                  Telefone
+                </label>
+              </div>
+              <div className="relative z-0 mb-5">
               <textarea
                 rows={2}
-                className=" border-b border-gray-600 bg-transparent focus:outline-none mb-5 text-gray-600 placeholder-gray-600 py-1 "
-                placeholder="Mensagem"
+                className="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-gray-100 appearance-none  dark:border-gray-400 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                placeholder=""
               />
+               <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                  Mensagem
+                </label>
+              </div>
 
               <button className="bg-gray-500 mt-8 text-white hover:bg-gray-600 text-white-700 font-semibold hover:text-white py-2 px-4 rounded-lg">
                 ENVIAR
               </button>
             </div>
-            <div>
-            </div>
+            <div></div>
           </div>
         </form>
       </div>
-            <MapWithNoSSR />
+      <MapWithNoSSR />
     </div>
   );
 }
