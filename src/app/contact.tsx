@@ -9,7 +9,7 @@ export default function Contact() {
 
   return (
     <div className="flex flex-col lg:flex-row justify-center px-8 lg:p-20  items-center w-[100%] mb-10 lg:max-h-[622px] ">
-      <div className=" bg-white w-full px-4 lg:px-10 py-10 rounded-lg w-full max-w-[1720px] ">
+      <div className=" bg-white w-full px-4 lg:px-10 py-10 rounded-lg xl:rounded-l-lg w-full max-w-[1720px] ">
         <Title title="CONTATO" />
         <form className="w-full">
           <div className="d-flex justify-between">

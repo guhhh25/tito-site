@@ -18,7 +18,7 @@ export default function Mapa() {
 
 
   return (
-    <MapContainer className='w-[1000px] h-[500px]' center={[-23.616595683387494, -46.55813227977169]} zoom={103} scrollWheelZoom={false}>
+    <MapContainer className='w-full h-[567px]' center={[-23.616595683387494, -46.55813227977169]} zoom={103} scrollWheelZoom={false}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
