@@ -8,12 +8,12 @@ export default function Contact() {
   });
 
   return (
-    <div className="flex flex-col lg:flex-row justify-center px-8 lg:p-20  items-center w-[100%] mb-10 lg:max-h-[622px] ">
-      <div className=" bg-white w-full px-4 lg:px-10 py-10 rounded-lg xl:rounded-l-lg w-full max-w-[1720px] ">
+    <div className="flex flex-col lg:flex-row justify-center px-8 lg:p-20  items-center  w-full mb-10 lg:max-h-[622px] ">
+      <div className=" bg-white w-full px-4 lg:px-10 py-10 rounded-lg xl:rounded-l-lg w-full  max-w-[900px]">
         <Title title="CONTATO" />
         <form className="w-full">
           <div className="d-flex justify-between">
-            <div className="flex flex-col mt-8 w-full ">
+            <div className="flex flex-col mt-8">
               <div className="relative z-0 mb-5">
                 <input
                   type="text"
@@ -34,7 +34,7 @@ export default function Contact() {
                   placeholder=" "
                 />
                 <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                 Email
+                  Email
                 </label>
               </div>
 
@@ -62,12 +62,12 @@ export default function Contact() {
                 </label>
               </div>
               <div className="relative z-0 mb-5">
-              <textarea
-                rows={2}
-                className="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-gray-100 appearance-none  dark:border-gray-400 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-                placeholder=""
-              />
-               <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
+                <textarea
+                  rows={2}
+                  className="block py-2.5 px-0 w-full text-md text-black bg-transparent border-0 border-b-2 border-gray-100 appearance-none  dark:border-gray-400 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                  placeholder=""
+                />
+                <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
                   Mensagem
                 </label>
               </div>
@@ -80,7 +80,9 @@ export default function Contact() {
           </div>
         </form>
       </div>
-      <MapWithNoSSR />
+      <div className="w-full 2xl:w-auto">
+        <MapWithNoSSR />
+      </div>
     </div>
   );
 }
