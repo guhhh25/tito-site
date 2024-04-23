@@ -4,6 +4,7 @@ import { SlPlane } from "react-icons/sl";
 import { IoBoatOutline } from "react-icons/io5";
 import { PiTrain } from "react-icons/pi";
 import { TbClockBolt } from "react-icons/tb";
+import { TiArrowRightThick } from "react-icons/ti";
 export default function Features() {
   return (
     <div className="flex flex-col lg:flex-row justify-center  lg:px-20   items-center mb-10 lg:max-h-[622px] ">
@@ -19,8 +20,9 @@ export default function Features() {
           Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
         </p>
 
-        <button className="bg-blue-500 w-[200px] hover:bg-blue-700 text-white font-bold py-4 px-4  mt-5 mb-5">
+        <button className="flex items-center justify-center bg-blue-500 w-[200px] hover:bg-blue-700 text-white font-bold py-4 px-4  mt-5 mb-5">
           Nossos Serviços
+          <TiArrowRightThick className="ml-2" />
         </button>
       </div>
       <div className="flex justify-center items-center flex-wrap lg:flex-nowrap lg:justify-start items-start">

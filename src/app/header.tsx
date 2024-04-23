@@ -185,6 +185,13 @@ export default function Header() {
             <span className="ml-1 font-medium">10/04/2024</span>
           </div>
         </div>
+        <a
+          href="/report"
+          id="hoverItem"
+          className="text-gray-700 hover:text-blue-600"
+        >
+          DENUNCIA
+        </a>
         <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
           <a
             href="https://home.titoonline.com.br/intranet_1/index.php"

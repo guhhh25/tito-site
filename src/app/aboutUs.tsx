@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { TiArrowRightThick } from "react-icons/ti";
 import Title from "./components/title";
 
 export default function AboutUs() {
@@ -24,8 +25,9 @@ export default function AboutUs() {
           encontro do que o mercado busca.
         </p>
 
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 mb-5">
+        <button className="flex justify-center items-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-5 mb-5">
           Veja mais sobre
+          <TiArrowRightThick className="ml-2" />
         </button>
       </div>
 
