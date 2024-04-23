@@ -1,5 +1,6 @@
 "use client";
 import Path from "../components/path";
+import TermsModal from "../components/termsModal";
 import Title from "../components/title";
 import Footer from "../footer";
 import Header from "../header";
@@ -11,6 +12,7 @@ export default function Report() {
   return (
     <div className="flex flex-col h-full">
       <Header />
+
       <div className="flex-grow flex w-full ">
         <div className="flex flex-col justify-center items-center w-full h-fit">
           <Path
@@ -22,6 +24,7 @@ export default function Report() {
           <div className="content w-full ">
             <div className="w-full px-10 mb-10  w-full">
               <div className="flex flex-col  justify-center w-full text-center items-center w-full">
+                <TermsModal/>
                 <p className="text-gray-600 font-bold tracking-wider text-2xl">
                   CANAL DE DENUNCIA
                 </p>
