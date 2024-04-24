@@ -1,6 +1,5 @@
 'use client'
 import { useEffect, useState } from 'react'
-import Loading from '../components/loading'
 import Header from '../header'
 import Footer from '../footer'
 import Path from '../components/path'
@@ -49,7 +48,7 @@ export default function Units() {
                   Tito oferecer a seus clientes serviços em qualquer parte do
                   mundo, através de agentes credenciados.
                 </p>
-                <div className="flex justify-center items-center w-full animation-duration overflow-x-hidden lg:animate-jump-in mt-10">
+                <div className="flex justify-center items-center w-full  mt-10">
                   <Image
                     src={'/units/mapa_abrangencia2.jpg'}
                     alt="img"
@@ -57,41 +56,38 @@ export default function Units() {
                     height={200}
                   />
                 </div>
-                <div
-                  className="flex justify-center mt-10 mb-5 rounded-md shadow-sm"
-                  role="group"
-                >
+                <div className="flex justify-center mt-10 mb-5" role="group">
                   <button
                     type="button"
-                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('brasil')}
                   >
                     Brasil
                   </button>
                   <button
                     type="button"
-                    className="px-4 py-2 min-w-[120px]  text-sm font-medium text-gray-900 bg-white border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('argentina')}
                   >
                     Argentina
                   </button>
                   <button
                     type="button"
-                    className="px-4 py-2 min-w-[120px]  text-sm font-medium text-gray-900 bg-white  border-t  border-r border-2 border-t border-b border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('usa')}
                   >
                     USA
                   </button>
                   <button
                     type="button"
-                    className="px-4 py-2 min-w-[120px]  text-sm font-medium text-gray-900 bg-white border-t border-r border-2 border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('mexico')}
                   >
                     MEXICO
                   </button>
                   <button
                     type="button"
-                    className="px-4 py-2 min-w-[120px]  text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-e-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-blue-500 dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-lg hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('holanda')}
                   >
                     HOLANDA
@@ -389,7 +385,7 @@ export default function Units() {
                       <div className="flex flex-row p-2">
                         <UnitItems
                           adress="Miami - FL"
-                          street="6701 NW 7th Street"
+                          street="6701 NW 7th Street / Suite #156 / Docks 27-31"
                           phone=" Phone: 1 305 677 8140"
                           country={
                             <US
