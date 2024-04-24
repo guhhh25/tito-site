@@ -24,9 +24,11 @@
     "react-leaflet": "^4.2.1",
     "react-responsive-carousel": "^3.2.23",
     "react-scroll-parallax": "^3.4.5",
+    "react-select": "^5.8.0",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
     "swiper": "^11.1.0",
+    "tailwindcss-animated": "^1.0.1",
     "typeface-roboto": "^1.1.13",
     "util": "^0.12.5"
   },

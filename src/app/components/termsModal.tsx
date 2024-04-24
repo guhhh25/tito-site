@@ -10,20 +10,19 @@ export default function TermsModal() {
 
   return (
     <>
-    
-    <Fade>
       {isModalOpen ? (
         <>
 
-          <div className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"></div>
+          <div className={` ${
+              isModalOpen ? "block" : "hidden"} fixed top-0 left-0 w-full h-full bg-black opacity-50 z-50`}></div>
         
           <div
             id="default-modal"
         
             aria-hidden="true"
             className={`${
-              isModalOpen ? "block" : "hidden"
-            } flex justify-center items-center overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full`}
+              isModalOpen ? "block " : "hidden"
+            } flex justify-center items-center animate-fade-down fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full`}
           >
             <div className="relative p-4 w-full max-w-[1000px] w-full max-h-full">
               <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -45,8 +44,8 @@ export default function TermsModal() {
                     >
                       <path
                         stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         strokeWidth="2"
                         d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
                       />
@@ -90,13 +89,15 @@ export default function TermsModal() {
                   >
                     Aceito
                   </button>
+                  <a href="/">
                   <button
                     data-modal-hide="default-modal"
                     type="button"
                     className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
                   >
-                    Tb aceito
+                    Recusar
                   </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -107,8 +108,7 @@ export default function TermsModal() {
       ) : (
         ""
       )}
-      
-      </Fade>
+
     </>
   );
 }
