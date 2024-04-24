@@ -21,9 +21,7 @@ export default function Report() {
   };
 
   useEffect(() => {
-    setInterval(() => {
       setIsLoading(false);
-    }, 1000);
   }, []);
 
   return (
@@ -40,8 +38,8 @@ export default function Report() {
               <Path
                 link1="/"
                 namePath1="Home"
-                namePath2="Logística Internacional"
-                link2="/internationallogistics"
+                namePath2="Denuncia"
+                link2="/report"
               />
               <div className="content w-full">
                 <div className="w-full px-10 mb-10  w-full">

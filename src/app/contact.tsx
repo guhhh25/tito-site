@@ -1,15 +1,15 @@
-import dynamic from "next/dynamic";
-import Mapa from "./components/map";
-import Title from "./components/title";
+import dynamic from 'next/dynamic'
+import Mapa from './components/map'
+import Title from './components/title'
 
 export default function Contact() {
-  const MapWithNoSSR = dynamic(() => import("./components/map"), {
+  const MapWithNoSSR = dynamic(() => import('./components/map'), {
     ssr: false,
-  });
+  })
 
   return (
     <div className="flex flex-col lg:flex-row justify-center px-8 lg:p-20  items-center  w-full mb-10 lg:max-h-[622px] ">
-      <div className=" bg-white w-full px-4 lg:px-10 py-10 rounded-lg lg:rounded-l-lg  max-w-[900px]">
+      <div className=" bg-white w-full px-4 lg:px-10 py-10  max-w-[900px]">
         <Title title="CONTATO" />
         <form className="w-full">
           <div className="d-flex justify-between">
@@ -84,5 +84,5 @@ export default function Contact() {
         <MapWithNoSSR />
       </div>
     </div>
-  );
+  )
 }

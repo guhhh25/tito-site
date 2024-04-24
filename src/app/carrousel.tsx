@@ -1,7 +1,7 @@
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Image from "next/image";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
+import { Carousel } from 'react-responsive-carousel'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Image from 'next/image'
+import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
 
 export default function Carrousel() {
   return (
@@ -20,7 +20,6 @@ export default function Carrousel() {
             <Image
               src="/carrousel/boat.jpg"
               alt="Image 1"
-             
               width={900}
               className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
               height={900}
@@ -85,5 +84,5 @@ export default function Carrousel() {
         </div>
       </div>
     </Carousel>
-  );
+  )
 }

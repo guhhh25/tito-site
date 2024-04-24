@@ -1,17 +1,17 @@
-import Image from "next/image";
-import { TiArrowRightThick } from "react-icons/ti";
-import Title from "./components/title";
+import Image from 'next/image'
+import { TiArrowRightThick } from 'react-icons/ti'
+import Title from './components/title'
 
 export default function AboutUs() {
   return (
-    <div className="flex flex-col lg:flex-row 2xl:justify-center  items-center 2xl:items-center text-start justify-start lg:p-20">
-      <div className="flex flex-col justify-center items-start 2xl:max-w-[1200px] px-8 lg:px-10">
+    <div className="flex flex-col xl:flex-row 2xl:justify-center  items-center 2xl:items-center text-start justify-start lg:p-20 ">
+      <div className="2xl:max-w-[1110px] px-8">
         <Title title="SOBRE A TITO SMART MODAL LOGISTICS" />
-        <p className="text-gray-800  lg:max-w-[1100px]   w-full text-4xl mt-4 mb-4">
+        <p className="text-gray-800  w-full text-4xl mt-4 mb-4">
           Experiência e atualização para oferecer ao mercado as melhores
           soluções logísticas.
         </p>
-        <p className="text-xl lg:max-w-[1100px] w-full ">
+        <p className="text-xl  max-w-[1100px] w-full ">
           A experiência da Tito em inúmeros casos demonstra que a mudança de
           processos traz resultados maiores e mais consistentes para o Opex, e
           na maioria das vezes impactam positivamente na qualidade. Os prazos
@@ -36,11 +36,11 @@ export default function AboutUs() {
           alt="truck"
           className="border-1 rounded-lg px-8 lg:px-0"
           src="/truck/truck.jpg"
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: '100%', height: 'auto' }}
           width={600}
           height={200}
         />
       </div>
     </div>
-  );
+  )
 }

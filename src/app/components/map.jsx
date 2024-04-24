@@ -14,7 +14,7 @@ export default function Mapa() {
 
   return (
     <MapContainer
-      className="2xl:w-[800px] max-w-[1000px] 2xl:max-w-[800px] h-[567px]"
+      className="2xl:w-[800px] max-w-[1000px] 2xl:max-w-[800px] h-[562px]"
       center={[-23.616595683387494, -46.55813227977169]}
       zoom={103}
       scrollWheelZoom={false}

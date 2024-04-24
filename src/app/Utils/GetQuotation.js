@@ -1,16 +1,15 @@
-export function getQuotation() {
-  return fetch("https://economia.awesomeapi.com.br/last/USD-BRL")
-    .then((response) => {
+export async function getQuotation () {
+  return await fetch('https://economia.awesomeapi.com.br/last/USD-BRL')
+    .then(async (response) => {
       if (!response.ok) {
-        throw new Error("Erro ao obter a cotação do dólar.");
+        throw new Error('Erro ao obter a cotação do dólar.')
       }
-      return response.json();
+      return await response.json()
     })
     .then((data) => {
-
-      return data;
+      return data
     })
     .catch((error) => {
-      console.error("Erro ao obter a cotação do dólar:", error);
-    });
+      console.error('Erro ao obter a cotação do dólar:', error)
+    })
 }

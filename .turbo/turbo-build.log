@@ -1,0 +1,37 @@
+
+> site@0.1.0 build
+> next build
+
+   ▲ Next.js 14.1.4
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+   Collecting page data ...
+   Generating static pages (0/13) ...
+   Generating static pages (3/13) 
+   Generating static pages (6/13) 
+   Generating static pages (9/13) 
+ ✓ Generating static pages (13/13) 
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    23.9 kB         133 kB
+├ ○ /_not-found                          882 B          85.7 kB
+├ ○ /certifications                      1.06 kB        97.3 kB
+├ ○ /contact                             1.67 kB        97.9 kB
+├ ○ /internationallogistcs               3.06 kB         112 kB
+├ ○ /report                              29.9 kB         134 kB
+├ ○ /titotools                           1.08 kB        97.3 kB
+├ ○ /titotools/calculator                1.39 kB        97.6 kB
+├ ○ /titotools/converter                 23.1 kB         119 kB
+└ ○ /units                               1.04 kB        97.2 kB
++ First Load JS shared by all            84.9 kB
+  ├ chunks/69-9dd0609d89e7b7b5.js        29 kB
+  ├ chunks/fd9d1056-af27c1750e04c582.js  53.4 kB
+  └ other shared chunks (total)          2.46 kB
+
+
+○  (Static)  prerendered as static content
+

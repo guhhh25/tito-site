@@ -1,3 +1,18 @@
 {
-  "extends": "next/core-web-vitals"
+  "plugins": ["@typescript-eslint", "react", "jsx-a11y"],
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error"
+    // Adicione outras regras específicas do seu projeto aqui
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

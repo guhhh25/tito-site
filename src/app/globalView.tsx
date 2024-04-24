@@ -9,7 +9,7 @@ export default function GlobalView() {
         <Image
           height={1000}
           width={1000}
-          alt="alguma"
+          alt="globalView"
           className=" w-full object-cover rounded-t-lg  md:h-[360px] md:w-[890px] md:!rounded-none md:!rounded-s-lg"
           src="/globalView/image.png"
         />

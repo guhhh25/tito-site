@@ -1,74 +1,74 @@
-import Image from "next/image";
-import { useEffect, useState } from "react";
-import { getQuotation } from "./Utils/GetQuotation";
-import { VscArrowUp } from "react-icons/vsc";
-import { VscArrowDown } from "react-icons/vsc";
-import { PiChartLineUpThin } from "react-icons/pi";
-import { PiChartLineDownThin } from "react-icons/pi";
-import { PiCalendarBlankThin } from "react-icons/pi";
+import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import { getQuotation } from './Utils/GetQuotation'
+import { VscArrowUp } from 'react-icons/vsc'
+import { VscArrowDown } from 'react-icons/vsc'
+import { PiChartLineUpThin } from 'react-icons/pi'
+import { PiChartLineDownThin } from 'react-icons/pi'
+import { PiCalendarBlankThin } from 'react-icons/pi'
 
 interface usdQuotationValueProps {
-  ask: string;
-  bid: string;
-  USDBRL: any;
+  ask: string
+  bid: string
+  USDBRL: any
 }
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
   const [usdQuotationValue, setUsdQuotationValue] =
-    useState<usdQuotationValueProps>();
+    useState<usdQuotationValueProps>()
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
-      const offset = window.scrollY;
+      const offset = window.scrollY
       if (offset > 100) {
-        setIsScrolled(true);
+        setIsScrolled(true)
       } else {
-        setIsScrolled(false);
+        setIsScrolled(false)
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let actualQuotation = await getQuotation();
+        let actualQuotation = await getQuotation()
 
-        setUsdQuotationValue(actualQuotation as any);
+        setUsdQuotationValue(actualQuotation as any)
       } catch (error) {
-        console.error("Ocorreu um erro:", error);
+        console.error('Ocorreu um erro:', error)
       }
-    };
+    }
 
-    fetchData();
-  }, []);
+    fetchData()
+  }, [])
 
   //let formattedData = FormatData(usdQuotationValue);
 
   return (
     <div
-      style={{ transition: "background-color 0.3s ease" }}
+      style={{ transition: 'background-color 0.3s ease' }}
       className={`fixed shadow-2xl w-full z-10 h-auto flex items-center justify-between bg-white p-5   ${
-        isScrolled ? "bg-white bg-opacity-40" : ""
+        isScrolled ? 'bg-white bg-opacity-40' : ''
       }`}
     >
       <a href="/">
         <Image
           className={`h-auto w-auto cursor-pointer ${
-            isScrolled ? "opacity-40" : ""
+            isScrolled ? 'opacity-40' : ''
           }`}
-          style={{ width: "100%", height: "auto" }}
+          style={{ width: '100%', height: 'auto' }}
           alt="tito logo"
           width={110}
           height={110}
@@ -131,7 +131,7 @@ export default function Header() {
         </a>
 
         <a
-          href="/contact"
+          href="#"
           id="hoverItem"
           className="text-gray-700 hover:text-blue-600"
         >
@@ -140,9 +140,9 @@ export default function Header() {
         <div id="popup" className="popup">
           <p className="text-xl text-gray-500 mt-2 mb-2">COMERCIAL</p>
           <div className="flex items-center">
-            <VscArrowUp className="w-[16px] h-[16px]" />{" "}
+            <VscArrowUp className="w-[16px] h-[16px]" />{' '}
             <p className="text-green-500 ml-2 mt-0.5  font-medium text-[16px]">
-              {" "}
+              {' '}
               COMPRA:
             </p>
             <span className=" ml-1 mt-0.5 font-medium ">
@@ -185,6 +185,11 @@ export default function Header() {
             <span className="ml-1 font-medium">10/04/2024</span>
           </div>
         </div>
+
+        <a href="/units" className="text-gray-700 hover:text-blue-600">
+          UNIDADES
+        </a>
+
         <a
           href="/report"
           id="hoverItem"
@@ -205,12 +210,12 @@ export default function Header() {
       {/* Menu mobile */}
       <div
         className={`lg:hidden fixed top-0 right-0 bottom-0 left-0 bg-white z-10 transition-all duration-300 ease-in-out ${
-          isMenuOpen ? "transform translate-x-0" : "transform translate-x-full"
+          isMenuOpen ? 'transform translate-x-0' : 'transform translate-x-full'
         }`}
       >
         <div className="p-5 mt-2">
           <a href="#">
-            {" "}
+            {' '}
             <Image
               className="cursor-pointer mb-5"
               alt="tito logo"
@@ -248,6 +253,12 @@ export default function Header() {
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
             CONTATO
+          </a>
+          <a
+            href="/units"
+            className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
+          >
+            UNIDADES
           </a>
           <a
             href="/contact"
@@ -300,5 +311,5 @@ export default function Header() {
         </div>
       </div>
     </div>
-  );
+  )
 }
