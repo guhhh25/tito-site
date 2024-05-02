@@ -190,6 +190,10 @@ export default function Header() {
           UNIDADES
         </a>
 
+        <a href="/traceability" className="text-gray-700 hover:text-blue-600">
+          RASTREABILIDADE
+        </a>
+
         <a
           href="/report"
           id="hoverItem"

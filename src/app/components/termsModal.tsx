@@ -1,27 +1,28 @@
-import { useEffect, useState } from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import { useEffect, useState } from 'react'
+import { Fade, Slide } from 'react-awesome-reveal'
 
 export default function TermsModal() {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(true)
 
   const handleModal = () => {
-    setIsModalOpen(false);
-  };
+    setIsModalOpen(false)
+  }
 
   return (
     <>
       {isModalOpen ? (
         <>
+          <div
+            className={` ${
+              isModalOpen ? 'block' : 'hidden'
+            } fixed top-0 left-0 w-full h-full bg-black opacity-50 z-50`}
+          ></div>
 
-          <div className={` ${
-              isModalOpen ? "block" : "hidden"} fixed top-0 left-0 w-full h-full bg-black opacity-50 z-50`}></div>
-        
           <div
             id="default-modal"
-        
             aria-hidden="true"
             className={`${
-              isModalOpen ? "block " : "hidden"
+              isModalOpen ? 'block ' : 'hidden'
             } flex justify-center items-center animate-fade-down fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full`}
           >
             <div className="relative p-4 w-full max-w-[1000px] w-full max-h-full">
@@ -90,25 +91,22 @@ export default function TermsModal() {
                     Aceito
                   </button>
                   <a href="/">
-                  <button
-                    data-modal-hide="default-modal"
-                    type="button"
-                    className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                  >
-                    Recusar
-                  </button>
+                    <button
+                      data-modal-hide="default-modal"
+                      type="button"
+                      className="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                    >
+                      Recusar
+                    </button>
                   </a>
                 </div>
               </div>
             </div>
-          
           </div>
-       
         </>
       ) : (
-        ""
+        ''
       )}
-
     </>
-  );
+  )
 }

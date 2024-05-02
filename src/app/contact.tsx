@@ -1,6 +1,7 @@
 import dynamic from 'next/dynamic'
 import Mapa from './components/map'
 import Title from './components/title'
+import Button from './components/button'
 
 export default function Contact() {
   const MapWithNoSSR = dynamic(() => import('./components/map'), {
@@ -72,9 +73,7 @@ export default function Contact() {
                 </label>
               </div>
 
-              <button className="bg-gray-500 mt-8 text-white hover:bg-gray-600 text-white-700 font-semibold hover:text-white py-2 px-4 rounded-lg">
-                ENVIAR
-              </button>
+              <Button text="Enviar" />
             </div>
             <div></div>
           </div>

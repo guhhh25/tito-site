@@ -1,7 +1,8 @@
-import { FaMapLocation } from "react-icons/fa6";
-import { FaPhone } from "react-icons/fa";
-import { SiMinutemailer } from "react-icons/si";
-import Title from "./title";
+import { FaMapLocation } from 'react-icons/fa6'
+import { FaPhone } from 'react-icons/fa'
+import { SiMinutemailer } from 'react-icons/si'
+import Title from './title'
+import Button from './button'
 
 export default function ContactForm() {
   return (
@@ -44,9 +45,7 @@ export default function ContactForm() {
               placeholder="Mensagem"
             />
 
-            <button className="bg-gray-500 mt-8 text-white hover:bg-gray-600 text-white-700 font-semibold hover:text-white py-2 px-4 rounded-lg">
-              ENVIAR
-            </button>
+            <Button text="Enviar" />
           </div>
         </form>
       </div>
@@ -88,5 +87,5 @@ export default function ContactForm() {
         </div>
       </div>
     </div>
-  );
+  )
 }

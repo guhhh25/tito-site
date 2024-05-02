@@ -4,10 +4,10 @@
 
 body {
   background-color: #f2f2f2;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-.content{
+.content {
   padding-top: 10rem;
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 .links a::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   width: 0;
@@ -47,9 +47,9 @@ body {
   right: 120px;
   top: 80px;
   background-color: white;
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
--moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
   border: 1px solid #ffffff;
   padding: 10px;
@@ -67,14 +67,14 @@ body {
 h1 {
   font-size: 42px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #363636;
 }
 
 h2 {
   font-size: 27px;
   font-weight: 600;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #363636;
 }
 
@@ -129,7 +129,6 @@ h2 {
 
 /* CSS */
 
-
 /* FlyingPlane.css */
 .plane-container {
   position: relative;
@@ -152,8 +151,7 @@ h2 {
     transform: translate(-50%, -50%) rotate(0deg) translateX(100px) rotate(0deg); /* O avião está na parte superior do círculo */
   }
   100% {
-    transform: translate(-50%, -50%) rotate(360deg) translateX(100px) rotate(-360deg); /* O avião completa um círculo */
+    transform: translate(-50%, -50%) rotate(360deg) translateX(100px)
+      rotate(-360deg); /* O avião completa um círculo */
   }
 }
-
-
