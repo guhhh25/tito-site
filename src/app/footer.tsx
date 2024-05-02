@@ -1,7 +1,7 @@
-import Image from "next/image";
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagramSquare } from "react-icons/fa";
-import { FaSquareTwitter } from "react-icons/fa6";
+import Image from 'next/image'
+import { FaFacebook, FaFacebookSquare, FaLinkedin } from 'react-icons/fa'
+import { FaInstagramSquare } from 'react-icons/fa'
+import { FaSquareTwitter } from 'react-icons/fa6'
 
 export default function Footer() {
   return (
@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="flex w-full h-full items-center">
         <div>
           <Image
-            src={"/logosTito/logo-tito-nobg.png"}
+            src={'/logosTito/logo-tito-nobg.png'}
             width={130}
             height={100}
             alt="img"
@@ -20,10 +20,20 @@ export default function Footer() {
         </div>
         <div className="flex w-[15%] justify-between">
           <div>
-            <FaLinkedin className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
+            <a
+              href="https://br.linkedin.com/company/tito-global-trade-services"
+              target="_blank"
+            >
+              <FaLinkedin className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
+            </a>
           </div>
           <div>
-            <FaInstagramSquare className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
+            <a
+              target="_blank"
+              href="https://pt-br.facebook.com/titosmartmodal/"
+            >
+              <FaFacebookSquare className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
+            </a>
           </div>
           <div>
             <FaSquareTwitter className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
@@ -31,5 +41,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

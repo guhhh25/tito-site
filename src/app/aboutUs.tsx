@@ -25,7 +25,17 @@ export default function AboutUs() {
           encontro do que o mercado busca.
         </p>
 
-        <Button text="Saiba mais sobre" />
+        <div className="flex gap-3">
+          <a href="/ourstory">
+            <Button text="Saiba mais sobre" />
+          </a>
+          <a
+            href="https://titoonline.com/pt/pdf/normas_conduta_ptb.pdf"
+            target="_blank"
+          >
+            <Button text="Codigo de conduta" />
+          </a>
+        </div>
       </div>
 
       <div className="relative">

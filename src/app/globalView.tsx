@@ -1,11 +1,11 @@
-import Image from "next/image";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Title from "./components/title";
+import Image from 'next/image'
+import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import Title from './components/title'
 
 export default function GlobalView() {
   return (
-    <div className="flex justify-center items-center px-10 lg:px-20 py-10  ">
-      <div className=" flex flex-col max-w-[1720px] xl:h-[360px]  justify-center items-center  w-full rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white md:flex-row">
+    <div className="flex  justify-center items-center px-10 lg:px-20 py-10  ">
+      <div className=" flex flex-col max-w-[1720px] xl:h-[360px]  justify-center items-center  w-full rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white xl:flex-row">
         <Image
           height={1000}
           width={1000}
@@ -32,5 +32,5 @@ export default function GlobalView() {
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -14,10 +14,12 @@ import { useEffect, useState } from 'react'
 import Features from './features'
 import Loading from './components/loading'
 import Contact from './contact'
+import CookiesModal from './components/cookiesModal'
 
 export default function Page() {
   const [isHidden, setIsHidden] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
+  const [acceptCookies, setAcceptCookies] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,6 +34,10 @@ export default function Page() {
     window.addEventListener('scroll', handleScroll)
 
     setIsLoading(false)
+
+    if (document.cookie != null) {
+      setAcceptCookies(!acceptCookies)
+    }
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
@@ -52,7 +58,8 @@ export default function Page() {
           </div>
           <div>
             <BackPageToTop hidden={isHidden} />
-            <Fade triggerOnce={true} delay={80} duration={800}>
+            <CookiesModal />
+            <Fade triggerOnce={true} delay={200} duration={1000}>
               <AboutUs />
               <GlobalView />
               <Solutions />
