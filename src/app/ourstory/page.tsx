@@ -45,6 +45,7 @@ export default function OurStory() {
                         objectFit="fit"
                         height={800}
                         width={690}
+                        alt="history01"
                       />
                     </div>
                   </div>
@@ -56,6 +57,7 @@ export default function OurStory() {
                         objectFit="fit"
                         height={800}
                         width={690}
+                        alt="history02"
                       />
                     </div>
                     <div className="max-w-[690px] ">
@@ -95,6 +97,7 @@ export default function OurStory() {
                         objectFit="fit"
                         height={800}
                         width={690}
+                        alt="history03"
                       />
                     </div>
                   </div>
@@ -106,6 +109,7 @@ export default function OurStory() {
                         objectFit="fit"
                         height={500}
                         width={690}
+                        alt="history04"
                       />
                     </div>
                     <div className="max-w-[690px] ">
