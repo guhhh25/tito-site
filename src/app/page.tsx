@@ -61,6 +61,7 @@ export default function Page() {
             <CookiesModal />
             <Fade triggerOnce={true} delay={200} duration={1000}>
               <AboutUs />
+
               <GlobalView />
               <Solutions />
               <Partnerships />

@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function CardFeature(props: any) {
-  const { text, title, icon } = props;
+  const { text, title, icon } = props
 
   return (
     <div className="p-5">
@@ -11,9 +11,7 @@ export default function CardFeature(props: any) {
         aria-label="View item"
         title="View item"
       >
-        <div>
-        {icon}
-        </div>
+        <div>{icon}</div>
         <div className="absolute bottom-0 left-0 w-full h-[2px] duration-300 origin-left transform scale-x-0 bg-tito-color group-hover:scale-x-100"></div>
         <div className="absolute bottom-0 left-0 w-[1.5px] h-full duration-300 origin-bottom transform scale-y-0 bg-tito-color group-hover:scale-y-100"></div>
         <div className="absolute top-0 left-0 w-full h-[2px] duration-300 origin-right transform scale-x-0 bg-tito-color group-hover:scale-x-100"></div>
@@ -25,11 +23,9 @@ export default function CardFeature(props: any) {
             </h6>
             <p className="text-sm text-gray-900 text-sm">{text}</p>
           </div>
-          <div className="flex items-center justify-center">
-          
-          </div>
+          <div className="flex items-center justify-center"></div>
         </div>
       </a>
     </div>
-  );
+  )
 }

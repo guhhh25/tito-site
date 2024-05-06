@@ -11,7 +11,7 @@ export default function Card(props: cardProps) {
   const { image, title, text } = props
 
   return (
-    <div className="card flex w-full mt-5 lg:mt-0   sm:max-w-[350px] 2xl:max-w-[450px] w-full rounded-md overflow-hiddenborder border-gray-400 rounded shadow-lg group m-5">
+    <div className="card flex w-full mt-5 lg:mt-0  max-w-[500px]  2xl:max-w-[450px] w-full rounded-md overflow-hiddenborder border-gray-400 rounded shadow-lg group m-5">
       <div className="w-full h-full relative">
         <Image
           src={image}

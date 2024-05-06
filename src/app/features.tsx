@@ -23,8 +23,8 @@ export default function Features() {
 
         <Button text="Nossos Serviços" />
       </div>
-      <div className="flex justify-center items-center flex-wrap lg:flex-nowrap lg:justify-start items-start">
-        <div className="flex flex-col justify-center items-center  lg:px-0">
+      <div className="flex justify-center items-center flex-wrap xl:flex-nowrap lg:justify-start items-start">
+        <div className="flex flex-col justify-center items-center  lg:px-0 ">
           <CardFeature
             title={'VOOS'}
             text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. "

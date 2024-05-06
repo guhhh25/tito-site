@@ -10,7 +10,7 @@ export default function GlobalView() {
           height={1000}
           width={1000}
           alt="globalView"
-          className=" w-full object-cover rounded-t-lg  md:h-[360px] md:w-[890px] md:!rounded-none md:!rounded-s-lg"
+          className=" w-full object-cover rounded-t-lg  xl:h-[360px] 2xl:w-[890px] md:!rounded-none md:!rounded-s-lg"
           src="/globalView/image.png"
         />
 
@@ -24,10 +24,11 @@ export default function GlobalView() {
             documentos dentre outras funcionalidades.
           </p>
           <a
-            href="/globalview"
+            target="_blank"
+            href="https://gv2.tito.com.br/"
             className="underline text-black hover:text-blue-500"
           >
-            Para saber mais clique aqui!
+            Visitar Global View
           </a>
         </div>
       </div>
