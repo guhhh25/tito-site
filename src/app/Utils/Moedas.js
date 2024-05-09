@@ -288,5 +288,5 @@ export const Moedas = [
   { code: 'EUR-PLN', name: 'Euro/Zlóti Polonês' },
   { code: 'EUR-NZD', name: 'Euro/Dólar Neozelandês' },
   { code: 'EUR-SEK', name: 'Euro/Coroa Sueca' },
-  { code: 'EUR-ILS', name: 'Euro/Novo Shekel Israelense' }
+  { code: 'EUR-ILS', name: 'Euro/Novo Shekel Israelense' },
 ]
