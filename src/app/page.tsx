@@ -15,11 +15,15 @@ import Features from './features'
 import Loading from './components/loading'
 import Contact from './contact'
 import CookiesModal from './components/cookiesModal'
+import axios from 'axios'
+import { GetServerSideProps } from 'next'
+
 
 export default function Page() {
   const [isHidden, setIsHidden] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
   const [acceptCookies, setAcceptCookies] = useState(false)
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,3 +79,4 @@ export default function Page() {
     </div>
   )
 }
+
