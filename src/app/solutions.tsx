@@ -17,7 +17,7 @@ export default function Solutions() {
         />
         <Card
           image={'/solutions/card2.jpg'}
-          title="Gestión Aduanera"
+          title="Gestão Aduanera"
           text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Voluptatibus quia, nulla! Maiores et perferendis eaque,
               exercitationem praesentium nihil."

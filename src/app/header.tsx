@@ -59,7 +59,7 @@ export default function Header() {
   return (
     <div
       style={{ transition: 'background-color 0.3s ease' }}
-      className={`fixed shadow-2xl w-full z-10 h-auto flex items-center justify-between bg-white p-5   ${
+      className={`fixed shadow-2xl w-full z-10 h-auto flex items-center justify-between bg-white p-4   ${
         isScrolled ? 'bg-white bg-opacity-40' : ''
       }`}
     >

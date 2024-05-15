@@ -2,8 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
+body, html {
   background-color: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+.tito-font {
   font-family: 'Roboto', sans-serif;
 }
 

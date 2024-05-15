@@ -6,7 +6,7 @@ import Header from "../header";
 
 export default function InternationalLogistics() {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="w-full ">
       <Header />
       <div className="flex-grow flex">
         <div className="flex flex-col items-start">

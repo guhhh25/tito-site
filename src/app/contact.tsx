@@ -1,12 +1,21 @@
 import dynamic from 'next/dynamic'
-import Mapa from './components/map'
 import Title from './components/title'
 import Button from './components/button'
+import SendEmail from './api/email'
+import { useEffect } from 'react'
 
 export default function Contact() {
   const MapWithNoSSR = dynamic(() => import('./components/map'), {
     ssr: false,
   })
+
+  useEffect(() => {
+    try {
+      SendEmail()
+    } catch (e) {
+      console.log(e)
+    }
+  }, [])
 
   return (
     <div className="flex flex-col lg:flex-row justify-center px-8 lg:p-20  items-center  w-full mb-10 lg:max-h-[622px] ">
