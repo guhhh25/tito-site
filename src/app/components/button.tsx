@@ -3,7 +3,7 @@ import { TiArrowRightThick } from 'react-icons/ti'
 interface buttonProps {
   text: string
   onclick?: (e: any) => any
-  isLoading: boolean
+  isLoading?: boolean
 }
 
 export default function Button(props: buttonProps) {
