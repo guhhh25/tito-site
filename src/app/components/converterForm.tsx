@@ -1,27 +1,27 @@
-import { useState } from "react";
-import { MoneyConverter } from "../Utils/Converter";
-import { Moedas } from "../Utils/Moedas";
+import { useState } from 'react'
+import { MoneyConverter } from '../Utils/Converter'
+import { Moedas } from '../Utils/Moedas'
 
 export default function ConverterForm() {
-  const [result, setResult] = useState<number>();
+  const [result, setResult] = useState<number>()
   const [inputs, setInputs] = useState({
-    code: "",
-    codein: "",
-    date: "",
-    value: "",
-  });
+    code: '',
+    codein: '',
+    date: '',
+    value: '',
+  })
 
   const handleChange = (
     e:
       | React.ChangeEvent<HTMLSelectElement>
       | React.ChangeEvent<HTMLInputElement>
   ) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setInputs({
       ...inputs,
       [name]: value,
-    });
-  };
+    })
+  }
 
   const handleSubmit = async () => {
     let convert = await MoneyConverter(
@@ -29,9 +29,9 @@ export default function ConverterForm() {
       inputs.codein,
       inputs.date,
       inputs.value
-    );
-    await setResult(convert as any);
-  };
+    )
+    await setResult(convert as any)
+  }
 
   return (
     <div className="bg-white  w-[500px] border-1 rounded-lg bg-white p-10">
@@ -49,7 +49,7 @@ export default function ConverterForm() {
             onChange={handleChange}
             className="bg-gray-50 border border-gray-300 focus:outline-none  text-sm rounded-lg focus:border-blue-300 block w-full p-2.5 text-gray-500 "
           >
-            <option disabled value="" defaultValue={"selecione"}>
+            <option disabled value="" defaultValue={'selecione'}>
               Selecione...
             </option>
 
@@ -99,10 +99,10 @@ export default function ConverterForm() {
           Calcular
         </button>
 
-        <span className={`mr-8 ${result !== null ? "block" : "hidden"}`}>
-          Resultado: {result}{" "}
+        <span className={`mr-8 ${result !== null ? 'block' : 'hidden'}`}>
+          Resultado: {result}{' '}
         </span>
       </div>
     </div>
-  );
+  )
 }

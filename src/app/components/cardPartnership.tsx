@@ -1,14 +1,14 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 interface cardPartnetShipProps {
-  title: string;
-  description: string;
-  about: string;
-  img: string;
-  isMobile: boolean;
-  bgColor: string;
-  imgWidth: string;
-  imgHeight: string;
+  title: string
+  description: string
+  about: string
+  img: string
+  isMobile: boolean
+  bgColor: string
+  imgWidth: string
+  imgHeight: string
 }
 
 export default function CardPartnerShip(props: cardPartnetShipProps) {
@@ -21,7 +21,7 @@ export default function CardPartnerShip(props: cardPartnetShipProps) {
     bgColor,
     imgWidth,
     imgHeight,
-  } = props;
+  } = props
 
   return (
     <div className=" mx-8   bg-clip-border rounded-xl bg-white text-gray-700 h-[400px] shadow-lg  lg:max-w-[30rem] flex-row">
@@ -52,5 +52,5 @@ export default function CardPartnerShip(props: cardPartnetShipProps) {
         )}
       </div>
     </div>
-  );
+  )
 }

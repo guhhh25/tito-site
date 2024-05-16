@@ -1,8 +1,8 @@
-"use client";
-import InternationalLogistic from "../InternationalLogistic";
-import Path from "../components/path";
-import Footer from "../footer";
-import Header from "../header";
+'use client'
+import InternationalLogistic from '../InternationalLogistic'
+import Path from '../components/path'
+import Footer from '../footer'
+import Header from '../header'
 
 export default function InternationalLogistics() {
   return (
@@ -25,5 +25,5 @@ export default function InternationalLogistics() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }

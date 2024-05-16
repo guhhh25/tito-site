@@ -20,8 +20,6 @@ export default function Features() {
         <p className="text-gray-400  lg:max-w-[500px]   w-full text-xl mt-4 mb-4">
           Lorem Ipsum Lorem IpsumLorem IpsumLorem IpsumLorem IpsumLorem Ipsum
         </p>
-
-        <Button text="Nossos Serviços" />
       </div>
       <div className="flex justify-center items-center flex-wrap xl:flex-nowrap lg:justify-start items-start">
         <div className="flex flex-col justify-center items-center  lg:px-0 ">

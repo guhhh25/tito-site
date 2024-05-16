@@ -66,14 +66,19 @@ export default function Page() {
           <div>
             <BackPageToTop hidden={isHidden} />
             <CookiesModal />
-            <Fade triggerOnce={true} delay={200} duration={1000}>
+            <Fade
+              triggerOnce={true}
+              delay={200}
+              duration={1000}
+              className="w-full flex justify-center items-center"
+            >
               <AboutUs />
 
               <GlobalView />
               <Solutions />
               <Partnerships />
               <Features />
-              <div className="flex px-20 ">
+              <div className="flex flex-col xl:flex-row  px-10 xl:px-20  max-w-[1820px] w-full justify-center">
                 <Contact />
                 <MapWithNoSSR />
               </div>

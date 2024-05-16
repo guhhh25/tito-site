@@ -1,8 +1,8 @@
-"use client";
-import ContactForm from "../components/contactForm";
-import Path from "../components/path";
-import Footer from "../footer";
-import Header from "../header";
+'use client'
+import ContactForm from '../components/contactForm'
+import Path from '../components/path'
+import Footer from '../footer'
+import Header from '../header'
 
 export default function Contact() {
   return (
@@ -23,5 +23,5 @@ export default function Contact() {
       </div>
       <Footer />
     </div>
-  );
+  )
 }

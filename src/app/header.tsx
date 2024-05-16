@@ -120,9 +120,6 @@ export default function Header() {
         >
           LOGISTICA INTERNACIONAL
         </a>
-        <a href="#" className="text-gray-700 hover:text-blue-600">
-          SERVIÇOS
-        </a>
         <a href="/titotools" className="text-gray-700 hover:text-blue-600">
           FERRAMENTAS
         </a>
@@ -138,7 +135,7 @@ export default function Header() {
           DOLAR
         </a>
         <div id="popup" className="popup">
-          <p className="text-xl text-gray-500 mt-2 mb-2">COMERCIAL</p>
+          <p className="text-xl text-gray-500 mt-2 mb-4">COTAÇÃO DOLAR</p>
           <div className="flex items-center">
             <VscArrowUp className="w-[16px] h-[16px]" />{' '}
             <p className="text-green-500 ml-2 mt-0.5  font-medium text-[16px]">
@@ -213,56 +210,57 @@ export default function Header() {
 
       {/* Menu mobile */}
       <div
-        className={`lg:hidden fixed top-0 right-0 bottom-0 left-0 bg-white z-10 transition-all duration-300 ease-in-out ${
+        className={` lg:hidden fixed top-0 right-0 bottom-0 left-0 bg-white  transition-all duration-300 ease-in-out z-30 ${
           isMenuOpen ? 'transform translate-x-0' : 'transform translate-x-full'
         }`}
       >
-        <div className="p-5 mt-2">
-          <a href="#">
+        <div className="p-5 mt-2 ">
+          <a href="/">
             {' '}
             <Image
               className="cursor-pointer mb-5"
               alt="tito logo"
               width={110}
               height={110}
-              src="/logo-tito-white.png"
+              src="/logosTito/logo-tito-white.png"
             />
           </a>
+
           <a
-            href="#"
+            href="/internationallogistcs"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            SOBRE NÓS
+            LOGISTICA INTERNACIONAL
           </a>
           <a
-            href="#"
+            href="/titotools"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            SERVIÇOS
+            FERRAMENTAS
           </a>
           <a
-            href="#"
-            className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
-          >
-            COMUNICAÇÃO
-          </a>
-          <a
-            href="#"
+            href="/certifications"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
             CERTIFICAÇÕES
-          </a>
-          <a
-            href="/contact"
-            className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
-          >
-            CONTATO
           </a>
           <a
             href="/units"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
             UNIDADES
+          </a>
+          <a
+            href="/traceability"
+            className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
+          >
+            RASTREABILIADDE
+          </a>
+          <a
+            href="/report"
+            className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
+          >
+            DENUNCIA
           </a>
           <a
             href="/contact"
@@ -309,9 +307,12 @@ export default function Header() {
             </div>
           </div>
 
-          <button className="w-full bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mt-4">
-            Global View
-          </button>
+          <a
+            href="https://home.titoonline.com.br/intranet_1/index.php"
+            className="w-full  bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mt-5"
+          >
+            INTRANET
+          </a>
         </div>
       </div>
     </div>

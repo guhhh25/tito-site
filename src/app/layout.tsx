@@ -9,7 +9,14 @@ export default function RootLayout({
   return (
     <html lang="pt">
       <body>
-        <Toaster position="top-right" />
+        <div style={{ width: '900px' }}>
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              className: 'w-[400px] h-[80px] text-lg mt-[100px]',
+            }}
+          />
+        </div>
         {children}
       </body>
     </html>

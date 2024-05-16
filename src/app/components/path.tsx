@@ -21,7 +21,7 @@ export default function Path(props: PathProps) {
         {namePath1}
       </a>
 
-      <MdKeyboardArrowRight className="mt-1" />
+      <MdKeyboardArrowRight className="mt-2" />
 
       <a
         className="transiction ease-in-out delay-150 duration-100 hover:text-blue-500"
@@ -29,7 +29,7 @@ export default function Path(props: PathProps) {
       >
         {namePath2}
       </a>
-      {namePath3 ? '>' : ''}
+      {namePath3 ? <MdKeyboardArrowRight className="mt-2" /> : ''}
 
       <a
         className="transiction ease-in-out delay-150 duration-100 hover:text-blue-500"

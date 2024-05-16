@@ -27,15 +27,12 @@ export default function Carrousel() {
             />
           </Parallax>
         </ParallaxProvider>
-        <div className="absolute top-1/2 left-1/2 lg:left-1/3 transform -translate-x-1/2 -translate-y-1/2 text-start text-white text-center lg:text-start lg:ml-20">
-          <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
+        <div className="absolute top-1/2 lg:top-[50%]  left-1/2 xl:left-[40%] transform -translate-x-1/2 -translate-y-1/2 text-white text-center lg:text-start">
+          <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold lg:text-left">
             Um dos grandes objetivos de qualquer operação logística é a redução
             de custos. Porém simplesmente cortar custos buscando preço nos BIDs,
             traz impacto direto na qualidade.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 w-48 sm:w-[200px] mt-5">
-            Veja mais sobre
-          </button>
         </div>
       </div>
 
@@ -52,15 +49,12 @@ export default function Carrousel() {
           </Parallax>
         </ParallaxProvider>
 
-        <div className="absolute top-1/2 left-1/2 lg:left-1/3 transform -translate-x-1/2 -translate-y-1/2 text-start text-white text-center lg:text-start lg:ml-20">
-          <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
+        <div className="absolute top-1/2 lg:top-[50%]  left-1/2 xl:left-[40%]  transform -translate-x-1/2 -translate-y-1/2 text-white text-center lg:text-start">
+          <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold lg:text-left">
             se por um lado os importadores e exportadores precisam cortar
             gastos, por outro é igualmente essencial que se tornem mais
             competitivos. E isso implica em atingir a máxima qualidade.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 w-48 sm:w-[200px] mt-5">
-            Veja mais sobre
-          </button>
         </div>
       </div>
       <div>
@@ -76,13 +70,12 @@ export default function Carrousel() {
           </Parallax>
         </ParallaxProvider>
 
-        <div className="absolute top-1/2 left-1/2 lg:left-1/3 transform -translate-x-1/2 -translate-y-1/2 text-start text-white text-center lg:text-start lg:ml-20">
-          <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold">
-            solução reside em reduzir custo sim, mas de modo inteligente. Neste sentido, o impacto de uma gestão integrada e otimizada é muito maior do que simplesmente negociar preço.
+        <div className="absolute top-1/2 lg:top-[50%]  left-1/2 xl:left-[40%]  transform -translate-x-1/2 -translate-y-1/2 text-white text-center lg:text-start">
+          <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold lg:text-left">
+            solução reside em reduzir custo sim, mas de modo inteligente. Neste
+            sentido, o impacto de uma gestão integrada e otimizada é muito maior
+            do que simplesmente negociar preço.
           </p>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2 w-48 sm:w-[200px] mt-5">
-            Veja mais sobre
-          </button>
         </div>
       </div>
     </Carousel>

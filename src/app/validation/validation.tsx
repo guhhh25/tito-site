@@ -15,3 +15,14 @@ export const schema = yup
       .min(10, 'Minimo 10 caracteres.'),
   })
   .required()
+
+export const reportSchema = yup
+  .object({
+    name: yup.string(),
+    email: yup.string().email('Email Invalído'),
+    date: yup.string().datetime(),
+    phone: yup.string(),
+    company: yup.string().required('Este campo é obrigatório!'),
+    reason: yup.string().required('Este campo é obrigatório!'),
+  })
+  .required()

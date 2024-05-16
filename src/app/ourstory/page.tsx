@@ -40,24 +40,24 @@ export default function OurStory() {
                     </div>
                     <div className="w-full">
                       <Image
-                          src={'/story/history01.jpg'}
-                          className=""
-                          objectFit="fit"
-                          height={800}
-                          width={690}
-                          alt="history01"
+                        src={'/story/history01.jpg'}
+                        className=""
+                        objectFit="fit"
+                        height={800}
+                        width={690}
+                        alt="history01"
                       />
                     </div>
                   </div>
                   <div className="flex flex-col xl:flex-row px-[65px]  items-center">
                     <div className="w-full">
                       <Image
-                          src={'/story/history02.jpg'}
-                          className=""
-                          objectFit="fit"
-                          height={800}
-                          width={690}
-                          alt="history02"
+                        src={'/story/history02.jpg'}
+                        className=""
+                        objectFit="fit"
+                        height={800}
+                        width={690}
+                        alt="history02"
                       />
                     </div>
                     <div className="w-full">
@@ -105,12 +105,12 @@ export default function OurStory() {
                   <div className="flex flex-col xl:flex-row px-[65px]  items-center">
                     <div className="w-full">
                       <Image
-                          src={'/story/history02.jpg'}
-                          className=""
-                          objectFit="fit"
-                          height={800}
-                          width={690}
-                          alt="history02"
+                        src={'/story/history02.jpg'}
+                        className=""
+                        objectFit="fit"
+                        height={800}
+                        width={690}
+                        alt="history02"
                       />
                     </div>
                     <div className="w-full">

@@ -1,26 +1,26 @@
-import { useState } from "react";
-import { HandleCalculate } from "../Utils/Calculate";
+import { useState } from 'react'
+import { HandleCalculate } from '../Utils/Calculate'
 
 export default function Calculator() {
-  const [result, setResult] = useState<number>();
+  const [result, setResult] = useState<number>()
   const [inputs, setInputs] = useState({
-    units: "",
-    length: "",
-    width: "",
-    height: "",
-  });
+    units: '',
+    length: '',
+    width: '',
+    height: '',
+  })
 
   const handleChange = (
     e:
       | React.ChangeEvent<HTMLSelectElement>
       | React.ChangeEvent<HTMLInputElement>
   ) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target
     setInputs({
       ...inputs,
       [name]: value,
-    });
-  };
+    })
+  }
 
   const handleSubmit = () => {
     let calculate = HandleCalculate(
@@ -28,9 +28,9 @@ export default function Calculator() {
       inputs.width,
       inputs.height,
       inputs.units
-    );
-    setResult(calculate as any);
-  };
+    )
+    setResult(calculate as any)
+  }
 
   return (
     <div className="bg-white  w-[500px] border-1 rounded-lg bg-white p-10">
@@ -48,7 +48,7 @@ export default function Calculator() {
             onChange={handleChange}
             className="bg-gray-50 border border-gray-300 focus:outline-none  text-sm rounded-lg focus:border-blue-300 block w-full p-2.5 text-gray-500 "
           >
-            <option disabled value="" defaultValue={"selecione"}>
+            <option disabled value="" defaultValue={'selecione'}>
               Selecione...
             </option>
             <option value="cm">cm / kg</option>
@@ -104,10 +104,10 @@ export default function Calculator() {
           Calcular
         </button>
 
-        <span className={`mr-8 ${result !== undefined ? "block" : "hidden"}`}>
-          Peso volumetrico: {result}{" "}
+        <span className={`mr-8 ${result !== undefined ? 'block' : 'hidden'}`}>
+          Peso volumetrico: {result}{' '}
         </span>
       </div>
     </div>
-  );
+  )
 }

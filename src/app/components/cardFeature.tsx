@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function CardFeature(props: any) {
   const { text, title, icon } = props
 

@@ -2,11 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-body, html {
+body,
+html {
   background-color: #f2f2f2;
-  font-family: 'Roboto', sans-serif;
 }
-
 
 .tito-font {
   font-family: 'Roboto', sans-serif;
@@ -83,6 +82,14 @@ h2 {
   color: #363636;
 }
 
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+span {
+  font-family: 'Roboto', sans-serif;
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
@@ -121,7 +128,7 @@ h2 {
 }
 
 .card:hover .cardBtn {
-  width: 20%;
+  width: 100%;
 }
 
 .card:hover .cardLine {

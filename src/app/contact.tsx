@@ -10,11 +10,14 @@ import Mapa from './components/map'
 import { schema } from './validation/validation'
 import axios from 'axios'
 import dynamic from 'next/dynamic'
+import { useState } from 'react'
 
 export default function Contact() {
   const MapWithNoSSR = dynamic(() => import('./components/map'), {
     ssr: false,
   })
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const {
     register,
@@ -26,6 +29,7 @@ export default function Contact() {
 
   type FormData = yup.InferType<typeof schema>
   const onSubmit = async (data: any) => {
+    setIsLoading(true)
     try {
       const body = {
         from: 'Acme <onboarding@resend.dev>',
@@ -41,6 +45,7 @@ export default function Contact() {
       await axios.post('/api', body)
 
       toast.success('Mensagem enviada com sucesso!')
+      setIsLoading(false)
     } catch (error) {
       toast.error('Ocorreu um erro ao enviar a mensagem!')
       console.error('Erro ao enviar email:', error)
@@ -122,7 +127,7 @@ export default function Contact() {
                   Mensagem
                 </label>
               </div>
-              <Button text="Enviar" onclick={() => ''} />
+              <Button isLoading={isLoading} text="Enviar" onclick={() => ''} />
             </div>
           </div>
         </form>

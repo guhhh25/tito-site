@@ -8,7 +8,7 @@ export default function BackToTopBtn(props: any) {
     <div
       onClick={() => BackPageToTop()}
       id="backToTopBtn"
-      className={`transition-opacity duration-500 ease-in-out fixed bottom-20 right-5 z-50 ${
+      className={`transition-opacity duration-500 ease-in-out sm:fixed bottom-20 right-5 z-10  ${
         hidden
           ? 'opacity-0 pointer-events-none'
           : 'opacity-100 pointer-events-auto'

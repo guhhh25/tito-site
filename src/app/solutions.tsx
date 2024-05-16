@@ -11,23 +11,18 @@ export default function Solutions() {
         <Card
           image={'/solutions/truckcard.jpg'}
           title="Transporte Internacional"
-          text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, nulla! Maiores et perferendis eaque,
-              exercitationem praesentium nihil. "
+          text=" A TITO garante agilidade e visibilidade em embarques de Cargas Marítimas, Aéreas e Terrestres, com competências em modernos sistemas de gerenciamento e serviços especializados em diversos modais."
         />
         <Card
           image={'/solutions/card2.jpg'}
           title="Gestão Aduanera"
-          text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, nulla! Maiores et perferendis eaque,
-              exercitationem praesentium nihil."
+          text="
+          A Tito oferece suporte jurídico em Direito Aduaneiro, agilizando operações comerciais globalmente. Sua equipe participa ativamente de entidades do comércio internacional, garantindo eficiência em vários setores de mercado."
         />
         <Card
           image={'/solutions/card3.jpg'}
-          title="Logística Nacional"
-          text=" Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Voluptatibus quia, nulla! Maiores et perferendis eaque,
-              exercitationem praesentium nihil."
+          title="Planejamento"
+          text="Ao optar pela Tito, sua empresa garante não apenas um serviço, mas um resultado. Especializada em soluções integradas, a Tito oferece tudo o que é necessário para o sucesso do seu embarque em um único fornecedor."
         />
       </div>
     </div>

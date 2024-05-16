@@ -1,8 +1,20 @@
-document.onload = () => {
-  const d = new Date()
-  d.setTime(d.getTime() + exdays * 24 * 60 * 60 * 1000)
-  let expires = 'expires=' + d.toUTCString()
-  document.cookie = cname + '=' + cvalue + ';' + expires + ';path=/'
+export function VerifyCookies() {
+  const cookies = document.cookie.split(';')
+  const cookieExists = cookies.some((cookie) =>
+    cookie.trim().startsWith('cookies=true')
+  )
 
-  console.log(expires)
+  return cookieExists
+}
+
+export function setCookie() {
+  // Calcula a data de expiração para o próximo dia
+  const expirationDate = new Date()
+  expirationDate.setDate(expirationDate.getDate() + 1)
+
+  // Formata a data de expiração para o formato de cookie
+  const expires = expirationDate.toUTCString()
+
+  // Define o cookie com a data de expiração calculada
+  document.cookie = `cookies=true; expires=${expires}; path=/`
 }
