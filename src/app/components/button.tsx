@@ -3,7 +3,7 @@ import { TiArrowRightThick } from 'react-icons/ti'
 
 interface buttonProps {
   text: string
-  onclick: (e: any) => any
+  onclick?: (e: any) => any
 }
 
 export default function Button(props: buttonProps) {
