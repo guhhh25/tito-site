@@ -3,7 +3,7 @@ import { EmailReportTemplate } from '@//components/emailReportTemplate'
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY)
+const resend = new Resend('re_UtMnJztB_46hArSyvSiwo9aB4wegw2AtC')
 
 export async function POST(req: NextRequest) {
   const {
