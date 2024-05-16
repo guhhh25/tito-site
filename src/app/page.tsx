@@ -17,13 +17,16 @@ import Contact from './contact'
 import CookiesModal from './components/cookiesModal'
 import axios from 'axios'
 import { GetServerSideProps } from 'next'
-
+import dynamic from 'next/dynamic'
 
 export default function Page() {
   const [isHidden, setIsHidden] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
   const [acceptCookies, setAcceptCookies] = useState(false)
 
+  const MapWithNoSSR = dynamic(() => import('./components/map'), {
+    ssr: false,
+  })
 
   useEffect(() => {
     const handleScroll = () => {
@@ -70,7 +73,10 @@ export default function Page() {
               <Solutions />
               <Partnerships />
               <Features />
-              <Contact />
+              <div className="flex px-20 ">
+                <Contact />
+                <MapWithNoSSR />
+              </div>
             </Fade>
             <Footer />
           </div>
@@ -79,4 +85,3 @@ export default function Page() {
     </div>
   )
 }
-

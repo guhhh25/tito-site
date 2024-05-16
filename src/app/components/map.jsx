@@ -1,20 +1,20 @@
-import "leaflet/dist/leaflet.css";
-import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import L from "leaflet";
-import "leaflet-extra-markers/dist/js/leaflet.extra-markers.min.js";
-import "leaflet-extra-markers/dist/css/leaflet.extra-markers.min.css";
+import 'leaflet/dist/leaflet.css'
+import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
+import L from 'leaflet'
+import 'leaflet-extra-markers/dist/js/leaflet.extra-markers.min.js'
+import 'leaflet-extra-markers/dist/css/leaflet.extra-markers.min.css'
 
 export default function Mapa() {
   const extraMarkerIcon = L.ExtraMarkers.icon({
-    icon: "fa-location-dot",
-    markerColor: "blue",
-    shape: "circle",
-    prefix: "fa",
-  });
+    icon: 'fa-location-dot',
+    markerColor: 'blue',
+    shape: 'circle',
+    prefix: 'fa',
+  })
 
   return (
     <MapContainer
-      className="2xl:w-[800px] max-w-[1000px] 2xl:max-w-[800px] h-[562px]"
+      className="2xl:w-[800px] max-w-[1000px] 2xl:max-w-[800px] w-full max-h-[573px] "
       center={[-23.616595683387494, -46.55813227977169]}
       zoom={103}
       scrollWheelZoom={false}
@@ -32,5 +32,5 @@ export default function Mapa() {
         </Popup>
       </Marker>
     </MapContainer>
-  );
+  )
 }
