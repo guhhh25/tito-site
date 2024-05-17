@@ -10,17 +10,19 @@ export default function InternationalLogistic() {
   }
 
   return (
-    <div className="flex flex-col  lg:flex-row   mt-10 ">
-      <div>
+    <div className="flex flex-col  lg:flex-row    mt-10 mb-10 justify-center items-center ">
+      <div className="flex justify-center items-center flex-col">
         <Title title="LOGÍSTICA INTERNACIONAL" />
-
-        <p className="tracking-wider text-lg lg:mt-5">
-          As competências que a TITO desenvolveu, amparadas em modernos sistemas
-          de gerenciamento dos fluxos, garantem agilidade e visibilidade nos
-          embarques de Agenciamento de Cargas Marítimas, Aéreas e Terrestres.
-        </p>
+        <div className="flex p-6 border border-gray-300 rounded-lg shadow bg-white">
+          <p className=" mt-5 ">
+            As competências que a TITO desenvolveu, amparadas em modernos
+            sistemas de gerenciamento dos fluxos, garantem agilidade e
+            visibilidade nos embarques de Agenciamento de Cargas Marítimas,
+            Aéreas e Terrestres.
+          </p>
+        </div>
         <div className="w-full mt-8">
-          <div className="flex justify-center">
+          <div className="flex justify-center flex-wrap ">
             <button
               onClick={() => setTypeState('maritmo')}
               className={`${

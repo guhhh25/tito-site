@@ -1,16 +1,16 @@
-import { Fade } from "react-awesome-reveal";
-import { MdCheck } from "react-icons/md";
+import { Fade } from 'react-awesome-reveal'
+import { MdCheck } from 'react-icons/md'
 
 interface TypeProps {
-  type: string;
+  type: string
 }
 
 export default function InternationalLogisticContent(props: TypeProps) {
-  const { type } = props;
+  const { type } = props
 
   return (
     <div className=" w-full">
-      {type === "maritmo" ? (
+      {type === 'maritmo' ? (
         <Fade>
           <div className="block w-full p-6 border border-gray-300 rounded-lg shadow bg-gray-200 mt-1">
             <p className="text-lg w-full font-normal text-black">
@@ -20,31 +20,31 @@ export default function InternationalLogisticContent(props: TypeProps) {
             <ul className="mt-5 font-normal text-black  text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
               <div>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Relacionamento com as principais
                   cias marítimas e NVOCC
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Tarifas competitivas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Embarques Door to Door
                 </li>
               </div>
               <div>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Embarques FCL
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Consolidação de carga e rotas
                   regulares
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" />
                   Follow-up diário e relatórios via sistema
                 </li>
@@ -53,9 +53,9 @@ export default function InternationalLogisticContent(props: TypeProps) {
           </div>
         </Fade>
       ) : (
-        ""
+        ''
       )}
-      {type === "aereo" ? (
+      {type === 'aereo' ? (
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
             <p className="text-lg w-full font-normal text-black">
@@ -65,23 +65,23 @@ export default function InternationalLogisticContent(props: TypeProps) {
             <ul className="mt-5 font-normal text-black  text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
               <div>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Tarifas competitivas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" />
                   Consolidação de cargas e rotas regulares
                 </li>
               </div>
               <div>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Consolidado semanal Miami x
                   Viracopos
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Follow-up diário via sistema
                 </li>
               </div>
@@ -89,9 +89,9 @@ export default function InternationalLogisticContent(props: TypeProps) {
           </div>
         </Fade>
       ) : (
-        ""
+        ''
       )}
-      {type === "rodoviario" ? (
+      {type === 'rodoviario' ? (
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
             <p className="w-full text-lg w-full">
@@ -101,41 +101,41 @@ export default function InternationalLogisticContent(props: TypeProps) {
             <ul className="mt-5 text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
               <div>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Brasil l Argentina l Chile l
                   Paraguai l Uruguai
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" />
                   Carga Consolidada e Full: Geral e Química
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Rumos Sul e Norte
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" />
                   Carga Geral e Química
                 </li>
               </div>
               <div>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Tarifas competitivas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Bases de apoio e liberação nas
                   principais fronteiras
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Opção MIC DTA (Door to Door)
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Rastreamento e Follow-up dos
                   embarques em tempo real.
                 </li>
@@ -144,10 +144,10 @@ export default function InternationalLogisticContent(props: TypeProps) {
           </div>
         </Fade>
       ) : (
-        ""
+        ''
       )}
 
-      {type === "projeto" ? (
+      {type === 'projeto' ? (
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
             <p className="w-full text-lg">
@@ -155,23 +155,23 @@ export default function InternationalLogisticContent(props: TypeProps) {
             </p>
             <ul className="mt-5 text-lg">
               <li className="flex items-center">
-                {" "}
+                {' '}
                 <MdCheck className="mr-1" /> Equipe com know-how e dedicada em
                 cargas especiais que planejam todas as etapas do projeto
               </li>
               <li className="flex items-center">
-                {" "}
+                {' '}
                 <MdCheck className="mr-1" /> Estudo de viabilidade do projeto
                 com melhor custo e menor tempo
               </li>
               <li className="flex items-center">
-                {" "}
+                {' '}
                 <MdCheck className="mr-1" /> Acompanhamento físico do embarque
                 na origem, seja através da nossa rede de agentes ou
                 profissionais Tito
               </li>
               <li className="flex items-center">
-                {" "}
+                {' '}
                 <MdCheck className="mr-1" /> Follow-up diário e relatórios via
                 sistema
               </li>
@@ -179,9 +179,9 @@ export default function InternationalLogisticContent(props: TypeProps) {
           </div>
         </Fade>
       ) : (
-        ""
+        ''
       )}
-      {type === "planejamento" ? (
+      {type === 'planejamento' ? (
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
             <p className="w-full text-lg">
@@ -190,25 +190,25 @@ export default function InternationalLogisticContent(props: TypeProps) {
             <ul className="mt-5 text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
               <div>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Redução de multas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Redução de tempo de cargas
                   paradas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Maior visibilidade da operação
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Redução dos custos totais e
                   ganhos operacionais
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Melhores alternativas em
                   contingência
                 </li>
@@ -216,47 +216,47 @@ export default function InternationalLogisticContent(props: TypeProps) {
                   - Efetivação de Ex-tarifários e Recuperação de Impostos Pagos
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Defesas de Multas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Regimes de Origem
                 </li>
               </div>
               <div>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Maior visibilidade da operação
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Redução de multas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Redução de tempo de cargas
                   paradas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Maior visibilidade da operação
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Redução de multas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Redução de tempo de cargas
                   paradas
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Maior visibilidade da operação
                 </li>
                 <li className="flex items-center">
-                  {" "}
+                  {' '}
                   <MdCheck className="mr-1" /> Follow-up diário e relatórios via
                   sistema
                 </li>
@@ -265,11 +265,11 @@ export default function InternationalLogisticContent(props: TypeProps) {
           </div>
         </Fade>
       ) : (
-        ""
+        ''
       )}
-      {type === "rastreabilidade" ? (
+      {type === 'rastreabilidade' ? (
         <Fade>
-          <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
+          <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1 ">
             <p className="w-full lg:w-[85%] text-lg  ">
               O conceito de Smartmodal Logistics, também está fortemente
               embasado em alta tecnologia. Uma poderosa intranet, com um sistema
@@ -288,22 +288,22 @@ export default function InternationalLogisticContent(props: TypeProps) {
             </p>
             <ul className="mt-5 text-lg">
               <li className="flex items-center">
-                {" "}
+                {' '}
                 <MdCheck className="mr-1" /> Maior visibilidade em todas as
                 etapas do processo;
               </li>
               <li className="flex items-center">
-                {" "}
+                {' '}
                 <MdCheck className="mr-1" /> Relatórios gerenciais de acordo com
                 a necessidade de cada operação;
               </li>
               <li className="flex items-center">
-                {" "}
+                {' '}
                 <MdCheck className="mr-1" /> Documentos relativos às operações
                 no sistema.
               </li>
               <li className="flex items-center">
-                {" "}
+                {' '}
                 <MdCheck className="mr-1" /> Follow-up diário e relatórios via
                 sistema
               </li>
@@ -311,8 +311,8 @@ export default function InternationalLogisticContent(props: TypeProps) {
           </div>
         </Fade>
       ) : (
-        ""
+        ''
       )}
     </div>
-  );
+  )
 }

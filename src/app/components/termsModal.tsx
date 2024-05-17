@@ -25,7 +25,7 @@ export default function TermsModal() {
               isModalOpen ? 'block ' : 'hidden'
             } flex justify-center items-center animate-fade-down fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full`}
           >
-            <div className="relative p-4 w-full max-w-[1000px] w-full max-h-full">
+            <div className="relative p-4 w-full max-w-[1000px] w-full max-h-full ">
               <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
                 <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
@@ -56,7 +56,7 @@ export default function TermsModal() {
                 </div>
 
                 <div className="p-4 md:p-5 space-y-4">
-                  <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  <p className="text-sm lg:text-base leading-relaxed text-gray-500 dark:text-gray-400">
                     Site hospeda um sistema on line e estritamente confidencial.
                     Pode ser utilizado por qualquer indivíduo que possua contato
                     direto ou indireto com a empresa. A empresa encoraja a todos

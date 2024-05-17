@@ -11,7 +11,7 @@ export default function Carrousel() {
       showArrows={false}
       showStatus={false}
       showThumbs={false}
-      interval={2000}
+      interval={4000}
       transitionTime={2500}
       className="mb-10 w-full"
     >

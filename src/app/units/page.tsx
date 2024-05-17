@@ -39,8 +39,8 @@ export default function Units() {
             link2="/units"
           />
           <div className="content w-full h-full mb-10">
-            <div className="px-10 mt-5">
-              <div className="bg-white p-8 rounded-lg h-full">
+            <div className="px-10 mt-5 w-full">
+              <div className="bg-white p-8 rounded-lg h-full w-full">
                 <p className="text-gray-600 mb-8 text-lg">
                   A Tito é membro da Cargo Partners Network, uma rede mundial de
                   agente de cargas e operadores logísticos. A CPN tem mais de
@@ -56,44 +56,47 @@ export default function Units() {
                     height={200}
                   />
                 </div>
-                <div className="flex justify-center mt-10 mb-5" role="group">
+                <div
+                  className="flex justify-center flex-col xl:flex-row mt-10 mb-5 w-full"
+                  role="group"
+                >
                   <button
                     type="button"
-                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-s-lg hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] text-sm mb-2 xl:mb-0 font-medium text-gray-900 bg-white border border-gray-200 xl:rounded-s-lg hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('brasil')}
                   >
                     Brasil
                   </button>
                   <button
                     type="button"
-                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] mb-2 xl:mb-0  text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('argentina')}
                   >
                     Argentina
                   </button>
                   <button
                     type="button"
-                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] mb-2 xl:mb-0  text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('usa')}
                   >
                     USA
                   </button>
                   <button
                     type="button"
-                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] mb-2 xl:mb-0  text-sm font-medium text-gray-900 bg-white border border-gray-200  hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('mexico')}
                   >
                     MEXICO
                   </button>
                   <button
                     type="button"
-                    className="px-6 py-3 min-w-[120px] text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-lg hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
+                    className="px-6 py-3 min-w-[120px] mb-2 xl:mb-0  text-sm font-medium text-gray-900 bg-white border border-gray-200 xl:rounded-r-lg hover:bg-gray-100 hover:text-blue-700  focus:text-blue-700 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:text-white dark:hover:bg-gray-700  dark:focus:text-white"
                     onClick={() => handleCoutry('holanda')}
                   >
                     HOLANDA
                   </button>
                 </div>
-                <div className="flex flex-col flex-wrap lg:flex-row bg-gray-100 w-full h-fit py-5 mt-1 justify-center items-center">
+                <div className="flex flex-col  lg:flex-row bg-gray-100 w-full h-fit py-5 mt-1 justify-center items-center">
                   <div className="hidden xl:block">
                     {country.country === 'brasil' ? (
                       <div>

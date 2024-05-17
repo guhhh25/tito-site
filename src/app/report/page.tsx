@@ -260,6 +260,7 @@ export default function Report() {
                                     <button
                                       type="button"
                                       className="p-2 text-gray-500 rounded cursor-pointer hover:text-gray-900 hover:bg-gray-100 dark:text-gray-400 dark:hover:text-white "
+                                      onClick={() => console.log('oi')}
                                     >
                                       <svg
                                         className="w-4 h-4"

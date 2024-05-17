@@ -15,7 +15,7 @@ export default function UnitItems(props: UnitItemsProps) {
 
   return (
     <Fade>
-      <div className="relative flex flex-col gap-4 text-gray-700 border-2 border-gray-400 text-sm 2xl:text-lg  bg-gray-200 p-5 rounded-sm h-fit w-[400px] sm:w-[550px]  2xl:w-[720px] mx-5">
+      <div className="relative flex flex-col gap-4 text-gray-700  border-2 border-gray-400 text-sm 2xl:text-lg  bg-gray-200 p-5 rounded-sm h-[170px] xl:h-[140px] w-[300px] sm:w-[450px]  2xl:w-[720px] mx-5">
         {country as any}
 
         <p className="flex items-center gap-2 font-semibold">
