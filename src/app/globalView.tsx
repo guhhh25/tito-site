@@ -49,13 +49,13 @@ export default function GlobalView() {
             image="/globalView/painel.png"
             title="Painel"
             content="
-            No painel de controle, exibimos uma visualização simplificada e organizada do status de cada processo logístico em diferentes etapas. As colunas representam desde Aguardando Embarque até Faturado, detalhando o progresso de cada item. Para cada processo, fornecemos informações cruciais, como o número do processo (IM) referenciado pela TITO, juntamente com dados sobre embarque, chegada e outros marcos importantes. Essa abordagem facilita o acompanhamento e a gestão eficiente de todos os processos em andamento."
+            Nosso painel de controle oferece uma visualização clara do status de cada processo logístico, desde Aguardando Embarque até Faturado, simplificando o acompanhamento de cada etapa. Fornecemos informações cruciais, como o número do processo (IM) e dados sobre embarque, chegada e marcos importantes, facilitando a gestão eficiente dos processos em andamento."
           />,
           <GlobalViewCard
             image="/globalView/relatorio.png"
             title="Relatorios"
             content="
-            Nossa plataforma oferece uma solução eficiente para geração automática de relatórios em diversos formatos, como Excel, TXT e PDF. Com processos automatizados, garantimos a precisão e agilidade na criação de relatórios detalhados sobre suas operações logísticas. Esses relatórios fornecem insights valiosos sobre o desempenho, eficiência e tendências, permitindo uma tomada de decisão informada e estratégica. Essa funcionalidade simplifica significativamente o processo de geração e compartilhamento de relatórios, otimizando a gestão logística de ponta a ponta.
+            Oferecemos uma solução eficiente de geração automática de relatórios em diversos formatos (Excel, TXT e PDF), garantindo precisão e agilidade. Esses relatórios fornecem insights valiosos sobre desempenho, eficiência e tendências, facilitando tomadas de decisão informadas e estratégicas. Simplificamos o processo de geração e compartilhamento de relatórios, otimizando a gestão logística de ponta a ponta.
 
             "
           />,
