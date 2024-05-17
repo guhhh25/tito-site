@@ -109,6 +109,7 @@ span {
 }
 
 .card .cardBtn {
+  height: 38px;
   width: 60px; /* Defina o valor inicial para zero */
   transition: width 0.3s; /* Aplicar transição */
 }
@@ -128,7 +129,7 @@ span {
 }
 
 .card:hover .cardBtn {
-  width: 100%;
+  width: 25%;
 }
 
 .card:hover .cardLine {

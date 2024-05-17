@@ -33,7 +33,7 @@ export default function Solutions() {
           href="/drawback"
           image={'/solutions/drawback.jpeg'}
           title="Drawback"
-          text="O Drawback é vital para exportações, com modalidades como Suspensão, Isenção e Restituição de Tributos sobre insumos importados. Investimos em sistemas e ferramentas para agilizar o processo, reduzindo custos e aprimorando a cadeia de exportação."
+          text="O Drawback é crucial para exportações, com modalidades como Suspensão, Isenção e Restituição de Tributos sobre insumos importados. Investimos em sistemas e ferramentas para agilizar o processo, reduzindo custos e melhorando a cadeia de exportação."
         />
         <Card
           image={'/solutions/rastreabilidade.jpeg'}

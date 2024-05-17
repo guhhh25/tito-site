@@ -25,12 +25,12 @@ export default function Card(props: cardProps) {
           alt="service"
         />
 
-        <div className="px-5 pt-5 h-[250px] mb-5">
+        <div className="px-5 pt-5 h-[270px] mb-5">
           <div className="font-bold text-xl mb-2">{title}</div>
           <div className="cardLine bg-blue-400 w-[80px] h-[8px] rounded-full mb-5"></div>
           <p className="text-gray-700 text-base ">{text}</p>
           <button className="cardBtn bg-blue-400 w-[60px] h-2 absolute  mb-5 -bottom-5 right-0">
-            {/* <GoArrowRight className="w-[50px] h-[30px]" /> */}
+            <GoArrowRight className="w-[50px] h-[30px]" />
           </button>
         </div>
       </div>
