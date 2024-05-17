@@ -13,6 +13,7 @@ export default function Carrousel() {
       showThumbs={false}
       interval={4000}
       transitionTime={2500}
+      emulateTouch
       className="mb-10 w-full"
     >
       <div className="relative">

@@ -8,13 +8,11 @@ export default function GlobalView() {
   return (
     <div className="w-full">
       <Carousel
-        autoPlay
-        infiniteLoop
         showArrows={false}
         showStatus={false}
-        showThumbs={false}
         interval={4000}
-        transitionTime={2500}
+        emulateTouch
+        transitionTime={1500}
       >
         {[
           <GlobalViewCard

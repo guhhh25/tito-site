@@ -18,6 +18,7 @@ import CookiesModal from './components/cookiesModal'
 import axios from 'axios'
 import { GetServerSideProps } from 'next'
 import dynamic from 'next/dynamic'
+import Image from 'next/image'
 
 export default function Page() {
   const [isHidden, setIsHidden] = useState(true)

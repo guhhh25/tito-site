@@ -11,7 +11,7 @@ export default function GlobalViewCard(props: GlobalViewCardProps) {
   const { image, title, content } = props
 
   return (
-    <div className="flex  justify-center items-center px-10 lg:px-20 py-10  ">
+    <div className="flex  justify-center items-center px-10 lg:px-20 py-10  onclick:cursor-grab hover:cursor-grab">
       <div className=" flex flex-col xl:max-w-[1720px] xl:h-[360px]  justify-center items-center  w-full rounded-lg bg-white text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-white xl:flex-row">
         <Image
           height={1000}
