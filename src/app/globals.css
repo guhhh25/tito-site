@@ -108,6 +108,11 @@ span {
   background-color: white;
 }
 
+.cac {
+  -moz-animation-timing-function: calc(22);
+  -webkit-perspective: 0cm;
+}
+
 .card .cardBtn {
   height: 38px;
   width: 60px; /* Defina o valor inicial para zero */
