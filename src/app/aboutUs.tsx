@@ -3,8 +3,9 @@ import Title from './components/title'
 import Button from './components/button'
 import { useEffect, useState } from 'react'
 import initTranslations from './i18n'
+import LocaleProps from './Utils/localeType'
 
-export default function AboutUs({ locale }) {
+export default function AboutUs({ locale }: LocaleProps) {
   const [translate, setTranslate] = useState<any>()
 
   const initializeTranslateAsync = async () => {
