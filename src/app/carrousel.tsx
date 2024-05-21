@@ -2,8 +2,22 @@ import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Image from 'next/image'
 import { Parallax, ParallaxProvider } from 'react-scroll-parallax'
+import { useEffect, useState } from 'react'
+import initTranslations from './i18n'
+import LocaleProps from './Utils/localeType'
 
-export default function Carrousel() {
+export default function Carrousel({ locale }: LocaleProps) {
+  const [translate, setTranslate] = useState<any>()
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+    console.log(locale)
+  }, [])
   return (
     <Carousel
       autoPlay
@@ -30,9 +44,7 @@ export default function Carrousel() {
         </ParallaxProvider>
         <div className="absolute top-1/2 lg:top-[50%]  left-1/2 xl:left-[40%] transform -translate-x-1/2 -translate-y-1/2 text-white text-center lg:text-start">
           <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold lg:text-left">
-            Um dos grandes objetivos de qualquer operação logística é a redução
-            de custos. Porém simplesmente cortar custos buscando preço nos BIDs,
-            traz impacto direto na qualidade.
+            {translate && translate.t && translate.t('CarroselFirstSlide')}
           </p>
         </div>
       </div>
@@ -52,9 +64,7 @@ export default function Carrousel() {
 
         <div className="absolute top-1/2 lg:top-[50%]  left-1/2 xl:left-[40%]  transform -translate-x-1/2 -translate-y-1/2 text-white text-center lg:text-start">
           <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold lg:text-left">
-            se por um lado os importadores e exportadores precisam cortar
-            gastos, por outro é igualmente essencial que se tornem mais
-            competitivos. E isso implica em atingir a máxima qualidade.
+            {translate && translate.t && translate.t('CarroselSecondSlide')}
           </p>
         </div>
       </div>
@@ -73,9 +83,7 @@ export default function Carrousel() {
 
         <div className="absolute top-1/2 lg:top-[50%]  left-1/2 xl:left-[40%]  transform -translate-x-1/2 -translate-y-1/2 text-white text-center lg:text-start">
           <p className="text-2xl sm:text-3xl lg:text-4xl 3xl:text-5xl font-bold lg:text-left">
-            solução reside em reduzir custo sim, mas de modo inteligente. Neste
-            sentido, o impacto de uma gestão integrada e otimizada é muito maior
-            do que simplesmente negociar preço.
+            {translate && translate.t && translate.t('CarroselThirdSlide')}
           </p>
         </div>
       </div>

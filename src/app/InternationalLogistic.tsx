@@ -1,9 +1,21 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import InternationalLogisticContent from './components/InternationLogisticContent'
 import Title from './components/title'
+import initTranslations from './i18n'
+import LocaleProps from './Utils/localeType'
 
-export default function InternationalLogistic() {
+export default function InternationalLogistic({ locale }: LocaleProps) {
+  const [translate, setTranslate] = useState<any>()
   const [type, setType] = useState('maritmo')
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+  }, [])
 
   const setTypeState = (value: string) => {
     setType(value)
@@ -12,13 +24,18 @@ export default function InternationalLogistic() {
   return (
     <div className="flex flex-col  lg:flex-row    mt-10 mb-10 justify-center items-center ">
       <div className="flex justify-center items-center flex-col">
-        <Title title="LOGÍSTICA INTERNACIONAL" />
+        <Title
+          title={
+            translate &&
+            translate.t &&
+            translate.t('HeaderInternationalLogistic')
+          }
+        />
         <div className="flex p-6 border border-gray-300 rounded-lg shadow bg-white">
           <p className=" mt-5 ">
-            As competências que a TITO desenvolveu, amparadas em modernos
-            sistemas de gerenciamento dos fluxos, garantem agilidade e
-            visibilidade nos embarques de Agenciamento de Cargas Marítimas,
-            Aéreas e Terrestres.
+            {translate &&
+              translate.t &&
+              translate.t('InternationalLogisticsText')}
           </p>
         </div>
         <div className="w-full mt-8">
@@ -31,7 +48,7 @@ export default function InternationalLogistic() {
                   : 'bg-gray-500 hover:bg-gray-700'
               } text-white font-bold py-2 px-6   -mr-1 rounded-b-none`}
             >
-              Marítimo
+              {translate && translate.t && translate.t('Maritime')}
             </button>
             <button
               onClick={() => setTypeState('aereo')}
@@ -41,7 +58,7 @@ export default function InternationalLogistic() {
                   : 'bg-gray-500 hover:bg-gray-700'
               }  text-white font-bold py-2 px-6 `}
             >
-              Aéreo
+              {translate && translate.t && translate.t('Plane')}
             </button>
             <button
               onClick={() => setTypeState('rodoviario')}
@@ -51,7 +68,7 @@ export default function InternationalLogistic() {
                   : 'bg-gray-500 hover:bg-gray-700'
               }  text-white font-bold py-2 px-6 `}
             >
-              Rodoviario
+              {translate && translate.t && translate.t('Road')}
             </button>
             <button
               onClick={() => setTypeState('projeto')}
@@ -61,7 +78,7 @@ export default function InternationalLogistic() {
                   : 'bg-gray-500 hover:bg-gray-700'
               }  text-white font-bold py-2 px-6  `}
             >
-              Projeto
+              {translate && translate.t && translate.t('Project')}
             </button>
             <button
               onClick={() => setTypeState('planejamento')}
@@ -71,7 +88,7 @@ export default function InternationalLogistic() {
                   : 'bg-gray-500 hover:bg-gray-700'
               }  text-white font-bold py-2 px-6 `}
             >
-              Planejamento
+              {translate && translate.t && translate.t('Planning')}
             </button>
             <button
               onClick={() => setTypeState('rastreabilidade')}
@@ -81,11 +98,11 @@ export default function InternationalLogistic() {
                   : 'bg-gray-500 hover:bg-gray-700'
               }  text-white font-bold py-2 px-6   rounded-b-none`}
             >
-              Rastreabilidade
+              {translate && translate.t && translate.t('Traceability')}
             </button>
           </div>
 
-          <InternationalLogisticContent type={type} />
+          <InternationalLogisticContent type={type} locale={locale} />
         </div>
       </div>
     </div>

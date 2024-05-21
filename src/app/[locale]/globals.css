@@ -43,12 +43,12 @@ html {
   filter: brightness(150%) contrast(120%);
 }
 
-#popup {
-  height: 290px;
+.popup {
+  height: 260px;
   width: 280px;
   display: none;
   position: absolute;
-  right: 290px;
+  right: 240px;
   top: 80px;
   background-color: white;
   box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);

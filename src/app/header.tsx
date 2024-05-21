@@ -6,14 +6,37 @@ import { VscArrowDown } from 'react-icons/vsc'
 import { PiChartLineUpThin } from 'react-icons/pi'
 import { PiChartLineDownThin } from 'react-icons/pi'
 import { PiCalendarBlankThin } from 'react-icons/pi'
+import {
+  Dropdown,
+  DropdownTrigger,
+  DropdownMenu,
+  DropdownItem,
+  Button,
+} from '@nextui-org/react'
+import { BR, ES, US } from 'country-flag-icons/react/3x2'
+import initTranslations from './i18n'
+import LocaleProps from './Utils/localeType'
 
 interface usdQuotationValueProps {
   ask: string
   bid: string
   USDBRL: any
+  create_date: string
 }
 
-export default function Header() {
+export default function Header({ locale }: LocaleProps) {
+  const [translate, setTranslate] = useState<any>()
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+    console.log(locale)
+  }, [])
+
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const [usdQuotationValue, setUsdQuotationValue] =
@@ -118,13 +141,15 @@ export default function Header() {
           href="/internationallogistcs"
           className="text-gray-700 hover:text-blue-600"
         >
-          LOGISTICA INTERNACIONAL
+          {translate &&
+            translate.t &&
+            translate.t('HeaderInternationalLogistic')}
         </a>
         <a href="/titotools" className="text-gray-700 hover:text-blue-600">
-          FERRAMENTAS
+          {translate && translate.t && translate.t('HeaderTools')}
         </a>
         <a href="/certifications" className="text-gray-700 hover:text-blue-600">
-          CERTIFICAÇÕES
+          {translate && translate.t && translate.t('HeaderCertifications')}
         </a>
 
         <a
@@ -132,15 +157,17 @@ export default function Header() {
           id="hoverItem"
           className="text-gray-700 hover:text-blue-600"
         >
-          DOLAR
+          {translate && translate.t && translate.t('HeaderDolar')}
         </a>
         <div id="popup" className="popup">
-          <p className="text-xl text-gray-500 mt-2 mb-4">COTAÇÃO DOLAR</p>
+          <p className="text-xl text-gray-500 mt-2 mb-4">
+            {translate && translate.t && translate.t('HeaderQuotationDolar')}
+          </p>
           <div className="flex items-center">
             <VscArrowUp className="w-[16px] h-[16px]" />{' '}
             <p className="text-green-500 ml-2 mt-0.5  font-medium text-[16px]">
               {' '}
-              COMPRA:
+              {translate && translate.t && translate.t('HeaderBuyDolar')}
             </p>
             <span className=" ml-1 mt-0.5 font-medium ">
               ${usdQuotationValue?.USDBRL.bid.substring(0, 4)}
@@ -149,7 +176,7 @@ export default function Header() {
           <div className="flex items-center mt-4">
             <VscArrowDown className="w-[16px] h-[16px]" />
             <p className="text-red-500 ml-2 mt-0.5  font-medium text-[16px]">
-              VENDA:
+              {translate && translate.t && translate.t('HeaderSellDolar')}
             </p>
             <span className=" ml-1 mt-0.5 font-medium ">
               ${usdQuotationValue?.USDBRL.ask.substring(0, 4)}
@@ -158,7 +185,7 @@ export default function Header() {
           <div className="flex items-center mt-4">
             <PiChartLineUpThin className="w-[18px] h-[18px]" />
             <p className="text-green-500 ml-2 mt-0.5  font-medium text-[16px]">
-              VALOR MAIS ALTO:
+              {translate && translate.t && translate.t('HeaderHighValueDolar')}
             </p>
             <span className=" ml-1 font-medium ">
               ${usdQuotationValue?.USDBRL.high.substring(0, 4)}
@@ -167,7 +194,7 @@ export default function Header() {
           <div className="flex items-center mt-4">
             <PiChartLineDownThin className="w-[18px] h-[18px]" />
             <p className="text-red-500 ml-2 mt-0.5  font-medium text-[16px]">
-              VALOR MAIS BAIXO:
+              {translate && translate.t && translate.t('HeaderLowValueDolar')}
             </p>
             <span className="ml-1 font-medium">
               ${usdQuotationValue?.USDBRL.low.substring(0, 4)}
@@ -177,18 +204,20 @@ export default function Header() {
             <PiCalendarBlankThin className="w-[16px] h-[16px]" />
 
             <p className="text-yellow-500 ml-2 mt-0.5  font-medium text-[16px]">
-              DOLAR PTAX EM:
+              {translate && translate.t && translate.t('DOLARPTAX')}
             </p>
-            <span className="ml-1 font-medium">10/04/2024</span>
+            <span className="ml-1 font-medium">
+              {usdQuotationValue?.USDBRL.create_date}
+            </span>
           </div>
         </div>
 
         <a href="/units" className="text-gray-700 hover:text-blue-600">
-          UNIDADES
+          {translate && translate.t && translate.t('HeaderUnits')}
         </a>
 
         <a href="/traceability" className="text-gray-700 hover:text-blue-600">
-          RASTREABILIDADE
+          {translate && translate.t && translate.t('HeaderTraceability')}
         </a>
 
         <a
@@ -196,7 +225,7 @@ export default function Header() {
           id="hoverItem"
           className="text-gray-700 hover:text-blue-600"
         >
-          DENUNCIA
+          {translate && translate.t && translate.t('HeaderReport')}
         </a>
         <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
           <a
@@ -206,6 +235,33 @@ export default function Header() {
             INTRANET
           </a>
         </button>
+
+        <Dropdown>
+          <DropdownTrigger>
+            <Button className="border-none outline-none">
+              {locale === 'pt' ? <BR className="h-10 w-10" /> : ''}
+              {locale === 'en' ? <US className="h-10 w-10" /> : ''}
+              {locale === 'es' ? <ES className="h-10 w-10" /> : ''}
+            </Button>
+          </DropdownTrigger>
+          <DropdownMenu aria-label="Static Actions">
+            <DropdownItem key="new">
+              <a href="/pt">
+                <BR className="h-10 w-10" />
+              </a>
+            </DropdownItem>
+            <DropdownItem key="copy">
+              <a href="/en">
+                <US className="h-10 w-10" />
+              </a>
+            </DropdownItem>
+            <DropdownItem key="edit">
+              <a href="/es">
+                <ES className="h-10 w-10" />
+              </a>
+            </DropdownItem>
+          </DropdownMenu>
+        </Dropdown>
       </div>
 
       {/* Menu mobile */}
@@ -230,62 +286,72 @@ export default function Header() {
             href="/internationallogistcs"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            LOGISTICA INTERNACIONAL
+            {translate &&
+              translate.t &&
+              translate.t('HeaderInternationalLogistic')}
           </a>
           <a
             href="/titotools"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            FERRAMENTAS
+            {translate && translate.t && translate.t('HeaderTools')}
           </a>
           <a
             href="/certifications"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            CERTIFICAÇÕES
+            {translate && translate.t && translate.t('HeaderCertifications')}
           </a>
           <a
             href="/units"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            UNIDADES
+            {translate && translate.t && translate.t('HeaderUnits')}
           </a>
           <a
             href="/traceability"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            RASTREABILIADDE
+            {translate && translate.t && translate.t('HeaderTraceability')}
           </a>
           <a
             href="/report"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            DENUNCIA
+            {translate && translate.t && translate.t('HeaderReport')}
           </a>
           <a
-            href="/contact"
+            href="/"
             id="hoverItem"
             className="block mb-3 py-2 border-b-2 border-bottom hover:text-blue-700"
           >
-            DOLAR
+            {translate && translate.t && translate.t('HeaderDolar')}
           </a>
           <div id="popup" className="popup">
             <p className="text-xl text-gray-500 mt-2 mb-2">COMERCIAL</p>
             <div className="flex items-center">
-              <p className="text-green-500   font-bold text-[16px]">COMPRA:</p>
+              <p className="text-green-500   font-bold text-[16px]">
+                {' '}
+                {translate && translate.t && translate.t('HeaderBuyDolar')}
+              </p>
               <span className=" ml-1 font-bold ">
                 ${usdQuotationValue?.USDBRL.bid.substring(0, 4)}
               </span>
             </div>
             <div className="flex items-center mt-2">
-              <p className="text-red-500 font-bold text-[16px]">VENDA:</p>
+              <p className="text-red-500 font-bold text-[16px]">
+                {' '}
+                {translate && translate.t && translate.t('HeaderSellDolar')}
+              </p>
               <span className="ml-1 font-bold">
                 ${usdQuotationValue?.USDBRL.ask.substring(0, 4)}
               </span>
             </div>
             <div className="flex items-center mt-2">
               <p className="text-green-500 mb-1  font-bold text-[16px]">
-                VALOR MAIS ALTO:
+                {translate &&
+                  translate.t &&
+                  translate.t('HeaderHighValueDolar')}
               </p>
               <span className=" ml-1 font-bold ">
                 ${usdQuotationValue?.USDBRL.high.substring(0, 4)}
@@ -293,7 +359,7 @@ export default function Header() {
             </div>
             <div className="flex items-center mt-2">
               <p className="text-red-500 font-bold text-[16px]">
-                VALOR MAIS BAIXO:
+                {translate && translate.t && translate.t('HeaderLowValueDolar')}
               </p>
               <span className="ml-1 font-bold">
                 ${usdQuotationValue?.USDBRL.low.substring(0, 4)}
@@ -301,18 +367,46 @@ export default function Header() {
             </div>
             <div className="flex items-center mt-2">
               <p className="text-yellow-500 font-bold text-[16px]">
-                DOLAR PTAX EM:
+                {translate && translate.t && translate.t('HeaderDolarPtax')}
               </p>
               <span className="ml-1 font-bold">10/04/2024</span>
             </div>
           </div>
+          <div className="flex items-center justify-center">
+            <a
+              href="https://home.titoonline.com.br/intranet_1/index.php"
+              className="w-full  bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mt-5"
+            >
+              INTRANET
+            </a>
 
-          <a
-            href="https://home.titoonline.com.br/intranet_1/index.php"
-            className="w-full  bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mt-5"
-          >
-            INTRANET
-          </a>
+            <Dropdown>
+              <DropdownTrigger>
+                <Button className="border-none outline-none">
+                  {locale === 'pt' ? <BR className="h-10 w-10" /> : ''}
+                  {locale === 'en' ? <US className="h-10 w-10" /> : ''}
+                  {locale === 'es' ? <ES className="h-10 w-10" /> : ''}
+                </Button>
+              </DropdownTrigger>
+              <DropdownMenu aria-label="Static Actions">
+                <DropdownItem key="new">
+                  <a href="/pt">
+                    <BR className="h-10 w-10" />
+                  </a>
+                </DropdownItem>
+                <DropdownItem key="copy">
+                  <a href="/en">
+                    <US className="h-10 w-10" />
+                  </a>
+                </DropdownItem>
+                <DropdownItem key="edit">
+                  <a href="/es">
+                    <ES className="h-10 w-10" />
+                  </a>
+                </DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+          </div>
         </div>
       </div>
     </div>

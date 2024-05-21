@@ -5,19 +5,31 @@ import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
 import * as yup from 'yup'
 import { toast } from 'react-hot-toast'
-
 import Mapa from './components/map'
 import { schema } from './validation/validation'
 import axios from 'axios'
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import initTranslations from './i18n'
+import { useRouter } from 'next/router'
+import LocaleProps from './Utils/localeType'
 
-export default function Contact() {
+export default function Contact({ locale }: LocaleProps) {
+  const [translate, setTranslate] = useState<any>()
+  const [isLoading, setIsLoading] = useState(false)
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+  }, [])
+
   const MapWithNoSSR = dynamic(() => import('./components/map'), {
     ssr: false,
   })
-
-  const [isLoading, setIsLoading] = useState(false)
 
   const {
     register,
@@ -55,7 +67,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col lg:flex-row justify-center  items-center  w-full mb-10  ">
       <div className=" bg-white w-full px-4 lg:px-10 py-10  max-w-[900px]">
-        <Title title="CONTATO" />
+        <Title title={translate && translate.t && translate.t('Contact')} />
         <form onSubmit={handleSubmit(onSubmit)} className="w-full">
           <div className="d-flex justify-between">
             <div className="flex flex-col mt-8">
@@ -68,7 +80,7 @@ export default function Contact() {
                 />
                 <p className="text-red-700 text-sm">{errors.name?.message}</p>
                 <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                  Nome
+                  {translate && translate.t && translate.t('ContactName')}
                 </label>
               </div>
 
@@ -94,7 +106,7 @@ export default function Contact() {
                   placeholder=" "
                 />
                 <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                  Endereço
+                  {translate && translate.t && translate.t('ContactAddress')}
                 </label>
               </div>
 
@@ -109,7 +121,7 @@ export default function Contact() {
                 />
                 <p className="text-red-700 text-sm">{errors.phone?.message}</p>
                 <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                  Telefone
+                  {translate && translate.t && translate.t('ContactPhone')}
                 </label>
               </div>
               <div className="relative z-0 mb-5">
@@ -124,10 +136,14 @@ export default function Contact() {
                   {errors.message?.message}
                 </p>
                 <label className="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto">
-                  Mensagem
+                  {translate && translate.t && translate.t('ContactMessage')}
                 </label>
               </div>
-              <Button isLoading={isLoading} text="Enviar" onclick={() => ''} />
+              <Button
+                isLoading={isLoading}
+                text={translate && translate.t && translate.t('BtnEnviar')}
+                onclick={() => ''}
+              />
             </div>
           </div>
         </form>

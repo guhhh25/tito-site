@@ -1,12 +1,27 @@
+import { useEffect, useState } from 'react'
 import { Fade } from 'react-awesome-reveal'
 import { MdCheck } from 'react-icons/md'
+import initTranslations from '../i18n'
 
-interface TypeProps {
+interface LocaleInterface {
   type: string
+  locale: string
 }
 
-export default function InternationalLogisticContent(props: TypeProps) {
-  const { type } = props
+export default function InternationalLogisticContent({
+  locale,
+  type,
+}: LocaleInterface) {
+  const [translate, setTranslate] = useState<any>()
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+  }, [])
 
   return (
     <div className=" w-full">
@@ -14,39 +29,55 @@ export default function InternationalLogisticContent(props: TypeProps) {
         <Fade>
           <div className="block w-full p-6 border border-gray-300 rounded-lg shadow bg-gray-200 mt-1">
             <p className="text-lg w-full font-normal text-black">
-              A Tito oferece soluções no modal marítimo, seja de forma pontual
-              até integrações com múltiplas ferramentas e outros modais.
+              {translate &&
+                translate.t &&
+                translate.t('InternationalLogisticMaritmeCard')}
             </p>
             <ul className="mt-5 font-normal text-black  text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
               <div>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Relacionamento com as principais
-                  cias marítimas e NVOCC
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticMaritmeCardItem1')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Tarifas competitivas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticMaritmeCardItem2')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Embarques Door to Door
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticMaritmeCardItem3')}
                 </li>
               </div>
               <div>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Embarques FCL
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticMaritmeCardItem4')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Consolidação de carga e rotas
-                  regulares
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticMaritmeCardItem5')}
                 </li>
                 <li className="flex items-center">
                   {' '}
                   <MdCheck className="mr-1" />
-                  Follow-up diário e relatórios via sistema
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticMaritmeCardItem6')}
                 </li>
               </div>
             </ul>
@@ -59,30 +90,41 @@ export default function InternationalLogisticContent(props: TypeProps) {
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
             <p className="text-lg w-full font-normal text-black">
-              O Transporte Aéreo Internacional da Tito, combina o melhor tempo
-              para sua operação.
+              {translate &&
+                translate.t &&
+                translate.t('InternationalLogisticPlaneCard')}
             </p>
             <ul className="mt-5 font-normal text-black  text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
               <div>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Tarifas competitivas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlaneCardItem1')}
                 </li>
                 <li className="flex items-center">
                   {' '}
                   <MdCheck className="mr-1" />
-                  Consolidação de cargas e rotas regulares
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlaneCardItem2')}
                 </li>
               </div>
               <div>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Consolidado semanal Miami x
-                  Viracopos
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlaneCardItem3')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Follow-up diário via sistema
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlaneCardItem4')}
                 </li>
               </div>
             </ul>
@@ -95,49 +137,69 @@ export default function InternationalLogisticContent(props: TypeProps) {
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
             <p className="w-full text-lg w-full">
-              Transporte Rodoviário Internacional Tito Smart Modal Logistics. A
-              expertise e a segurança que sua operação precisa.
+              {translate &&
+                translate.t &&
+                translate.t('InternationalLogisticRoadCard')}
             </p>
             <ul className="mt-5 text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
               <div>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Brasil l Argentina l Chile l
-                  Paraguai l Uruguai
+                  <MdCheck className="mr-1" />
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticRoadCardItem1')}
                 </li>
                 <li className="flex items-center">
                   {' '}
                   <MdCheck className="mr-1" />
-                  Carga Consolidada e Full: Geral e Química
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticRoadCardItem2')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Rumos Sul e Norte
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticRoadCardItem3')}
                 </li>
                 <li className="flex items-center">
                   {' '}
                   <MdCheck className="mr-1" />
-                  Carga Geral e Química
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticRoadCardItem4')}
                 </li>
               </div>
               <div>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Tarifas competitivas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticRoadCardItem5')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Bases de apoio e liberação nas
-                  principais fronteiras
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticRoadCardItem6')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Opção MIC DTA (Door to Door)
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticRoadCardItem7')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Rastreamento e Follow-up dos
-                  embarques em tempo real.
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticRoadCardItem8')}
                 </li>
               </div>
             </ul>
@@ -151,29 +213,38 @@ export default function InternationalLogisticContent(props: TypeProps) {
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
             <p className="w-full text-lg">
-              A Competência na medida certa para seu projeto.
+              {translate &&
+                translate.t &&
+                translate.t('InternationalLogisticProjectCard')}
             </p>
             <ul className="mt-5 text-lg">
               <li className="flex items-center">
                 {' '}
-                <MdCheck className="mr-1" /> Equipe com know-how e dedicada em
-                cargas especiais que planejam todas as etapas do projeto
+                <MdCheck className="mr-1" />{' '}
+                {translate &&
+                  translate.t &&
+                  translate.t('InternationalLogisticProjectCardItem1')}
               </li>
               <li className="flex items-center">
                 {' '}
-                <MdCheck className="mr-1" /> Estudo de viabilidade do projeto
-                com melhor custo e menor tempo
+                <MdCheck className="mr-1" />{' '}
+                {translate &&
+                  translate.t &&
+                  translate.t('InternationalLogisticProjectCardItem2')}
               </li>
               <li className="flex items-center">
                 {' '}
-                <MdCheck className="mr-1" /> Acompanhamento físico do embarque
-                na origem, seja através da nossa rede de agentes ou
-                profissionais Tito
+                <MdCheck className="mr-1" />{' '}
+                {translate &&
+                  translate.t &&
+                  translate.t('InternationalLogisticProjectCardItem3')}
               </li>
               <li className="flex items-center">
                 {' '}
-                <MdCheck className="mr-1" /> Follow-up diário e relatórios via
-                sistema
+                <MdCheck className="mr-1" />{' '}
+                {translate &&
+                  translate.t &&
+                  translate.t('InternationalLogisticProjectCardItem4')}
               </li>
             </ul>
           </div>
@@ -185,80 +256,125 @@ export default function InternationalLogisticContent(props: TypeProps) {
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1">
             <p className="w-full text-lg">
-              Os objetivos dos planos da Tito para seus clientes são:
+              {translate &&
+                translate.t &&
+                translate.t('InternationalLogisticPlanningCard')}
             </p>
             <ul className="mt-5 text-lg flex flex-col lg:flex-row justify-between w-full lg:w-[80%] ">
               <div>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Redução de multas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem1')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Redução de tempo de cargas
-                  paradas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem2')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Maior visibilidade da operação
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem3')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Redução dos custos totais e
-                  ganhos operacionais
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem4')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Melhores alternativas em
-                  contingência
+                  <MdCheck className="mr-1" />
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem5')}
                 </li>
                 <li>
-                  - Efetivação de Ex-tarifários e Recuperação de Impostos Pagos
+                  {' '}
+                  <MdCheck className="mr-1" />
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem6')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Defesas de Multas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem7')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Regimes de Origem
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem8')}
                 </li>
               </div>
               <div>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Maior visibilidade da operação
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem9')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Redução de multas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem10')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Redução de tempo de cargas
-                  paradas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem11')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Maior visibilidade da operação
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem12')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Redução de multas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem13')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Redução de tempo de cargas
-                  paradas
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem14')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Maior visibilidade da operação
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem15')}
                 </li>
                 <li className="flex items-center">
                   {' '}
-                  <MdCheck className="mr-1" /> Follow-up diário e relatórios via
-                  sistema
+                  <MdCheck className="mr-1" />{' '}
+                  {translate &&
+                    translate.t &&
+                    translate.t('InternationalLogisticPlanningCardItem16')}
                 </li>
               </div>
             </ul>
@@ -271,41 +387,43 @@ export default function InternationalLogisticContent(props: TypeProps) {
         <Fade>
           <div className="block w-full p-6  border border-gray-300 rounded-lg shadow  bg-gray-200 mt-1 ">
             <p className="w-full lg:w-[85%] text-lg  ">
-              O conceito de Smartmodal Logistics, também está fortemente
-              embasado em alta tecnologia. Uma poderosa intranet, com um sistema
-              “back to office” garante a sincronização entre clientes regionais
-              da cadeia de suprimentos logísticos. Já sua Extranet permite que
-              cada cliente possa ter estações de trabalho para interação ou
-              acompanhamento de operações. Esta plataforma oferece
-              rastreabilidade, transparência e inteligência para planejamento e
-              rápida tomada de decisão. O sistema de Gestão de Processos da
-              Bysoft nos módulos i Broker Import, i Broker export e i Drawback,
-              possibilita interface com sistemas Easy, Software, entre outros
-              sistemas de nossos clientes.
+              {translate &&
+                translate.t &&
+                translate.t('InternationalLogisticTraceabilityCard')}
             </p>
             <p className="text-lg mt-5">
-              A partir do Web Tracking Tito, nossos clientes possuem:
+              {translate &&
+                translate.t &&
+                translate.t('InternationalLogisticTraceabilityCardItem1')}
             </p>
             <ul className="mt-5 text-lg">
               <li className="flex items-center">
                 {' '}
-                <MdCheck className="mr-1" /> Maior visibilidade em todas as
-                etapas do processo;
+                <MdCheck className="mr-1" />{' '}
+                {translate &&
+                  translate.t &&
+                  translate.t('InternationalLogisticTraceabilityCardItem2')}
               </li>
               <li className="flex items-center">
                 {' '}
-                <MdCheck className="mr-1" /> Relatórios gerenciais de acordo com
-                a necessidade de cada operação;
+                <MdCheck className="mr-1" />{' '}
+                {translate &&
+                  translate.t &&
+                  translate.t('InternationalLogisticTraceabilityCardItem1')}
               </li>
               <li className="flex items-center">
                 {' '}
-                <MdCheck className="mr-1" /> Documentos relativos às operações
-                no sistema.
+                <MdCheck className="mr-1" />{' '}
+                {translate &&
+                  translate.t &&
+                  translate.t('InternationalLogisticTraceabilityCardItem3')}
               </li>
               <li className="flex items-center">
                 {' '}
-                <MdCheck className="mr-1" /> Follow-up diário e relatórios via
-                sistema
+                <MdCheck className="mr-1" />{' '}
+                {translate &&
+                  translate.t &&
+                  translate.t('InternationalLogisticTraceabilityCardItem4')}
               </li>
             </ul>
           </div>

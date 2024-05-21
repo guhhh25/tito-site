@@ -1,31 +1,46 @@
+import { useEffect, useState } from 'react'
 import Card from './components/card'
 import Title from './components/title'
+import initTranslations from './i18n'
 
-export default function Solutions() {
+export default function Solutions({ locale })  {
+
+  const [translate, setTranslate] = useState<any>()
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+  }, [])
+
   return (
     <div className="flex flex-col  lg:px-20 items-center w-[100%] mb-10 lg:max-h-fit ">
       <div className="w-full px-10 lg:py-10   rounded-lg w-full max-w-[1720px] ">
-        <Title title="SOLUÇÕES" />
+        <Title title={translate && translate.t && translate.t('Solutions')} />
       </div>
       <div className="flex flex-col  px-8 w-full h-auto lg:flex-row  items-center justify-between 2xl:justify-center ">
         <Card
           href="/internationallogistcs"
           image={'/solutions/truckcard.jpg'}
-          title="Transporte Internacional"
-          text=" A TITO garante agilidade e visibilidade em embarques de Cargas Marítimas, Aéreas e Terrestres, com competências em modernos sistemas de gerenciamento e serviços especializados em diversos modais."
+          title={translate && translate.t && translate.t('InternationalTransportSolution')} 
+          text={translate && translate.t && translate.t('InternationalTransportCard')} 
         />
         <Card
           href="/customsmanagement"
           image={'/solutions/card2.jpg'}
-          title="Gestão Aduanera"
-          text="
-          A Tito oferece suporte jurídico em Direito Aduaneiro, agilizando operações comerciais globalmente. Sua equipe participa ativamente de entidades do comércio internacional, garantindo eficiência em vários setores de mercado."
+          title={translate && translate.t && translate.t('CustomsManagementSolution')} 
+          text=
+          {translate && translate.t && translate.t('CustomsManagementCard')} 
         />
         <Card
           href="/planning"
           image={'/solutions/card3.jpg'}
-          title="Planejamento"
-          text="Ao optar pela Tito, sua empresa garante não apenas um serviço, mas um resultado. Especializada em soluções integradas, a Tito oferece tudo o que é necessário para o sucesso do seu embarque em um único fornecedor."
+          title={translate && translate.t && translate.t('PlanningSolution')} 
+          text=
+          {translate && translate.t && translate.t('PlanningCard')} 
         />
       </div>
       <div className="flex flex-col  px-8 w-full h-auto lg:flex-row  items-center justify-between 2xl:justify-center ">
@@ -33,20 +48,19 @@ export default function Solutions() {
           href="/drawback"
           image={'/solutions/drawback.jpeg'}
           title="Drawback"
-          text="O Drawback é crucial para exportações, com modalidades como Suspensão, Isenção e Restituição de Tributos sobre insumos importados. Investimos em sistemas e ferramentas para agilizar o processo, reduzindo custos e melhorando a cadeia de exportação."
+          text={translate && translate.t && translate.t('DrawbackCard')} 
         />
         <Card
           image={'/solutions/rastreabilidade.jpeg'}
-          title="Rastreabilidade"
+          title={translate && translate.t && translate.t('TraceabilitySolution')} 
           href="/traceability"
-          text="
-          A Tito usa alta tecnologia, com intranet e extranet para sincronizar clientes na cadeia de suprimentos. Oferece rastreabilidade, integração com sistemas de clientes e visibilidade total através do Web Tracking Tito."
+          text={translate && translate.t && translate.t('TraceabilityCard')} 
         />
         <Card
           image={'/solutions/ferramentas.jpeg'}
           href="/titotools"
-          title="Ferramentas"
-          text="Ao optar pela Tito, sua empresa garante não apenas um serviço, mas um resultado. Especializada em soluções integradas, a Tito oferece tudo o que é necessário para o sucesso do seu embarque em um único fornecedor."
+          title={translate && translate.t && translate.t('ToolsSolution')} 
+          text={translate && translate.t && translate.t('ToolsCard')} 
         />
       </div>
     </div>

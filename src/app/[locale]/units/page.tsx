@@ -1,21 +1,32 @@
 'use client'
 import { useEffect, useState } from 'react'
-import Header from '../header'
-import Footer from '../footer'
-import Path from '../components/path'
 import Image from 'next/image'
-import UnitItems from '../components/unitItems'
 import { BR } from 'country-flag-icons/react/3x2'
 import { AR } from 'country-flag-icons/react/3x2'
 import { US } from 'country-flag-icons/react/3x2'
 import { MX } from 'country-flag-icons/react/3x2'
 import { LU } from 'country-flag-icons/react/3x2'
+import Header from '@//header'
+import Path from '@//components/path'
+import UnitItems from '@//components/unitItems'
+import Footer from '@//footer'
+import initTranslations from '@//i18n'
 
 interface Country {
   country: string
 }
 
-export default function Units() {
+export default function Units({ params }: { params: { locale: string } }) {
+  const [translate, setTranslate] = useState<any>()
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(params.locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+  }, [])
   const [isLoading, setIsLoading] = useState(true)
   const [country, setCountry] = useState<Country>({ country: 'brasil' })
 
@@ -29,7 +40,7 @@ export default function Units() {
 
   return (
     <>
-      <Header />
+      <Header locale={params.locale} />
       <div className="flex-grow flex w-full">
         <div className="flex flex-col justify-center items-center w-full">
           <Path
@@ -42,11 +53,7 @@ export default function Units() {
             <div className="px-10 mt-5 w-full">
               <div className="bg-white p-8 rounded-lg h-full w-full">
                 <p className="text-gray-600 mb-8 text-lg">
-                  A Tito é membro da Cargo Partners Network, uma rede mundial de
-                  agente de cargas e operadores logísticos. A CPN tem mais de
-                  100 membros espalhados em todos continentes, capacitando a
-                  Tito oferecer a seus clientes serviços em qualquer parte do
-                  mundo, através de agentes credenciados.
+                  {translate && translate.t && translate.t('TitoUnitsText')}
                 </p>
                 <div className="flex justify-center items-center w-full  mt-10">
                   <Image

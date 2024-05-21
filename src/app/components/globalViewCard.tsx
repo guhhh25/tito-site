@@ -5,10 +5,11 @@ interface GlobalViewCardProps {
   image: string
   title: string
   content: string
+  hreftext: string
 }
 
 export default function GlobalViewCard(props: GlobalViewCardProps) {
-  const { image, title, content } = props
+  const { image, title, content, hreftext } = props
 
   return (
     <div className="flex  justify-center items-center px-10 lg:px-20 py-10  onclick:cursor-grab hover:cursor-grab">
@@ -29,7 +30,7 @@ export default function GlobalViewCard(props: GlobalViewCardProps) {
             href="https://gv2.tito.com.br/"
             className="underline text-black hover:text-blue-500"
           >
-            Visitar Global View
+            {hreftext} GlobalView
           </a>
         </div>
       </div>

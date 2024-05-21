@@ -1,31 +1,32 @@
 'use client'
 import './globals.css'
 import 'typeface-roboto'
-import Header from '../app/header'
-import Carrousel from '../app/carrousel'
-import Solutions from '../app/solutions'
-import GlobalView from '../app/globalView'
+import Header from '../header'
+import Carrousel from '../carrousel'
+import Solutions from '../solutions'
+import GlobalView from '../globalView'
 import { Fade } from 'react-awesome-reveal'
-import AboutUs from '../app/aboutUs'
-import Footer from '../app/footer'
-import Partnerships from './partnerships'
-import BackPageToTop from './components/backToTopBtn'
+import AboutUs from '../aboutUs'
+import Footer from '../footer'
+import Partnerships from '../partnerships'
+import BackPageToTop from '../components/backToTopBtn'
 import { useEffect, useState } from 'react'
-import Features from './features'
-import Loading from './components/loading'
-import Contact from './contact'
-import CookiesModal from './components/cookiesModal'
+import Features from '../features'
+import Loading from '../components/loading'
+import Contact from '../contact'
+import CookiesModal from '../components/cookiesModal'
 import axios from 'axios'
 import { GetServerSideProps } from 'next'
 import dynamic from 'next/dynamic'
 import Image from 'next/image'
+import initTranslations from '../i18n'
 
-export default function Page() {
+export default function Page({ params }: { params: { locale: string } }) {
   const [isHidden, setIsHidden] = useState(true)
   const [isLoading, setIsLoading] = useState(true)
   const [acceptCookies, setAcceptCookies] = useState(false)
 
-  const MapWithNoSSR = dynamic(() => import('./components/map'), {
+  const MapWithNoSSR = dynamic(() => import('../components/map'), {
     ssr: false,
   })
 
@@ -52,6 +53,8 @@ export default function Page() {
     }
   }, [])
 
+  console.log(params?.locale)
+
   return (
     <div>
       {isLoading ? (
@@ -61,8 +64,8 @@ export default function Page() {
       ) : (
         <div className="w-full">
           <div>
-            <Header />
-            <Carrousel />
+            <Header locale={params.locale} />
+            <Carrousel locale={params.locale} />
           </div>
           <div>
             <BackPageToTop hidden={isHidden} />
@@ -73,14 +76,14 @@ export default function Page() {
               duration={1000}
               className="w-full flex justify-center items-center"
             >
-              <AboutUs />
+              <AboutUs locale={params.locale} />
 
-              <GlobalView />
-              <Solutions />
-              <Partnerships />
-              <Features />
+              <GlobalView locale={params.locale} />
+              <Solutions locale={params.locale} />
+              <Partnerships locale={params.locale} />
+              <Features locale={params.locale} />
               <div className="flex flex-col xl:flex-row  px-10 xl:px-20  max-w-[1820px] w-full justify-center">
-                <Contact />
+                <Contact locale={params.locale} />
                 <MapWithNoSSR />
               </div>
             </Fade>
