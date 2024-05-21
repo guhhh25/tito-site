@@ -5,8 +5,9 @@ import { Carousel } from 'react-responsive-carousel'
 import GlobalViewCard from './components/globalViewCard'
 import { useEffect, useState } from 'react'
 import initTranslations from './i18n'
+import LocaleProps from './Utils/localeType'
 
-export default function GlobalView({ locale }) {
+export default function GlobalView({ locale }: LocaleProps) {
   const [translate, setTranslate] = useState<any>()
 
   const initializeTranslateAsync = async () => {
@@ -33,7 +34,9 @@ export default function GlobalView({ locale }) {
             title="Global View"
             content={translate && translate.t && translate.t('GlobalViewAbout')}
             key={1}
-            hreftext={translate && translate.t && translate.t('VisitGlobalView')}
+            hreftext={
+              translate && translate.t && translate.t('VisitGlobalView')
+            }
           />,
           <GlobalViewCard
             image="/globalView/map.png"
@@ -42,7 +45,9 @@ export default function GlobalView({ locale }) {
               translate && translate.t && translate.t('GlobalViewMapAbout')
             }
             key={2}
-            hreftext={translate && translate.t && translate.t('VisitGlobalView')}
+            hreftext={
+              translate && translate.t && translate.t('VisitGlobalView')
+            }
           />,
 
           <GlobalViewCard
@@ -56,7 +61,9 @@ export default function GlobalView({ locale }) {
               translate.t('GlobalViewProcessosAbout')
             }
             key={3}
-            hreftext={translate && translate.t && translate.t('VisitGlobalView')}
+            hreftext={
+              translate && translate.t && translate.t('VisitGlobalView')
+            }
           />,
           <GlobalViewCard
             image="/globalView/dashboard.png"
@@ -67,7 +74,9 @@ export default function GlobalView({ locale }) {
               translate.t('GlobalViewDashboardAbout')
             }
             key={4}
-            hreftext={translate && translate.t && translate.t('VisitGlobalView')}
+            hreftext={
+              translate && translate.t && translate.t('VisitGlobalView')
+            }
           />,
           <GlobalViewCard
             image="/globalView/painel.png"
@@ -76,7 +85,9 @@ export default function GlobalView({ locale }) {
               translate && translate.t && translate.t('GlobalViewPainelAbout')
             }
             key={5}
-            hreftext={translate && translate.t && translate.t('VisitGlobalView')}
+            hreftext={
+              translate && translate.t && translate.t('VisitGlobalView')
+            }
           />,
           <GlobalViewCard
             image="/globalView/relatorio.png"
@@ -89,7 +100,9 @@ export default function GlobalView({ locale }) {
               translate.t('GlobalViewRelatoriosAbout')
             }
             key={6}
-            hreftext={translate && translate.t && translate.t('VisitGlobalView')}
+            hreftext={
+              translate && translate.t && translate.t('VisitGlobalView')
+            }
           />,
         ]}
       </Carousel>
