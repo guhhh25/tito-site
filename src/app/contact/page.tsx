@@ -7,7 +7,7 @@ import Header from '../header'
 export default function Contact() {
   return (
     <div className="flex flex-col h-screen ">
-      <Header />
+      <Header locale="pt" />
       <div className="flex-grow flex  ">
         <div className="flex flex-col w-full mx-4 mt-10">
           <Path

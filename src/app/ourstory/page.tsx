@@ -9,7 +9,7 @@ export default function OurStory() {
   return (
     <>
       <div className="flex  flex-col h-screen">
-        <Header />
+        <Header locale="pt" />
         <div className="flex-grow flex">
           <div className="flex flex-col justify-center items-center w-full">
             <Path
