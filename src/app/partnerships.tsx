@@ -7,8 +7,9 @@ import Card from './components/card'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import initTranslations from './i18n'
+import LocaleProps from './Utils/localeType'
 
-export default function Partnerships({ locale }) {
+export default function Partnerships({ locale }: LocaleProps) {
   const [translate, setTranslate] = useState<any>()
 
   const initializeTranslateAsync = async () => {

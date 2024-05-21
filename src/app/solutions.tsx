@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import Card from './components/card'
 import Title from './components/title'
 import initTranslations from './i18n'
+import LocaleProps from './Utils/localeType'
 
-export default function Solutions({ locale })  {
-
+export default function Solutions({ locale }: LocaleProps) {
   const [translate, setTranslate] = useState<any>()
 
   const initializeTranslateAsync = async () => {
@@ -25,22 +25,32 @@ export default function Solutions({ locale })  {
         <Card
           href="/internationallogistcs"
           image={'/solutions/truckcard.jpg'}
-          title={translate && translate.t && translate.t('InternationalTransportSolution')} 
-          text={translate && translate.t && translate.t('InternationalTransportCard')} 
+          title={
+            translate &&
+            translate.t &&
+            translate.t('InternationalTransportSolution')
+          }
+          text={
+            translate &&
+            translate.t &&
+            translate.t('InternationalTransportCard')
+          }
         />
         <Card
           href="/customsmanagement"
           image={'/solutions/card2.jpg'}
-          title={translate && translate.t && translate.t('CustomsManagementSolution')} 
-          text=
-          {translate && translate.t && translate.t('CustomsManagementCard')} 
+          title={
+            translate && translate.t && translate.t('CustomsManagementSolution')
+          }
+          text={
+            translate && translate.t && translate.t('CustomsManagementCard')
+          }
         />
         <Card
           href="/planning"
           image={'/solutions/card3.jpg'}
-          title={translate && translate.t && translate.t('PlanningSolution')} 
-          text=
-          {translate && translate.t && translate.t('PlanningCard')} 
+          title={translate && translate.t && translate.t('PlanningSolution')}
+          text={translate && translate.t && translate.t('PlanningCard')}
         />
       </div>
       <div className="flex flex-col  px-8 w-full h-auto lg:flex-row  items-center justify-between 2xl:justify-center ">
@@ -48,19 +58,21 @@ export default function Solutions({ locale })  {
           href="/drawback"
           image={'/solutions/drawback.jpeg'}
           title="Drawback"
-          text={translate && translate.t && translate.t('DrawbackCard')} 
+          text={translate && translate.t && translate.t('DrawbackCard')}
         />
         <Card
           image={'/solutions/rastreabilidade.jpeg'}
-          title={translate && translate.t && translate.t('TraceabilitySolution')} 
+          title={
+            translate && translate.t && translate.t('TraceabilitySolution')
+          }
           href="/traceability"
-          text={translate && translate.t && translate.t('TraceabilityCard')} 
+          text={translate && translate.t && translate.t('TraceabilityCard')}
         />
         <Card
           image={'/solutions/ferramentas.jpeg'}
           href="/titotools"
-          title={translate && translate.t && translate.t('ToolsSolution')} 
-          text={translate && translate.t && translate.t('ToolsCard')} 
+          title={translate && translate.t && translate.t('ToolsSolution')}
+          text={translate && translate.t && translate.t('ToolsCard')}
         />
       </div>
     </div>
