@@ -32,7 +32,7 @@ export default function Carrousel({ locale }: LocaleProps) {
     >
       <div className="relative">
         <ParallaxProvider>
-          <Parallax speed={-50}>
+          <Parallax speed={-40}>
             <Image
               src="/carrousel/carrouselBoat.jpg"
               alt="Image 1"
