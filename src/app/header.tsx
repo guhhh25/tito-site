@@ -427,6 +427,8 @@ export default function Header({ locale }: LocaleProps) {
                   {locale === 'pt' ? <BR className="h-10 w-10" /> : ''}
                   {locale === 'en' ? <US className="h-10 w-10" /> : ''}
                   {locale === 'es' ? <ES className="h-10 w-10" /> : ''}
+                  {locale === 'ar' ? <AR className="h-10 w-10" /> : ''}
+                  {locale === 'mx' ? <MX className="h-10 w-10" /> : ''}
                 </Button>
               </DropdownTrigger>
               <DropdownMenu aria-label="Static Actions">
@@ -453,6 +455,24 @@ export default function Header({ locale }: LocaleProps) {
                       <DropdownItem key="new">
                         <a href="/es">
                           <ES className="h-10 w-10" />
+                        </a>
+                      </DropdownItem>
+                    ) as any)
+                  : ''}
+                {locale !== 'ar'
+                  ? ((
+                      <DropdownItem key="new">
+                        <a href="/ar">
+                          <AR className="h-10 w-10" />
+                        </a>
+                      </DropdownItem>
+                    ) as any)
+                  : ''}
+                {locale !== 'mx'
+                  ? ((
+                      <DropdownItem key="new">
+                        <a href="/mx">
+                          <MX className="h-10 w-10" />
                         </a>
                       </DropdownItem>
                     ) as any)
