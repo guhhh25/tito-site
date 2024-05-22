@@ -283,7 +283,7 @@ export default function Header({ locale }: LocaleProps) {
             {locale !== 'ar'
               ? ((
                   <DropdownItem key="new">
-                    <a href="/es">
+                    <a href="/ar">
                       <AR className="h-10 w-10" />
                     </a>
                   </DropdownItem>
@@ -292,7 +292,7 @@ export default function Header({ locale }: LocaleProps) {
             {locale !== 'mx'
               ? ((
                   <DropdownItem key="new">
-                    <a href="/es">
+                    <a href="/mx">
                       <MX className="h-10 w-10" />
                     </a>
                   </DropdownItem>
