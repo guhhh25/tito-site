@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex w-full h-full items-center text-white ml-3">
           @Copyright Tito Smart Logistcs
         </div>
-        <div className="flex w-[15%] justify-between">
+        <div className="flex w-[15%] justify-around">
           <div>
             <a
               href="https://br.linkedin.com/company/tito-global-trade-services"
@@ -34,9 +34,6 @@ export default function Footer() {
             >
               <FaFacebookSquare className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
             </a>
-          </div>
-          <div>
-            <FaSquareTwitter className="text-white flex w-full h-full text-white mr-3 cursor-pointer hover:text-blue-700" />
           </div>
         </div>
       </div>

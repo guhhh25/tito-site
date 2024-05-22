@@ -28,7 +28,7 @@ export default function Carrousel({ locale }: LocaleProps) {
       interval={4000}
       transitionTime={2500}
       emulateTouch
-      className="mb-10 w-full"
+      className="mb-2 w-full"
     >
       <div className="relative">
         <ParallaxProvider>
@@ -37,7 +37,7 @@ export default function Carrousel({ locale }: LocaleProps) {
               src="/carrousel/carrouselBoat.jpg"
               alt="Image 1"
               width={900}
-              className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
+              className="h-[80vh] 2xl:max-h-[800px]  filter brightness-50"
               height={900}
             />
           </Parallax>
@@ -56,7 +56,7 @@ export default function Carrousel({ locale }: LocaleProps) {
               src="/carrousel/carrouselPlane.jpg"
               alt="Image 1"
               width={900}
-              className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
+              className="h-[80vh] 2xl:max-h-[800px]  filter brightness-50"
               height={900}
             />
           </Parallax>
@@ -75,7 +75,7 @@ export default function Carrousel({ locale }: LocaleProps) {
               src="/carrousel/carrouselTruck.jpg"
               alt="Image 1"
               width={900}
-              className="h-[100vh] 2xl:max-h-[800px]  filter brightness-50"
+              className="h-[80vh] 2xl:max-h-[800px]  filter brightness-50"
               height={900}
             />
           </Parallax>

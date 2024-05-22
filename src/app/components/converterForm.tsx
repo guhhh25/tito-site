@@ -1,8 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { MoneyConverter } from '../Utils/Converter'
 import { Moedas } from '../Utils/Moedas'
+import LocaleProps from '../Utils/localeType'
+import initTranslations from '../i18n'
 
-export default function ConverterForm() {
+export default function ConverterForm({ locale }: LocaleProps) {
+  const [translate, setTranslate] = useState<any>()
+  const [isLoading, setIsLoading] = useState(true)
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+    setIsLoading(false)
+  }, [])
   const [result, setResult] = useState<number>()
   const [inputs, setInputs] = useState({
     code: '',
@@ -34,12 +48,14 @@ export default function ConverterForm() {
   }
 
   return (
-    <div className="bg-white  w-[500px] border-1 rounded-lg bg-white p-10">
-      <h2 className="font-sm">Conversor Monetario</h2>
+    <div className="bg-white  max-w-[500px] border-1 rounded-lg bg-white p-10">
+      <h2 className="font-sm">
+        {translate && translate.t && translate.t('CurrencyConverter')}
+      </h2>
       <div className="mb-6">
         <div className="mt-5">
           <label className="block mb-2 text-sm font-medium text-black">
-            Unidades utilizadas para o cálculo
+            {translate && translate.t && translate.t('Unitsusedforcalculation')}
           </label>
 
           <select
@@ -50,7 +66,7 @@ export default function ConverterForm() {
             className="bg-gray-50 border border-gray-300 focus:outline-none  text-sm rounded-lg focus:border-blue-300 block w-full p-2.5 text-gray-500 "
           >
             <option disabled value="" defaultValue={'selecione'}>
-              Selecione...
+              {translate && translate.t && translate.t('ReportSelect')}
             </option>
 
             {Moedas.sort((a, b) => a.name.localeCompare(b.name)).map(
@@ -65,7 +81,7 @@ export default function ConverterForm() {
         <div className="mt-5"></div>
         <div className="mt-5">
           <label className="block mb-2 text-sm font-medium text-black">
-            Data da Cotação:
+            {translate && translate.t && translate.t('DateofQuotation')}
           </label>
           <input
             type="date"
@@ -78,7 +94,7 @@ export default function ConverterForm() {
         </div>
         <div className="mt-5">
           <label className="block mb-2 text-sm font-medium text-black">
-            Valor para conversão
+            {translate && translate.t && translate.t('Valueforconversion')}
           </label>
 
           <input
@@ -96,11 +112,11 @@ export default function ConverterForm() {
           onClick={() => handleSubmit()}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-          Calcular
+          {translate && translate.t && translate.t('Calculate')}
         </button>
 
         <span className={`mr-8 ${result !== null ? 'block' : 'hidden'}`}>
-          Resultado: {result}{' '}
+          {translate && translate.t && translate.t('Result')}: {result}{' '}
         </span>
       </div>
     </div>

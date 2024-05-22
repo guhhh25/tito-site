@@ -19,7 +19,7 @@ export default function AboutUs({ locale }: LocaleProps) {
 
   return (
     <>
-      <div className="flex flex-col xl:flex-row 2xl:justify-center  items-center 2xl:items-center text-start justify-start lg:p-20 ">
+      <div className="flex flex-col xl:flex-row 2xl:justify-center  items-center 2xl:items-center text-start justify-start md:p-20 ">
         <div className="2xl:max-w-[1110px] px-8">
           <Title
             title={translate && translate.t && translate.t('AboutTitle')}
@@ -32,7 +32,7 @@ export default function AboutUs({ locale }: LocaleProps) {
           </p>
 
           <div className="flex gap-3">
-            <a href="/ourstory">
+            <a href={`${locale}/ourstory`}>
               <Button
                 text={translate && translate.t && translate.t('AboutBtnAbout')}
               />

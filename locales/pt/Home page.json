@@ -55,7 +55,7 @@
   "CurrencyConverter": "Conversor Monetário",
 
   "ReportSelect": "Selecione...",
-
+  "CalculationofVolumetricWeight": "Cálculo do Peso Volumétrico",
   "CustomManagement": "Uma retaguarda composta por advogados especializados em Direito Aduaneiro oferece suporte técnico ou jurídico nos diversos processos para os clientes da Tito. Entre as vantagens que a Tito integra estão: máxima celeridade nas operações; elaboração de pré-custo e custo final do produto no fechamento do embarque; elaboração e controle dos KPI’s; redução no tempo de desembaraço e lead times operacionais; relatórios gerenciais customizados. A TITO é membro atuante, com participação efetiva junto às principais entidades no comércio internacional: Federação Nacional do Despachantes Aduaneiros; Câmara Americana de Comércio Brasil-EUA – AMCHAM; Associação Internacional de Agentes Aduaneiros Privados – ASAPRA; Centro de Despachantes Aduaneiros da República Argentina – CDA; Confederação das Associações dos Agentes Aduaneiros da República Mexicana – CAAAREM; Instituto PROCOMEX; Associação Brasileira de Transportadores Internacionais – ABTI; FECOMÉRCIO; CPN – Cargo Partners Network. A Tito possui profissionais qualificados que tratam cada operação com cuidados específicos, para que os processos sejam geridos em conformidade aos requisitos aduaneiros internacionais. As metodologias de trabalho adotadas buscam organizar e aumentar a eficiência operacional, sempre focando na melhoria continua dos serviços prestados. Aliado a experiência nos principais setores do mercado: automotivo, alimentício, fármaco, químico, embalagens, varejo, entre outros.",
 
   "PlanningText": "Ao contratar a Tito sua empresa não está contratando um  serviço, ESTÁ CONTRATANDO UM RESULTADO. A Tito é especializada no planejamento de soluções integrando todos os serviços e conhecimento necessários para sucesso de seu embarque em um ÚNICO FORNECEDOR. A Tito combina Gestão Aduaneira, no nível de operações e consultoria legal com ferramentas de Logística Internacional, tanto no âmbito operacional quanto gerenciamento.",
@@ -177,6 +177,19 @@
   "whatweaimfor": "O que buscamos?",
   "whatweprioritize": "O que Priorizamos?",
   "advisoryservice": "Prestar uma assessoria com plenitude e assegurar aos nossos clientes a utilização correta do benefício, demonstrando constantemente a relação custo x benefício.",
-
-  "professionalsdescription": "Os profissionais atuantes na Gestão do Drawback possuem experiência sólida e conhecimento técnico. Atuam no mercado há mais de 10 anos e estão alocados na unidade Tito de São Caetano do Sul-SP. Sendo primordial a atualização e treinamento constantes, visto o dinamismo do mercado."
+  "history": "Em 1935, o Sr. Tito Cademartori iniciou suas atividades profissionais no escritório de serviços de sua família, sucedendo ao seu pai, Sr. Alcides Cademartori. Nascia a empresa. As atividades aduaneiras eram exercidas na Vila da Barra do Quarai, atuando na representação de importadores e exportadores nacionais. A história da Tito teve início em uma época quando expressões como logística, livre-comércio, outsourcing e drawback sequer existiam. A Tito deu a cada uma delas outros significados e outras funcionalidades e, a uma especialmente, deu uma importância incalculável: A CONFIANÇA.",
+  "history1": "Nos anos 40, lideranças ligadas à Tito integraram a Comissão Mista Pró-construção da Ponte Internacional entre Paso de los Libres e Uruguaiana, demonstrando o espírito empreendedor de seus integrantes. Com a inauguração desta ponte, ao longo dos anos 40 e 50 intensificou-se o comércio bi-lateral entre Brasil e Argentina. A Tito sente-se orgulhosa de manter em sua atual carteira de clientes importadores e exportadores que utilizavam seus serviços desde aquela época.",
+  "history2": "No início dos anos 60 ocorreram dois marcos importantes no comércio bi-lateral: a assinatura dos primeiros protocolos da ALALC (Associação Latino-Americana de Livre Comércio), que reduzia impostos e fomentou relações comerciais no Cone Sul, além da concessão recíproca de habilitações à transportadoras rodoviárias terrestres, que propiciou uma nova alternativa de transporte, deflagrando a pavimentação e modernização das rodovias. Novamente a Tito teve papel nesse intercâmbio, articulando acordos operacionais e viabilizando negócios.",
+  "history3": "Nos anos 70 a empresa já possuía uma sólida atuação na América do Sul. Com a consolidação dos fluxos comerciais e a intensa movimentação de mercadorias, foram criados os terminais de fronteira como centros de serviços aduaneiros. Nos anos 80, a Tito foi uma das três primeiras empresas do Brasil a automatizarem seus processos internos investindo maciçamente em informática.",
+  "professionalsdescription": "Os profissionais atuantes na Gestão do Drawback possuem experiência sólida e conhecimento técnico. Atuam no mercado há mais de 10 anos e estão alocados na unidade Tito de São Caetano do Sul-SP. Sendo primordial a atualização e treinamento constantes, visto o dinamismo do mercado.",
+  "Unidadesutilizadasparacálculo": "Unidades utilizadas para o cálculo",
+  "Comprimento": "Comprimento",
+  "Largura": "Largura",
+  "Altura": "Altura",
+  "Calcular": "Calcular",
+  "VolumetricWeight": "Peso Volumétrico",
+  "Unitsusedforcalculation": "Unidades utilizadas para o cálculo",
+  "DateofQuotation": "Data da Cotação:",
+  "Valueforconversion": "Valor para conversão",
+  "Result": "Resultado"
 }

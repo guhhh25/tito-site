@@ -39,8 +39,12 @@ export default function InternationalLogistics({
             <div className="flex w-full">
               <Path
                 link1="/"
-                namePath1="Home"
-                namePath2="Logística Internacional"
+                namePath1="HOME"
+                namePath2={
+                  translate &&
+                  translate.t &&
+                  translate.t('HeaderInternationalLogistic')
+                }
                 link2="/internationallogistics"
               />
               <div className="content  flex justify-center items-center">

@@ -1,7 +1,22 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { HandleCalculate } from '../Utils/Calculate'
+import initTranslations from '../i18n'
+import LocaleProps from '../Utils/localeType'
 
-export default function Calculator() {
+export default function calculator({ locale }: LocaleProps) {
+  const [translate, setTranslate] = useState<any>()
+  const [isLoading, setIsLoading] = useState(true)
+
+  const initializeTranslateAsync = async () => {
+    const translation = await initTranslations(locale, ['Home page'])
+    setTranslate(translation)
+  }
+
+  useEffect(() => {
+    initializeTranslateAsync()
+    setIsLoading(false)
+  }, [])
+
   const [result, setResult] = useState<number>()
   const [inputs, setInputs] = useState({
     units: '',
@@ -33,12 +48,16 @@ export default function Calculator() {
   }
 
   return (
-    <div className="bg-white  w-[500px] border-1 rounded-lg bg-white p-10">
-      <h2 className="font-sm">Calculo do peso volumetrico</h2>
+    <div className="bg-white  w-full  border-1 rounded-lg bg-white p-10 max-w-[500px]">
+      <h2 className="font-sm">
+        {translate &&
+          translate.t &&
+          translate.t('CalculationofVolumetricWeight')}
+      </h2>
       <div className="mb-6">
         <div className="mt-5">
           <label className="block mb-2 text-sm font-medium text-black">
-            Unidades utilizadas para o cálculo
+            {translate && translate.t && translate.t('Unitsusedforcalculation')}
           </label>
 
           <select
@@ -49,7 +68,7 @@ export default function Calculator() {
             className="bg-gray-50 border border-gray-300 focus:outline-none  text-sm rounded-lg focus:border-blue-300 block w-full p-2.5 text-gray-500 "
           >
             <option disabled value="" defaultValue={'selecione'}>
-              Selecione...
+              {translate && translate.t && translate.t('ReportSelect')}
             </option>
             <option value="cm">cm / kg</option>
             <option value="lb">pol / lb</option>
@@ -57,7 +76,7 @@ export default function Calculator() {
         </div>
         <div className="mt-5">
           <label className="block mb-2 text-sm font-medium text-black">
-            Comprimento
+            {translate && translate.t && translate.t('Length')}
           </label>
 
           <input
@@ -71,7 +90,7 @@ export default function Calculator() {
         </div>
         <div className="mt-5">
           <label className="block mb-2 text-sm font-medium text-black">
-            Largura
+            {translate && translate.t && translate.t('Width')}
           </label>
           <input
             type="number"
@@ -84,7 +103,7 @@ export default function Calculator() {
         </div>
         <div className="mt-5">
           <label className="block mb-2 text-sm font-medium text-black">
-            Altura
+            {translate && translate.t && translate.t('Height')}
           </label>
           <input
             type="number"
@@ -101,11 +120,12 @@ export default function Calculator() {
           onClick={() => handleSubmit()}
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
-          Calcular
+          {translate && translate.t && translate.t('Calculate')}
         </button>
 
         <span className={`mr-8 ${result !== undefined ? 'block' : 'hidden'}`}>
-          Peso volumetrico: {result}{' '}
+          {translate && translate.t && translate.t('VolumetricWeight')}:{' '}
+          {result}{' '}
         </span>
       </div>
     </div>

@@ -29,42 +29,71 @@ export default function Partnerships({ locale }: LocaleProps) {
         />
         <div className="w-full">
           <div className="flex lg:flex-row lg:items-center justify-around mt-5 flex-wrap">
-            <Image
-              src={'/partnerships/amacarga.png'}
-              alt="amacarga"
-              width={180}
-              height={100}
-              className="py-5  "
-            />
-
-            <Image
-              src={'/partnerships/image.png'}
-              alt="amacarga"
-              width={180}
-              height={100}
-              className="py-5"
-            />
-            <Image
-              src={'/partnerships/cambras.png'}
-              alt="amacarga"
-              width={180}
-              height={100}
-              className="py-5"
-            />
-            <Image
-              src={'/partnerships/camebra.png'}
-              alt="amacarga"
-              width={180}
-              height={100}
-              className="py-5"
-            />
-            <Image
-              src={'/partnerships/novo_dutcham.png'}
-              alt="amacarga"
-              width={180}
-              height={100}
-              className="py-5"
-            />
+            <a
+              href="https://amacarga.mx/"
+              target="_blank"
+              className="hover:transform hover:scale-110 transition-transform duration-300 ease-in-out"
+            >
+              <Image
+                src={'/partnerships/amacarga.png'}
+                alt="amacarga"
+                width={180}
+                height={100}
+                className="py-5  "
+              />
+            </a>
+            <a
+              href="https://www.amcham.com.br/"
+              target="_blank"
+              className="hover:transform hover:scale-110 transition-transform duration-300 ease-in-out"
+            >
+              <Image
+                src={'/partnerships/image.png'}
+                alt="amacarga"
+                width={180}
+                height={100}
+                className="py-5"
+              />
+            </a>
+            <a
+              href="https://cambras.org.ar/pt/"
+              target="_blank"
+              className="hover:transform hover:scale-110 transition-transform duration-300 ease-in-out"
+            >
+              <Image
+                src={'/partnerships/cambras.png'}
+                alt="amacarga"
+                width={180}
+                height={100}
+                className="py-5"
+              />
+            </a>
+            <a
+              href="https://www.camebra.mx/"
+              target="_blank"
+              className="hover:transform hover:scale-110 transition-transform duration-300 ease-in-out"
+            >
+              <Image
+                src={'/partnerships/camebra.png'}
+                alt="amacarga"
+                width={180}
+                height={100}
+                className="py-5"
+              />
+            </a>
+            <a
+              href="https://www.dutcham.com.br/"
+              target="_blank"
+              className="hover:transform hover:scale-110 transition-transform duration-300 ease-in-out"
+            >
+              <Image
+                src={'/partnerships/novo_dutcham.png'}
+                alt="amacarga"
+                width={180}
+                height={100}
+                className="py-5"
+              />
+            </a>
           </div>
         </div>
       </div>

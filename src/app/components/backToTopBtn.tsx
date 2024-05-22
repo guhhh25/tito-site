@@ -8,13 +8,13 @@ export default function BackToTopBtn(props: any) {
     <div
       onClick={() => BackPageToTop()}
       id="backToTopBtn"
-      className={`transition-opacity duration-500 ease-in-out sm:fixed bottom-20 right-5 z-10  ${
+      className={` transition-opacity duration-500 ease-in-out sm:fixed bottom-20 right-5 z-10  ${
         hidden
           ? 'opacity-0 pointer-events-none'
           : 'opacity-100 pointer-events-auto'
       }`}
     >
-      <div className=" flex text-center items-center justify-center  bg-blue-500 w-[50px] h-[50px] rounded-full cursor-pointer">
+      <div className=" flex text-center items-center justify-center  bg-blue-500 hover:bg-blue-600 w-[50px] h-[50px] rounded-full cursor-pointer">
         <IoIosArrowUp className="text-white w-6 h-6" />
       </div>
     </div>

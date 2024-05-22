@@ -33,8 +33,10 @@ export default function TitoTools({ params }: { params: { locale: string } }) {
             <div className="flex flex-col items-start">
               <Path
                 link1="/"
-                namePath1="Home"
-                namePath2="Ferramentas"
+                namePath1="HOME"
+                namePath2={
+                  translate && translate.t && translate.t('HeaderTools')
+                }
                 link2="/titotools"
               />
               <div className="content p-10">

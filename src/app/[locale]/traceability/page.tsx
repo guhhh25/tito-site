@@ -38,8 +38,10 @@ export default function Traceability({
             <div className="flex flex-col items-start">
               <Path
                 link1="/"
-                namePath1="Home"
-                namePath2="Rastreabilidade"
+                namePath1="HOME"
+                namePath2={
+                  translate && translate.t && translate.t('HeaderTraceability')
+                }
                 link2="/traceability"
               />
               <div className="content  ">

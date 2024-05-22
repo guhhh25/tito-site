@@ -45,13 +45,13 @@ export default function Units({ params }: { params: { locale: string } }) {
         <div className="flex flex-col justify-center items-center w-full">
           <Path
             link1="/"
-            namePath1="Home"
-            namePath2="Unidades"
+            namePath1="HOME"
+            namePath2={translate && translate.t && translate.t('HeaderUnits')}
             link2="/units"
           />
           <div className="content w-full h-full mb-10">
-            <div className="px-10 mt-5 w-full">
-              <div className="bg-white p-8 rounded-lg h-full w-full">
+            <div className="sm:px-10 px-2 mt-5 w-full">
+              <div className="flex flex-col justify-center items-center bg-white p-2 sm:p-8 rounded-lg h-full w-full">
                 <p className="text-gray-600 mb-8 text-lg">
                   {translate && translate.t && translate.t('TitoUnitsText')}
                 </p>

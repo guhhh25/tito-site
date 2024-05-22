@@ -14,7 +14,7 @@ export default function Card(props: cardProps) {
   return (
     <a
       href={href}
-      className="card cursor-pointer flex w-full mt-5 lg:mt-0  max-w-[500px]  2xl:max-w-[450px] w-full rounded-md overflow-hiddenborder border-gray-400 rounded shadow-lg group m-5"
+      className="card cursor-pointer flex w-full mt-5 lg:mt-0  max-w-[500px] sm:h-[600px] lg:max-h-[550px] 2xl:max-w-[450px] w-full rounded-md overflow-hiddenborder border-gray-400 rounded shadow-lg group m-5"
     >
       <div className="w-full h-full relative">
         <Image

@@ -53,8 +53,6 @@ export default function Page({ params }: { params: { locale: string } }) {
     }
   }, [])
 
-  console.log(params?.locale)
-
   return (
     <div>
       {isLoading ? (
@@ -84,7 +82,7 @@ export default function Page({ params }: { params: { locale: string } }) {
               <Features locale={params.locale} />
               <div className="flex flex-col xl:flex-row  px-10 xl:px-20  max-w-[1820px] w-full justify-center">
                 <Contact locale={params.locale} />
-                <MapWithNoSSR />
+                <MapWithNoSSR locale={params.locale} />
               </div>
             </Fade>
             <Footer />

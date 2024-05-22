@@ -38,8 +38,12 @@ export default function Certification({
             <div className="flex flex-col  mx-4 w-full justify-center items-center">
               <Path
                 link1="/"
-                namePath1="Home"
-                namePath2="Certificações"
+                namePath1="HOME"
+                namePath2={
+                  translate &&
+                  translate.t &&
+                  translate.t('HeaderCertifications')
+                }
                 link2="/certification"
               />
               <div className="content">

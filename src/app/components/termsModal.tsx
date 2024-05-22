@@ -56,7 +56,7 @@ export default function TermsModal() {
                 </div>
 
                 <div className="p-4 md:p-5 space-y-4">
-                  <p className="text-sm lg:text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                  <p className="text-sm lg:text-base leading-relaxed text-gray-500 dark:text-gray-400 overflow-y-auto h-80">
                     Site hospeda um sistema on line e estritamente confidencial.
                     Pode ser utilizado por qualquer indivíduo que possua contato
                     direto ou indireto com a empresa. A empresa encoraja a todos

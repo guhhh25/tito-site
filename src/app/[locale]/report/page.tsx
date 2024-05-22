@@ -102,8 +102,10 @@ export default function Report({ params }: { params: { locale: string } }) {
             <div className="flex flex-col justify-center items-center w-full h-fit">
               <Path
                 link1="/"
-                namePath1="Home"
-                namePath2="Denuncia"
+                namePath1="HOME"
+                namePath2={
+                  translate && translate.t && translate.t('HeaderReport')
+                }
                 link2="/report"
               />
               <div className="content w-full">
@@ -193,15 +195,15 @@ export default function Report({ params }: { params: { locale: string } }) {
                       <div>
                         {/* SECTION 1 */}
 
-                        <form className="flex flex-col justify-center items-center  mt-10  w-full  ">
-                          <div className="flex lg:flex-row flex-col  ">
-                            <div className="mb-5 px-5  ">
+                        <form className="flex flex-col mt-10 w-full lg:items-center lg:justify-center">
+                          <div className="flex lg:flex-row flex-col w-full">
+                            <div className="mb-5 px-5 w-full">
                               <input
                                 value={formValues.nome}
                                 name="nome"
                                 onChange={handleChange}
                                 type="text"
-                                className=" text-gray-700 border border-gray-300  text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500   w-full xl:w-[500px]  2xl:w-[600px] p-2.5"
+                                className="w-full text-gray-700 border border-gray-300 text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500  p-2.5"
                                 placeholder={
                                   translate &&
                                   translate.t &&
@@ -209,38 +211,38 @@ export default function Report({ params }: { params: { locale: string } }) {
                                 }
                               />
                             </div>
-                            <div className="mb-5 px-5">
+                            <div className="mb-5 px-5 w-full">
                               <input
                                 type="date"
                                 name="data"
                                 value={formValues.data}
                                 onChange={handleChange}
                                 placeholder="Data da Ocorrencia"
-                                className=" text-gray-700 border border-gray-300  text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500   w-full xl:w-[500px]  2xl:w-[600px] p-2.5"
+                                className="w-full text-gray-700 border border-gray-300 text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500  p-2.5"
                                 required
                               />
                             </div>
                           </div>
-                          <div className="flex lg:flex-row flex-col">
-                            <div className="mb-5 px-5">
+                          <div className="flex lg:flex-row flex-col w-full">
+                            <div className="mb-5 px-5 w-full">
                               <input
                                 type="email"
                                 name="email"
                                 value={formValues.email}
                                 onChange={handleChange}
-                                className=" text-gray-700 border border-gray-300  text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500   w-full xl:w-[500px]  2xl:w-[600px] p-2.5"
+                                className="w-full text-gray-700 border border-gray-300 text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500  p-2.5"
                                 placeholder="Email (Não Obrigatório)"
                                 required
                               />
                             </div>
-                            <div className="mb-5 px-5">
+                            <div className="mb-5 px-5 w-full">
                               <InputMask
                                 mask="(99) 99999-9999"
                                 name="telefone"
                                 value={formValues.telefone}
                                 onChange={handleChange}
                                 type="text"
-                                className=" text-gray-700 border border-gray-300  text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500   w-full xl:w-[500px]  2xl:w-[600px] p-2.5"
+                                className="w-full text-gray-700 border border-gray-300 text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500  p-2.5"
                                 placeholder={
                                   translate &&
                                   translate.t &&
@@ -250,9 +252,8 @@ export default function Report({ params }: { params: { locale: string } }) {
                               />
                             </div>
                           </div>
-                          <div className="flex lg:flex-row flex-col"></div>
-                          <div className="flex lg:flex-row flex-col">
-                            <div className="mb-5 px-5">
+                          <div className="flex lg:flex-row flex-col w-full">
+                            <div className="mb-5 px-5 w-full">
                               <Select
                                 onChange={(selectedOptions) =>
                                   handleSelectChange(
@@ -262,7 +263,7 @@ export default function Report({ params }: { params: { locale: string } }) {
                                 }
                                 isMulti
                                 options={reasonsObjects}
-                                className=" text-gray-700 border border-gray-300  text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500   w-full xl:w-[500px]  2xl:w-[600px] p-2.5"
+                                className="w-full text-gray-700 border border-gray-300 text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500  p-2.5"
                                 placeholder={
                                   translate &&
                                   translate.t &&
@@ -270,14 +271,14 @@ export default function Report({ params }: { params: { locale: string } }) {
                                 }
                               />
                             </div>
-                            <div className="mb-5 px-5">
+                            <div className="mb-5 px-5 w-full">
                               <Select
                                 isMulti
                                 onChange={(selectedOptions) =>
                                   handleSelectChange(selectedOptions, 'reasons')
                                 }
                                 options={titoItemsObjects}
-                                className=" text-gray-700 border border-gray-300  text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500   w-full xl:w-[500px]  2xl:w-[600px] p-2.5"
+                                className="w-full text-gray-700 border  border-gray-300 text-sm rounded-lg border-3 focus:outline-none focus:border-sky-500  p-2.5"
                                 placeholder={
                                   translate &&
                                   translate.t &&

@@ -13,7 +13,7 @@ export default function Path(props: PathProps) {
   const { link1, link2, namePath1, namePath2, link3, namePath3 } = props
 
   return (
-    <div className="flex absolute left-10 top-[120px] tracking-wider font-bold text-2xl text-gray-800">
+    <div className="hidden sm:flex absolute text-xl left-10 top-[120px] tracking-wider font-bold  lg:text-2xl text-gray-800">
       <a
         className="transiction ease-in-out delay-150 duration-100 hover:text-blue-500"
         href={link1}
@@ -21,7 +21,7 @@ export default function Path(props: PathProps) {
         {namePath1}
       </a>
 
-      <MdKeyboardArrowRight className="mt-2" />
+      <MdKeyboardArrowRight className="mt-[5px]" />
 
       <a
         className="transiction ease-in-out delay-150 duration-100 hover:text-blue-500"

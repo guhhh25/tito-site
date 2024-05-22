@@ -3,9 +3,8 @@ export default function CardFeature(props: any) {
 
   return (
     <div className="p-2">
-      <a
+      <div
         className="flex relative px-5 justify-center items-center block max-w-md mx-auto overflow-hidden bg-white border border-gray-400 rounded shadow-sm group"
-        href="#"
         aria-label="View item"
         title="View item"
       >
@@ -25,7 +24,7 @@ export default function CardFeature(props: any) {
           </div>
           <div className="flex items-center justify-center"></div>
         </div>
-      </a>
+      </div>
     </div>
   )
 }

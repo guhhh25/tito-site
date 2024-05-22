@@ -68,6 +68,31 @@ html {
   width: 100%;
 }
 
+#popupMobile {
+  height: 290px;
+  width: 280px;
+  display: none;
+  position: absolute;
+  right: 100px;
+  top: 120px;
+  background-color: white;
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  z-index: 100;
+}
+
+#hoverItem:hover + #popupMobile {
+  display: block;
+}
+
+.links a:hover::before {
+  width: 100%;
+}
+
 h1 {
   font-size: 42px;
   font-weight: 600;

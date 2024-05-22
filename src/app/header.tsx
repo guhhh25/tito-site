@@ -13,7 +13,7 @@ import {
   DropdownItem,
   Button,
 } from '@nextui-org/react'
-import { BR, ES, US } from 'country-flag-icons/react/3x2'
+import { AR, BR, ES, MX, US } from 'country-flag-icons/react/3x2'
 import initTranslations from './i18n'
 import LocaleProps from './Utils/localeType'
 
@@ -26,6 +26,8 @@ interface usdQuotationValueProps {
 
 export default function Header({ locale }: LocaleProps) {
   const [translate, setTranslate] = useState<any>()
+
+  console.log(locale, 'locale header')
 
   const initializeTranslateAsync = async () => {
     const translation = await initTranslations(locale, ['Home page'])
@@ -227,14 +229,18 @@ export default function Header({ locale }: LocaleProps) {
         >
           {translate && translate.t && translate.t('HeaderReport')}
         </a>
-        <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+        <div className="border-1 border-blue-500">
           <a
-            href="https://home.titoonline.com.br/intranet_1/index.php"
+            href="https://home.titoonline.com.br/intranet_1/"
             target="_blank"
+            className="relative inline-flex text-center items-center justify-center px-4  overflow-hidden  transition-all bg-transparent rounded hover:bg-white group border border-blue-500"
           >
-            INTRANET
+            <span className=" w-48 h-48 rounded text-center rotate-[-30deg] bg-blue-500 absolute bottom-0 -left-50 -translate-x-full ease-out duration-500 transition-all translate-y-full  group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+            <span className="text-gray-700 hover:text-blue-600 relative w-full  text-center text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white p-2">
+              INTRANET
+            </span>
           </a>
-        </button>
+        </div>
 
         <Dropdown>
           <DropdownTrigger>
@@ -242,24 +248,56 @@ export default function Header({ locale }: LocaleProps) {
               {locale === 'pt' ? <BR className="h-10 w-10" /> : ''}
               {locale === 'en' ? <US className="h-10 w-10" /> : ''}
               {locale === 'es' ? <ES className="h-10 w-10" /> : ''}
+              {locale === 'ar' ? <AR className="h-10 w-10" /> : ''}
+              {locale === 'mx' ? <MX className="h-10 w-10" /> : ''}
             </Button>
           </DropdownTrigger>
           <DropdownMenu aria-label="Static Actions">
-            <DropdownItem key="new">
-              <a href="/pt">
-                <BR className="h-10 w-10" />
-              </a>
-            </DropdownItem>
-            <DropdownItem key="copy">
-              <a href="/en">
-                <US className="h-10 w-10" />
-              </a>
-            </DropdownItem>
-            <DropdownItem key="edit">
-              <a href="/es">
-                <ES className="h-10 w-10" />
-              </a>
-            </DropdownItem>
+            {locale !== 'pt'
+              ? ((
+                  <DropdownItem key="new">
+                    <a href="/pt">
+                      <BR className="h-10 w-10" />
+                    </a>
+                  </DropdownItem>
+                ) as any)
+              : ''}
+            {locale !== 'en'
+              ? ((
+                  <DropdownItem key="new">
+                    <a href="/en">
+                      <US className="h-10 w-10" />
+                    </a>
+                  </DropdownItem>
+                ) as any)
+              : ''}
+            {locale !== 'es'
+              ? ((
+                  <DropdownItem key="new">
+                    <a href="/es">
+                      <ES className="h-10 w-10" />
+                    </a>
+                  </DropdownItem>
+                ) as any)
+              : ''}
+            {locale !== 'ar'
+              ? ((
+                  <DropdownItem key="new">
+                    <a href="/es">
+                      <AR className="h-10 w-10" />
+                    </a>
+                  </DropdownItem>
+                ) as any)
+              : ''}
+            {locale !== 'mx'
+              ? ((
+                  <DropdownItem key="new">
+                    <a href="/es">
+                      <MX className="h-10 w-10" />
+                    </a>
+                  </DropdownItem>
+                ) as any)
+              : ''}
           </DropdownMenu>
         </Dropdown>
       </div>
@@ -327,7 +365,7 @@ export default function Header({ locale }: LocaleProps) {
           >
             {translate && translate.t && translate.t('HeaderDolar')}
           </a>
-          <div id="popup" className="popup">
+          <div id="popupMobile" className="popupMobile">
             <p className="text-xl text-gray-500 mt-2 mb-2">COMERCIAL</p>
             <div className="flex items-center">
               <p className="text-green-500   font-bold text-[16px]">
@@ -374,12 +412,15 @@ export default function Header({ locale }: LocaleProps) {
           </div>
           <div className="flex items-center justify-center">
             <a
-              href="https://home.titoonline.com.br/intranet_1/index.php"
-              className="w-full  bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mt-5"
+              href="https://home.titoonline.com.br/intranet_1/"
+              target="_blank"
+              className="relative inline-flex text-center items-center justify-center px-4  overflow-hidden  transition-all bg-transparent rounded hover:bg-white group border border-blue-500"
             >
-              INTRANET
+              <span className=" w-48 h-48 rounded text-center rotate-[-30deg] bg-blue-500 absolute bottom-0 -left-50 -translate-x-full ease-out duration-500 transition-all translate-y-full  group-hover:ml-0 group-hover:mb-32 group-hover:translate-x-0"></span>
+              <span className="text-gray-700 hover:text-blue-600 relative w-full  text-center text-left text-black transition-colors duration-300 ease-in-out group-hover:text-white p-2">
+                INTRANET
+              </span>
             </a>
-
             <Dropdown>
               <DropdownTrigger>
                 <Button className="border-none outline-none">
@@ -389,21 +430,33 @@ export default function Header({ locale }: LocaleProps) {
                 </Button>
               </DropdownTrigger>
               <DropdownMenu aria-label="Static Actions">
-                <DropdownItem key="new">
-                  <a href="/pt">
-                    <BR className="h-10 w-10" />
-                  </a>
-                </DropdownItem>
-                <DropdownItem key="copy">
-                  <a href="/en">
-                    <US className="h-10 w-10" />
-                  </a>
-                </DropdownItem>
-                <DropdownItem key="edit">
-                  <a href="/es">
-                    <ES className="h-10 w-10" />
-                  </a>
-                </DropdownItem>
+                {locale !== 'pt'
+                  ? ((
+                      <DropdownItem key="new">
+                        <a href="/pt">
+                          <BR className="h-10 w-10" />
+                        </a>
+                      </DropdownItem>
+                    ) as any)
+                  : ''}
+                {locale !== 'en'
+                  ? ((
+                      <DropdownItem key="new">
+                        <a href="/en">
+                          <US className="h-10 w-10" />
+                        </a>
+                      </DropdownItem>
+                    ) as any)
+                  : ''}
+                {locale !== 'es'
+                  ? ((
+                      <DropdownItem key="new">
+                        <a href="/es">
+                          <ES className="h-10 w-10" />
+                        </a>
+                      </DropdownItem>
+                    ) as any)
+                  : ''}
               </DropdownMenu>
             </Dropdown>
           </div>
